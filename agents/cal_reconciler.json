@@ -1,0 +1,34 @@
+{
+  "name": "cal_reconciler",
+  "tier": "group",
+  "job": "Decide what to do on the student's calendar for ONE inbox item: create, update, delete or no_change.",
+  "instructions": "You get one item from the inbox (a deadline or an event, with its status and time) and the calendar events that code found for it: events in the same course with a similar title, or linked to the same message.\nPick exactly one action:\n- create: no listed event is this same assignment or event, and the item is not cancelled.\n- update: a listed event IS this same assignment or event, but at a different time (the date moved). Give its event_id.\n- delete: the item is cancelled and a listed event is that cancelled thing. Give its event_id.\n- no_change: a listed event is this same thing at the same time already (give its event_id), or the item is cancelled and nothing is listed (event_id '').\nSame thing = same course AND the same assignment or event: 'Lab report 4' is not the 'Midterm paper outline', and a review session is not the exam it reviews for. An event linked to the same message is almost always the same thing. Never delete because something is old or done; only cancellation deletes.\nevent_id: copy it exactly from the list, or '' for create. reason: under 15 words.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "action": {
+        "type": "string",
+        "enum": [
+          "create",
+          "update",
+          "delete",
+          "no_change"
+        ]
+      },
+      "event_id": {
+        "type": "string"
+      },
+      "reason": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "action",
+      "event_id",
+      "reason"
+    ]
+  },
+  "max_tokens": 1024,
+  "success_check": "Every decision passes check_decision; the applied calendar matches the answer key (no duplicates, no collateral changes)."
+}

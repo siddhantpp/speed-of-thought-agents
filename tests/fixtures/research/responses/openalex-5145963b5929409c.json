@@ -1,0 +1,59 @@
+{
+ "url": "https://api.openalex.org/works/doi:10.5555/njca.2016.0031?select=id,doi,title,publication_year,publication_date,type,cited_by_count,is_retracted,open_access,primary_location,locations,authorships,biblio,abstract_inverted_index,referenced_works",
+ "kind": "openalex_work",
+ "key": "doi:10.5555/njca.2016.0031",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "id": "https://openalex.org/W0000000107",
+  "doi": "https://doi.org/10.5555/njca.2016.0031",
+  "title": "Binaural beats double vocabulary retention in a single study session",
+  "type": "article",
+  "publication_year": 2016,
+  "publication_date": "2016-01-01",
+  "cited_by_count": 95,
+  "is_retracted": true,
+  "open_access": {
+   "oa_status": "closed"
+  },
+  "primary_location": {
+   "source": {
+    "type": "journal",
+    "display_name": "Northvale Journal of Classroom Acoustics",
+    "issn_l": "0000-0043"
+   }
+  },
+  "locations": [
+   {
+    "source": {
+     "type": "journal",
+     "display_name": "Northvale Journal of Classroom Acoustics",
+     "issn_l": "0000-0043"
+    }
+   }
+  ],
+  "authorships": [
+   {
+    "author": {
+     "display_name": "Fergus Drummond"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Lise Aubertin"
+    }
+   }
+  ],
+  "biblio": {
+   "volume": "4",
+   "issue": "1",
+   "first_page": "12",
+   "last_page": "19"
+  },
+  "referenced_works": [
+   "https://openalex.org/W0000000101",
+   "https://openalex.org/W0000000106"
+  ],
+  "abstract": "We tested whether listening to binaural beats while studying improves memory for new vocabulary. Sixty students studied 40 word pairs for 20 minutes with binaural beats or in silence. Students in the binaural-beat condition recalled twice as many word pairs one day later. We argue that binaural beats offer a simple, low-cost way to improve study sessions, and we recommend them to students preparing for language exams."
+ }
+}

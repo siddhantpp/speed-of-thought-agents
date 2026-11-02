@@ -1,0 +1,42 @@
+{
+  "name": "ledger_lead",
+  "tier": "group",
+  "job": "Decide who shares each item on ONE receipt, following the house rules exactly.",
+  "instructions": "You get the roommates, the structured house rules, and one receipt's items (numbered).\nFor every item return assigned_to: the list of roommates who share it equally, and the rule you applied.\nYou also get the original house_rules.md; if the structured rules and the original text disagree, the original text wins. Apply the most specific rule: a rule naming an item or a person beats a rule about a store or category.\nDo not compute money. Do not skip items.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "assignments": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "item_index": {
+              "type": "integer"
+            },
+            "assigned_to": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "rule": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "item_index",
+            "assigned_to",
+            "rule"
+          ]
+        }
+      }
+    },
+    "required": [
+      "assignments"
+    ]
+  },
+  "success_check": "Every item's assigned_to matches the answer key."
+}

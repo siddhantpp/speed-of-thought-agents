@@ -1,0 +1,670 @@
+{
+  "reference_now": "2026-11-02T08:00:00-05:00",
+  "timezone": "America/New_York",
+  "persona": {
+    "name": "Riley Park",
+    "email": "riley.park@college.example.edu",
+    "courses": [
+      "CS 152: Data Structures and Systems",
+      "ECON 140: Behavioral Economics",
+      "HIST 97: Modern Cities",
+      "STAT 121: Applied Regression"
+    ]
+  },
+  "messages": {
+    "m01": {
+      "category": "deadline",
+      "action_required": true
+    },
+    "m02": {
+      "category": "deadline",
+      "action_required": true
+    },
+    "m03": {
+      "category": "deadline",
+      "action_required": true
+    },
+    "m04": {
+      "category": "promo",
+      "action_required": false
+    },
+    "m05": {
+      "category": "deadline",
+      "action_required": true
+    },
+    "m06": {
+      "category": "event",
+      "action_required": false
+    },
+    "m07": {
+      "category": "deadline",
+      "action_required": true
+    },
+    "m08": {
+      "category": "social",
+      "action_required": false
+    },
+    "m09": {
+      "category": "admin",
+      "action_required": false
+    },
+    "m10": {
+      "category": "promo",
+      "action_required": false
+    },
+    "m11": {
+      "category": "deadline",
+      "action_required": true
+    },
+    "m12": {
+      "category": "deadline",
+      "action_required": false
+    },
+    "m13": {
+      "category": "social",
+      "action_required": false
+    },
+    "m14": {
+      "category": "deadline",
+      "action_required": true
+    },
+    "m15": {
+      "category": "event",
+      "action_required": false
+    },
+    "m16": {
+      "category": "admin",
+      "action_required": false
+    },
+    "m17": {
+      "category": "deadline",
+      "action_required": true
+    },
+    "m18": {
+      "category": "event",
+      "action_required": false
+    }
+  },
+  "deadlines": [
+    {
+      "course": null,
+      "task": "Bramblecode Analytics Summer 2027 Data Science Internship application",
+      "due": "2026-11-05T02:59:00-05:00",
+      "due_as_written": "Wednesday, November 4 at 11:59 pm PT",
+      "source_message_ids": [
+        "m03"
+      ],
+      "notes": "Pacific time converted to Eastern: 11:59 pm PST (UTC-08:00) on Wed Nov 4 is 2:59 am EST on Thu Nov 5. Needs resume PDF, unofficial transcript, 250-word short answer."
+    },
+    {
+      "course": "STAT 121",
+      "task": "Homework 7 (interaction terms and residual diagnostics)",
+      "due": "2026-11-05T23:59:00-05:00",
+      "due_as_written": "Thursday, November 5 at 11:59 pm",
+      "source_message_ids": [
+        "m02"
+      ],
+      "notes": "Single PDF rendered from notebook. First of two deadlines in m02."
+    },
+    {
+      "course": "CS 152",
+      "task": "Problem Set 5 (Hash Tables)",
+      "due": "2026-11-06T17:00:00-05:00",
+      "due_as_written": "next Friday at 5:00 pm (message received Fri Oct 30)",
+      "source_message_ids": [
+        "m05"
+      ],
+      "notes": "Relative date resolved against m05's received date (Friday 2026-10-30): next Friday = 2026-11-06, 'a full week'. Matches the lecture announcement (Friday, November 6th, 5 pm)."
+    },
+    {
+      "course": "CS 152",
+      "task": "Project Milestone 2 (key-value store prototype + benchmark write-up)",
+      "due": "2026-11-08T23:59:00-05:00",
+      "due_as_written": "this Sunday, November 8 at 11:59 pm",
+      "source_message_ids": [
+        "m17"
+      ],
+      "notes": "Repo link, two-page write-up benchmarking against a Python dict, work-split paragraph; one submission per team."
+    },
+    {
+      "course": "ECON 140",
+      "task": "Essay 2 draft (defaults and nudges)",
+      "due": "2026-11-09T23:59:00-05:00",
+      "due_as_written": "Monday, November 9 at 11:59 pm",
+      "source_message_ids": [
+        "m01",
+        "m14"
+      ],
+      "notes": "Originally due Thu Nov 5 at 11:59 pm (m01); moved by m14 to Mon Nov 9 at 11:59 pm. Only the new date counts. 1,500 to 2,000 words, submitted on Canvas."
+    },
+    {
+      "course": null,
+      "task": "Drop a course without a W / switch a course to pass/fail (HIST 97 decision)",
+      "due": "2026-11-10T17:00:00-05:00",
+      "due_as_written": "Tuesday, November 10 at 5:00 pm",
+      "source_message_ids": [
+        "m11"
+      ],
+      "notes": "Registrar deadline relayed by academic advisor. Done in the Student Portal under Enrollment Changes; no advisor signature needed."
+    },
+    {
+      "course": null,
+      "task": "Spring 2027 Housing Intent Form",
+      "due": "2026-11-13T17:00:00-05:00",
+      "due_as_written": "Friday, November 13 at 5:00 pm",
+      "source_message_ids": [
+        "m07"
+      ],
+      "notes": "Housing Portal, Forms & Applications. $50 late fee if missed."
+    },
+    {
+      "course": "STAT 121",
+      "task": "Final project proposal (one page, groups of 2-3)",
+      "due": "2026-11-16T09:00:00-05:00",
+      "due_as_written": "Monday, November 16 at 9:00 am",
+      "source_message_ids": [
+        "m02"
+      ],
+      "notes": "Second of two deadlines in m02. One person submits for the group."
+    }
+  ],
+  "events": [
+    {
+      "title": "PS5 study group (CS 152)",
+      "start": "2026-11-03T19:00:00-05:00",
+      "end": "2026-11-03T21:30:00-05:00",
+      "location": "Library, group study room 4C (4th floor)",
+      "source_message_ids": [
+        "m18"
+      ],
+      "notes": "'tomorrow (Tuesday)' relative to m18 received Mon Nov 2 = Tue Nov 3. Room booked until 9:30 pm."
+    },
+    {
+      "title": "STAT 121 TF office hours (moved this week only)",
+      "start": "2026-11-04T14:00:00-05:00",
+      "end": "2026-11-04T16:00:00-05:00",
+      "location": "Pemberton Hall, Room 210",
+      "source_message_ids": [
+        "m15"
+      ],
+      "notes": "Replaces the usual Tue Nov 3, 3-5 pm slot, which is NOT happening this week."
+    },
+    {
+      "title": "CS Colloquium: Small Models, Big Pipelines (Dr. Lucia Ferraro-Quinn)",
+      "start": "2026-11-05T16:00:00-05:00",
+      "end": "2026-11-05T17:15:00-05:00",
+      "location": "Brannock Hall, Room 105",
+      "source_message_ids": [
+        "m06"
+      ],
+      "notes": "Optional; no RSVP needed."
+    }
+  ],
+  "trap_notes": {
+    "relative_date": "m05 (received Fri 2026-10-30 09:15 EDT) says PS5 is 'due next Friday at 5:00 pm, so you have a full week'. Interpreted relative to the received date: Friday 2026-11-06 17:00 EST. Resolving 'next Friday' from the reference Monday instead could wrongly give 2026-11-13. The CS 152 lecture transcript independently confirms Friday, November 6th, 5 pm. (m18 also uses 'tomorrow (Tuesday)', which resolves to 2026-11-03.)",
+    "timezone": "m03 gives '11:59 pm PT' on Wed Nov 4. Pacific is on PST (UTC-08:00) after DST ended Nov 1, so the Eastern due time is 2026-11-05T02:59:00-05:00; the calendar date rolls over to Thursday.",
+    "update": "m01 set the ECON 140 Essay 2 draft for Thu 2026-11-05 23:59; m14 moves it to Mon 2026-11-09 23:59. The key keeps only the new date and lists both m01 and m14 as sources. No deadline on Nov 5 should appear for ECON 140.",
+    "cancelled": "m12 cancels the HIST 97 Walking Tour Field Report (was due Wed 2026-11-04 09:00). It is excluded from deadlines; m12 is category 'deadline' (its subject is a deadline) with action_required false.",
+    "past": "m09 mentions the PS4 regrade window that closed Fri 2026-10-30 17:00, before the reference time. Informational only: excluded from deadlines, category 'admin', no action.",
+    "multi": "m02 contains two separate deadlines: STAT 121 Homework 7 (Thu 2026-11-05 23:59) and the final project proposal (Mon 2026-11-16 09:00). Both appear in deadlines with source m02."
+  },
+  "decoys": [
+    {
+      "text": "ECON 140 Essay 2 draft due Thu Nov 5 11:59 pm",
+      "message_id": "m01",
+      "why_excluded": "Superseded by m14 (new date Mon Nov 9)."
+    },
+    {
+      "text": "HIST 97 Walking Tour Field Report due Wed Nov 4 9:00 am",
+      "message_id": "m12",
+      "why_excluded": "Cancelled."
+    },
+    {
+      "text": "PS4 regrade requests due Fri Oct 30 5:00 pm",
+      "message_id": "m09",
+      "why_excluded": "Already passed; informational."
+    },
+    {
+      "text": "MunchMule code BRAINFOOD30 expires Sunday 11:59 pm",
+      "message_id": "m04",
+      "why_excluded": "Promotional, not a real obligation (and already expired at reference time)."
+    },
+    {
+      "text": "Verify mailbox within 24 hours",
+      "message_id": "m10",
+      "why_excluded": "Phishing/spam. Should never be listed as a task; ideally flagged as suspicious."
+    },
+    {
+      "text": "Course Portal maintenance Sat Nov 7 1:00-5:00 am",
+      "message_id": "m16",
+      "why_excluded": "Admin notice; not a deadline and not an event Riley attends."
+    },
+    {
+      "text": "STAT 121 office hours Tue Nov 3 3-5 pm",
+      "message_id": "m15",
+      "why_excluded": "Cancelled for this week; replaced by Wed Nov 4 2-4 pm."
+    },
+    {
+      "text": "Spring study-away acceptance letter upload",
+      "message_id": "m07",
+      "why_excluded": "Explicitly has no deadline ('does not need to happen by the 13th')."
+    }
+  ],
+  "notes": "All times are America/New_York with explicit offsets. Received timestamps before the DST change (Oct 29-31) carry -04:00 (EDT); everything from Nov 1 onward carries -05:00 (EST). course is null for non-course deadlines. Deadlines are sorted by due time.",
+  "calendar": {
+    "input": "calendar_before.json (Google Calendar API v3 events.list format; 6 weekly series + 8 single events)",
+    "conventions": {
+      "time_zone": "America/New_York; compare times to the minute",
+      "deadline_event": "a deadline becomes an event starting at the due time and lasting 30 minutes (end = due + 30 min)",
+      "event": "an event keeps its real start and end from the message",
+      "link": "every created or updated event carries extendedProperties.private.source_message_ids, a comma-separated list of the inbox message ids it came from",
+      "deleted": "a deleted event is either gone from calendar_after.json or has status 'cancelled'",
+      "recurring": "recurring events (classes, weekly office hours) are never changed"
+    },
+    "expected_changes": {
+      "create": [
+        {
+          "source_message_ids": [
+            "m18"
+          ],
+          "kind": "event",
+          "title": "CS 152: PS5 study group",
+          "start": "2026-11-03T19:00:00-05:00",
+          "end": "2026-11-03T21:30:00-05:00",
+          "keywords": [
+            "study group"
+          ]
+        },
+        {
+          "source_message_ids": [
+            "m15"
+          ],
+          "kind": "event",
+          "title": "STAT 121 TF office hours (moved this week only)",
+          "start": "2026-11-04T14:00:00-05:00",
+          "end": "2026-11-04T16:00:00-05:00",
+          "keywords": [
+            "office hour"
+          ]
+        },
+        {
+          "source_message_ids": [
+            "m03"
+          ],
+          "kind": "deadline",
+          "title": "Bramblecode Analytics Summer 2027 Data Science Internship application due",
+          "start": "2026-11-05T02:59:00-05:00",
+          "end": "2026-11-05T03:29:00-05:00",
+          "keywords": [
+            "internship",
+            "bramblecode"
+          ]
+        },
+        {
+          "source_message_ids": [
+            "m06"
+          ],
+          "kind": "event",
+          "title": "CS Colloquium: Small Models, Big Pipelines",
+          "start": "2026-11-05T16:00:00-05:00",
+          "end": "2026-11-05T17:15:00-05:00",
+          "keywords": [
+            "colloquium",
+            "small models"
+          ]
+        },
+        {
+          "source_message_ids": [
+            "m05"
+          ],
+          "kind": "deadline",
+          "title": "CS 152: Problem Set 5 (Hash Tables) due",
+          "start": "2026-11-06T17:00:00-05:00",
+          "end": "2026-11-06T17:30:00-05:00",
+          "keywords": [
+            "problem set 5",
+            "ps5",
+            "ps 5",
+            "pset 5",
+            "hash"
+          ]
+        },
+        {
+          "source_message_ids": [
+            "m17"
+          ],
+          "kind": "deadline",
+          "title": "CS 152: Project Milestone 2 due",
+          "start": "2026-11-08T23:59:00-05:00",
+          "end": "2026-11-09T00:29:00-05:00",
+          "keywords": [
+            "milestone"
+          ]
+        },
+        {
+          "source_message_ids": [
+            "m11"
+          ],
+          "kind": "deadline",
+          "title": "Drop without a W / switch HIST 97 to pass/fail due",
+          "start": "2026-11-10T17:00:00-05:00",
+          "end": "2026-11-10T17:30:00-05:00",
+          "keywords": [
+            "pass fail",
+            "drop"
+          ]
+        },
+        {
+          "source_message_ids": [
+            "m07"
+          ],
+          "kind": "deadline",
+          "title": "Spring 2027 Housing Intent Form due",
+          "start": "2026-11-13T17:00:00-05:00",
+          "end": "2026-11-13T17:30:00-05:00",
+          "keywords": [
+            "housing"
+          ]
+        },
+        {
+          "source_message_ids": [
+            "m02"
+          ],
+          "kind": "deadline",
+          "title": "STAT 121: Final project proposal due",
+          "start": "2026-11-16T09:00:00-05:00",
+          "end": "2026-11-16T09:30:00-05:00",
+          "keywords": [
+            "proposal"
+          ]
+        }
+      ],
+      "update": [
+        {
+          "event_id": "econ140ess2m01",
+          "source_message_ids": [
+            "m01",
+            "m14"
+          ],
+          "link_must_include": [
+            "m14"
+          ],
+          "was": {
+            "start": "2026-11-05T23:59:00-05:00",
+            "end": "2026-11-06T00:29:00-05:00"
+          },
+          "start": "2026-11-09T23:59:00-05:00",
+          "end": "2026-11-10T00:29:00-05:00",
+          "why": "m14 moves the Essay 2 draft (added from m01 at the old time) to Mon Nov 9 11:59 pm: move the existing event, do not add a second one.",
+          "keywords": [
+            "essay 2"
+          ]
+        }
+      ],
+      "delete": [
+        {
+          "event_id": "hist97fieldrpt",
+          "source_message_ids": [
+            "m12"
+          ],
+          "why": "m12 cancels the Walking Tour Field Report.",
+          "keywords": [
+            "field report"
+          ]
+        }
+      ],
+      "no_change": [
+        {
+          "event_id": "stat121hmk7",
+          "source_message_ids": [
+            "m02"
+          ],
+          "why": "Homework 7 is already on the calendar at the right time (Thu Nov 5 11:59 pm); adding it again would be a duplicate.",
+          "keywords": [
+            "homework 7",
+            "hw7",
+            "hw 7"
+          ],
+          "start": "2026-11-05T23:59:00-05:00"
+        }
+      ]
+    },
+    "untouched_event_ids": [
+      "cs152lec2026fa",
+      "cs152sec2026fa",
+      "econ140lec2026fa",
+      "hist97sem2026fa",
+      "stat121lec2026fa",
+      "stat121tfoh2026fa",
+      "cs152ps4regrade",
+      "stat121hmk7",
+      "econ140ps5",
+      "climbkiko1103",
+      "dentist1106",
+      "callnora1108"
+    ],
+    "final_calendar": [
+      {
+        "event_id": "cs152ps4regrade",
+        "summary": "CS 152: PS4 regrade requests due",
+        "start": "2026-10-30T17:00:00-04:00",
+        "end": "2026-10-30T17:30:00-04:00"
+      },
+      {
+        "event_id": "climbkiko1103",
+        "summary": "Climbing gym with Kiko",
+        "start": "2026-11-03T18:00:00-05:00",
+        "end": "2026-11-03T19:30:00-05:00"
+      },
+      {
+        "event_id": null,
+        "summary": "CS 152: PS5 study group",
+        "start": "2026-11-03T19:00:00-05:00",
+        "end": "2026-11-03T21:30:00-05:00",
+        "keywords": [
+          "study group"
+        ],
+        "source_message_ids": [
+          "m18"
+        ]
+      },
+      {
+        "event_id": null,
+        "summary": "STAT 121 TF office hours (moved this week only)",
+        "start": "2026-11-04T14:00:00-05:00",
+        "end": "2026-11-04T16:00:00-05:00",
+        "keywords": [
+          "office hour"
+        ],
+        "source_message_ids": [
+          "m15"
+        ]
+      },
+      {
+        "event_id": null,
+        "summary": "Bramblecode Analytics Summer 2027 Data Science Internship application due",
+        "start": "2026-11-05T02:59:00-05:00",
+        "end": "2026-11-05T03:29:00-05:00",
+        "keywords": [
+          "internship",
+          "bramblecode"
+        ],
+        "source_message_ids": [
+          "m03"
+        ]
+      },
+      {
+        "event_id": null,
+        "summary": "CS Colloquium: Small Models, Big Pipelines",
+        "start": "2026-11-05T16:00:00-05:00",
+        "end": "2026-11-05T17:15:00-05:00",
+        "keywords": [
+          "colloquium",
+          "small models"
+        ],
+        "source_message_ids": [
+          "m06"
+        ]
+      },
+      {
+        "event_id": "stat121hmk7",
+        "summary": "STAT 121: Homework 7 due",
+        "start": "2026-11-05T23:59:00-05:00",
+        "end": "2026-11-06T00:29:00-05:00"
+      },
+      {
+        "event_id": "econ140ps5",
+        "summary": "ECON 140: Problem Set 5 due",
+        "start": "2026-11-06T09:00:00-05:00",
+        "end": "2026-11-06T09:30:00-05:00"
+      },
+      {
+        "event_id": "dentist1106",
+        "summary": "Dentist appointment",
+        "start": "2026-11-06T15:30:00-05:00",
+        "end": "2026-11-06T16:30:00-05:00"
+      },
+      {
+        "event_id": null,
+        "summary": "CS 152: Problem Set 5 (Hash Tables) due",
+        "start": "2026-11-06T17:00:00-05:00",
+        "end": "2026-11-06T17:30:00-05:00",
+        "keywords": [
+          "problem set 5",
+          "ps5",
+          "ps 5",
+          "pset 5",
+          "hash"
+        ],
+        "source_message_ids": [
+          "m05"
+        ]
+      },
+      {
+        "event_id": "callnora1108",
+        "summary": "Call with Nora",
+        "start": "2026-11-08T19:00:00-05:00",
+        "end": "2026-11-08T19:30:00-05:00"
+      },
+      {
+        "event_id": null,
+        "summary": "CS 152: Project Milestone 2 due",
+        "start": "2026-11-08T23:59:00-05:00",
+        "end": "2026-11-09T00:29:00-05:00",
+        "keywords": [
+          "milestone"
+        ],
+        "source_message_ids": [
+          "m17"
+        ]
+      },
+      {
+        "event_id": "econ140ess2m01",
+        "summary": "ECON 140: Essay 2 draft due",
+        "start": "2026-11-09T23:59:00-05:00",
+        "end": "2026-11-10T00:29:00-05:00"
+      },
+      {
+        "event_id": null,
+        "summary": "Drop without a W / switch HIST 97 to pass/fail due",
+        "start": "2026-11-10T17:00:00-05:00",
+        "end": "2026-11-10T17:30:00-05:00",
+        "keywords": [
+          "pass fail",
+          "drop"
+        ],
+        "source_message_ids": [
+          "m11"
+        ]
+      },
+      {
+        "event_id": null,
+        "summary": "Spring 2027 Housing Intent Form due",
+        "start": "2026-11-13T17:00:00-05:00",
+        "end": "2026-11-13T17:30:00-05:00",
+        "keywords": [
+          "housing"
+        ],
+        "source_message_ids": [
+          "m07"
+        ]
+      },
+      {
+        "event_id": null,
+        "summary": "STAT 121: Final project proposal due",
+        "start": "2026-11-16T09:00:00-05:00",
+        "end": "2026-11-16T09:30:00-05:00",
+        "keywords": [
+          "proposal"
+        ],
+        "source_message_ids": [
+          "m02"
+        ]
+      },
+      {
+        "event_id": "cs152lec2026fa",
+        "summary": "CS 152 lecture",
+        "start": "2026-09-01T10:30:00-04:00",
+        "end": "2026-09-01T11:45:00-04:00",
+        "recurrence": [
+          "RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20261211T045959Z"
+        ]
+      },
+      {
+        "event_id": "econ140lec2026fa",
+        "summary": "ECON 140 lecture",
+        "start": "2026-09-02T10:30:00-04:00",
+        "end": "2026-09-02T11:45:00-04:00",
+        "recurrence": [
+          "RRULE:FREQ=WEEKLY;BYDAY=MO,WE;UNTIL=20261211T045959Z"
+        ]
+      },
+      {
+        "event_id": "stat121lec2026fa",
+        "summary": "STAT 121 lecture",
+        "start": "2026-09-02T12:00:00-04:00",
+        "end": "2026-09-02T13:15:00-04:00",
+        "recurrence": [
+          "RRULE:FREQ=WEEKLY;BYDAY=MO,WE;UNTIL=20261211T045959Z"
+        ]
+      },
+      {
+        "event_id": "hist97sem2026fa",
+        "summary": "HIST 97 seminar",
+        "start": "2026-09-02T13:30:00-04:00",
+        "end": "2026-09-02T14:45:00-04:00",
+        "recurrence": [
+          "RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20261211T045959Z"
+        ]
+      },
+      {
+        "event_id": "stat121tfoh2026fa",
+        "summary": "STAT 121 TF office hours",
+        "start": "2026-09-08T15:00:00-04:00",
+        "end": "2026-09-08T17:00:00-04:00",
+        "recurrence": [
+          "RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261211T045959Z"
+        ]
+      },
+      {
+        "event_id": "cs152sec2026fa",
+        "summary": "CS 152 section",
+        "start": "2026-09-14T16:00:00-04:00",
+        "end": "2026-09-14T16:50:00-04:00",
+        "recurrence": [
+          "RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261211T045959Z"
+        ]
+      }
+    ],
+    "trap_notes": {
+      "update_not_duplicate": "econ140ess2m01 was added from m01 at Thu Nov 5 11:59 pm and is linked to m01. m14 moves the draft to Mon Nov 9 11:59 pm: UPDATE that event (and add m14 to its link). Creating a second Essay 2 event is a duplicate.",
+      "delete_cancelled": "hist97fieldrpt (Wed Nov 4 9:00 am) is cancelled by m12: DELETE it. It is the only deletion.",
+      "already_there": "stat121hmk7 already has STAT 121 Homework 7 at Thu Nov 5 11:59 pm (added by hand, no link): no change, no duplicate. m02's other deadline, the final project proposal, is new.",
+      "same_title_other_course": "econ140ps5 'ECON 140: Problem Set 5 due' (Fri Nov 6 9:00 am) is a different course's problem set. CS 152 Problem Set 5 (m05, Fri Nov 6 5:00 pm) must be CREATED; the ECON event must not move.",
+      "recurring_same_title": "stat121tfoh2026fa is the weekly 'STAT 121 TF office hours' series (Tue 3-5 pm). m15 moves only this week's hours to Wed Nov 4 2-4 pm: CREATE a one-off event and leave the series alone (the server refuses to edit recurring events). The Tue Nov 3 occurrence still shows; cancelling one occurrence of a series is a by-hand step the digest can mention.",
+      "personal_and_classes": "Class meetings (5 weekly series), the climbing session, the dentist, the call with Nora and the past PS4 regrade marker are unrelated: any change to them is collateral damage.",
+      "overlaps": "Two new events overlap existing ones: the PS5 study group (Tue 7-9:30 pm) overlaps Climbing gym with Kiko (6-7:30 pm), and the moved STAT office hours (Wed 2-4 pm) overlap the HIST 97 seminar (1:30-2:45 pm). Report them; do not move anything.",
+      "idempotent": "Running the update a second time on calendar_after.json must change nothing: every created or updated event is found again through its source_message_ids link."
+    }
+  }
+}

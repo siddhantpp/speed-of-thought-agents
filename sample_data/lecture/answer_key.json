@@ -1,0 +1,207 @@
+{
+  "title": "Lecture 9 — Hash Tables: From Arrays to O(1) Lookups",
+  "course": "CS 152: Data Structures and Systems",
+  "lecture_date": "2026-10-29",
+  "instructor": "Prof. Imogen Vasquez-Hale",
+  "key_concepts": [
+    {
+      "term": "hash table",
+      "definition": "A data structure that stores keys (and values) in an array of buckets, using a hash function to compute where each key belongs, so lookups, inserts, and deletes take O(1) time on average."
+    },
+    {
+      "term": "direct addressing",
+      "definition": "Using the key itself as the array index, which makes every operation one step but only works when keys are small integers from a compact range."
+    },
+    {
+      "term": "hash function",
+      "definition": "A deterministic, fast function that turns a key into an integer, which is then reduced (usually mod m) to a bucket index, ideally spreading keys uniformly."
+    },
+    {
+      "term": "bucket",
+      "definition": "One slot of the hash table's underlying array; a key's bucket index is h(k) mod m, where m is the number of buckets."
+    },
+    {
+      "term": "collision",
+      "definition": "The situation where two different keys hash to the same bucket, which is unavoidable by the pigeonhole principle whenever there are more possible keys than buckets."
+    },
+    {
+      "term": "birthday problem",
+      "definition": "The fact that only 23 people are needed for a better-than-even chance of a shared birthday, illustrating that collisions appear long before a table is full."
+    },
+    {
+      "term": "separate chaining",
+      "definition": "A collision strategy in which each bucket holds a list of every item that hashed there, and a lookup walks that list comparing keys."
+    },
+    {
+      "term": "load factor",
+      "definition": "The number of stored items divided by the number of buckets (alpha = n/m), which sets the average chain length or probing cost."
+    },
+    {
+      "term": "open addressing",
+      "definition": "A collision strategy in which every item is stored directly in the array, one per slot, and a collision is resolved by probing for another slot."
+    },
+    {
+      "term": "linear probing",
+      "definition": "An open-addressing scheme that tries slots i, i+1, i+2, and so on (wrapping mod m) until it finds the key or an empty slot."
+    },
+    {
+      "term": "primary clustering",
+      "definition": "The tendency of linear probing to build long runs of filled slots that keep growing as new keys land anywhere in them, which drives probe counts up as the table fills."
+    },
+    {
+      "term": "tombstone",
+      "definition": "A marker left in a deleted slot under open addressing that tells lookups to keep probing (and lets inserts reuse the slot), so probe chains are not broken."
+    },
+    {
+      "term": "rehashing (resizing)",
+      "definition": "When the load factor passes a threshold, allocating a larger table (usually double the size) and reinserting every key, because each key's index depends on the table size m."
+    },
+    {
+      "term": "amortized O(1)",
+      "definition": "A guarantee about total cost: one resize is O(n), but with doubling the total copying work over n inserts is less than 2n, so the average cost per insert is constant."
+    },
+    {
+      "term": "hash flooding",
+      "definition": "An attack in which an adversary crafts many keys that collide so a hash table degrades to O(n) per operation; Python counters it by salting string hashes with a random per-process seed."
+    }
+  ],
+  "must_include_terms": [
+    "hash function",
+    "bucket",
+    "collision",
+    "chaining",
+    "open addressing",
+    "linear probing",
+    "load factor",
+    "tombstone",
+    "resizing",
+    "rehash",
+    "amortized",
+    "O(1)",
+    "O(n)",
+    "dict"
+  ],
+  "true_facts": [
+    {
+      "claim": "A hash function must be deterministic: equal keys always produce equal hashes.",
+      "source_quote": "So equal keys must always give equal hashes."
+    },
+    {
+      "claim": "A collision happens when two different keys hash to the same bucket.",
+      "source_quote": "When two different keys hash to the same bucket, that's called a collision."
+    },
+    {
+      "claim": "Only 23 people are needed for a better-than-even chance that two share a birthday, and with 70 people the chance exceeds 99.9 percent.",
+      "source_quote": "It's only 23. With 70 people it's over 99.9 percent."
+    },
+    {
+      "claim": "The load factor is the number of stored items divided by the number of buckets.",
+      "source_quote": "is the number of items stored divided by the number of buckets"
+    },
+    {
+      "claim": "Hash table lookups are O(1) on average with a good hash function, but O(n) in the worst case.",
+      "source_quote": "hash table lookups are O(1) on average, or expected, with a good hash function. The worst case is O(n)."
+    },
+    {
+      "claim": "To delete from a linear-probing table you leave a tombstone marker instead of emptying the slot.",
+      "source_quote": "when you delete, you leave a marker in the slot called a tombstone"
+    },
+    {
+      "claim": "When the table is resized, every key must be rehashed and reinserted, because each index depends on the table size.",
+      "source_quote": "So every key has to be rehashed and reinserted into the new table."
+    },
+    {
+      "claim": "With doubling, the total copying work across all resizes is less than 2n, which makes inserts amortized O(1).",
+      "source_quote": "The total copying work is 1 plus 2 plus 4 plus up to n, which is less than 2n."
+    },
+    {
+      "claim": "Python's dict uses open addressing rather than chaining.",
+      "source_quote": "First, it uses open addressing, not chaining."
+    },
+    {
+      "claim": "CPython resizes a dict when it is about two-thirds full.",
+      "source_quote": "CPython resizes the dict when it gets about two-thirds full"
+    }
+  ],
+  "false_claims": [
+    "Hash table lookups are O(1) even in the worst case.",
+    "Python's dict resolves collisions with separate chaining (a linked list in each bucket).",
+    "The load factor is the number of buckets divided by the number of stored items.",
+    "When a hash table resizes, existing entries can be copied to the same indexes in the new array without rehashing.",
+    "With linear probing, you can delete a key by simply emptying its slot."
+  ],
+  "reference_quiz": [
+    {
+      "type": "mcq",
+      "q": "A chained hash table holds 50 items in 100 buckets. What is its load factor?",
+      "options": [
+        "A) 0.5",
+        "B) 2",
+        "C) 50",
+        "D) 150"
+      ],
+      "a": "A) 0.5"
+    },
+    {
+      "type": "short",
+      "q": "Why can't you delete a key from a linear-probing table by simply emptying its slot?",
+      "a": "A later lookup for a key that probed past that slot would stop at the empty slot and wrongly conclude the key is absent, breaking the probe chain; you leave a tombstone instead."
+    },
+    {
+      "type": "mcq",
+      "q": "What is the worst-case time for a lookup in a hash table holding n items?",
+      "options": [
+        "A) O(1)",
+        "B) O(log n)",
+        "C) O(n)",
+        "D) O(n log n)"
+      ],
+      "a": "C) O(n)"
+    },
+    {
+      "type": "short",
+      "q": "When a hash table grows, why does every key have to be rehashed rather than copied to the same index?",
+      "a": "The index is h(k) mod m, and m (the number of buckets) changes, so each key's bucket index changes."
+    },
+    {
+      "type": "mcq",
+      "q": "Which collision strategy does Python's dict use?",
+      "options": [
+        "A) Separate chaining with linked lists",
+        "B) Open addressing",
+        "C) A balanced tree in each bucket",
+        "D) It prevents collisions entirely"
+      ],
+      "a": "B) Open addressing"
+    },
+    {
+      "type": "short",
+      "q": "In the birthday problem, how many people are needed for a better-than-even chance that two share a birthday?",
+      "a": "23"
+    },
+    {
+      "type": "mcq",
+      "q": "Why do hash tables double their size when resizing instead of adding a fixed number of slots?",
+      "options": [
+        "A) Doubling uses less memory",
+        "B) Doubling keeps total copying work linear, so inserts are amortized O(1); fixed-size growth makes it quadratic",
+        "C) Doubling means keys don't need to be rehashed",
+        "D) Doubling prevents all future collisions"
+      ],
+      "a": "B) Doubling keeps total copying work linear, so inserts are amortized O(1); fixed-size growth makes it quadratic"
+    },
+    {
+      "type": "short",
+      "q": "Why can't a Python list be used as a dictionary key?",
+      "a": "Lists are mutable and therefore unhashable: if the list changed, its hash would change and it would sit in the wrong bucket. Python raises TypeError: unhashable type: 'list'."
+    }
+  ],
+  "logistics": [
+    {
+      "item": "Problem Set 5",
+      "due": "2026-11-06T17:00:00-05:00",
+      "source_quote": "Problem set five is due Friday at 5 pm",
+      "notes": "Instructor clarifies 'next Friday, November 6th, not tomorrow' (lecture is Thu Oct 29). Posted on Canvas the next morning. Same deadline as inbox message m05."
+    }
+  ]
+}

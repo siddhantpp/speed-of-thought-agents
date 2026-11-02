@@ -1,0 +1,61 @@
+{
+ "url": "https://api.openalex.org/works/doi:10.5555/nvcl.2013.0062?select=id,doi,title,publication_year,publication_date,type,cited_by_count,is_retracted,open_access,primary_location,locations,authorships,biblio,abstract_inverted_index,referenced_works",
+ "kind": "openalex_work",
+ "key": "doi:10.5555/nvcl.2013.0062",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "id": "https://openalex.org/W0000000106",
+  "doi": "https://doi.org/10.5555/nvcl.2013.0062",
+  "title": "Lyrics in the background hinder reading for listeners and nearby classmates",
+  "type": "article",
+  "publication_year": 2012,
+  "publication_date": "2012-10-11",
+  "cited_by_count": 820,
+  "is_retracted": false,
+  "open_access": {
+   "oa_status": "closed"
+  },
+  "primary_location": {
+   "source": {
+    "type": "journal",
+    "display_name": "Northvale Computers & Learning",
+    "issn_l": "0000-0035"
+   }
+  },
+  "locations": [
+   {
+    "source": {
+     "type": "journal",
+     "display_name": "Northvale Computers & Learning",
+     "issn_l": "0000-0035"
+    }
+   }
+  ],
+  "authorships": [
+   {
+    "author": {
+     "display_name": "Aino Saarinen"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Teodor Weissfeld"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Nadia Okoro-Banks"
+    }
+   }
+  ],
+  "biblio": {
+   "volume": "9",
+   "issue": null,
+   "first_page": "55",
+   "last_page": "63"
+  },
+  "referenced_works": [],
+  "abstract": "Students often study with music in shared spaces such as libraries and dorm rooms. In two experiments in a simulated study hall, participants who listened to music with lyrics while reading scored lower on a comprehension test than participants who read in silence, and participants seated next to a listener whose music was audible scored lower than those seated next to a quiet peer. Instrumental music had smaller effects. The results suggest that music with lyrics is a distraction for listeners and for the people around them."
+ }
+}

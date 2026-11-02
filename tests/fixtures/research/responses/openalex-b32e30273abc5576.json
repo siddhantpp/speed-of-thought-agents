@@ -1,0 +1,426 @@
+{
+ "url": "https://api.openalex.org/works?search.title_and_abstract=background+music+recall&filter=from_publication_date%3A2000-01-01&per_page=40&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Cpublication_date%2Ctype%2Ccited_by_count%2Cis_retracted%2Copen_access%2Cprimary_location%2Clocations%2Cauthorships%2Cbiblio%2Cabstract_inverted_index",
+ "kind": "search",
+ "query": "background music recall",
+ "backend": "openalex",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "meta": {
+   "count": 214
+  },
+  "results": [
+   {
+    "id": "https://openalex.org/W0000000108",
+    "doi": "https://doi.org/10.5555/nvpre.2023.0011",
+    "title": "Does music help or hurt studying? A preregistered online experiment",
+    "type": "preprint",
+    "publication_year": 2023,
+    "publication_date": "2023-01-01",
+    "cited_by_count": 4,
+    "is_retracted": false,
+    "open_access": {
+     "oa_status": "closed"
+    },
+    "primary_location": {
+     "source": {
+      "type": "repository",
+      "display_name": "Northvale Preprints",
+      "issn_l": null
+     }
+    },
+    "locations": [
+     {
+      "source": {
+       "type": "repository",
+       "display_name": "Northvale Preprints",
+       "issn_l": null
+      }
+     }
+    ],
+    "authorships": [
+     {
+      "author": {
+       "display_name": "Odile Fenwick"
+      }
+     }
+    ],
+    "biblio": {
+     "volume": null,
+     "issue": null,
+     "first_page": null,
+     "last_page": null
+    },
+    "referenced_works": [
+     "https://openalex.org/W0000000101",
+     "https://openalex.org/W0000000106"
+    ],
+    "abstract": "In a preregistered online experiment, 600 adults studied a short text with or without background music and then answered recall questions. Recall did not differ between conditions, and participants who chose their own music rated the session as more pleasant."
+   },
+   {
+    "id": "https://openalex.org/W0000000101",
+    "doi": "https://doi.org/10.5555/nvjls.2014.0412",
+    "title": "Quiet rooms help: Advantages of silent study over background music for recall",
+    "type": "article",
+    "publication_year": 2014,
+    "publication_date": "2014-04-23",
+    "cited_by_count": 1450,
+    "is_retracted": false,
+    "open_access": {
+     "oa_status": "closed"
+    },
+    "primary_location": {
+     "source": {
+      "type": "journal",
+      "display_name": "Northvale Journal of Learning Science",
+      "issn_l": "0000-0019"
+     }
+    },
+    "locations": [
+     {
+      "source": {
+       "type": "journal",
+       "display_name": "Northvale Journal of Learning Science",
+       "issn_l": "0000-0019"
+      }
+     }
+    ],
+    "authorships": [
+     {
+      "author": {
+       "display_name": "Ingrid M. Brennholt"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Tobiah R. Vanstone"
+      }
+     }
+    ],
+    "biblio": {
+     "volume": "12",
+     "issue": "4",
+     "first_page": "301",
+     "last_page": "317"
+    },
+    "referenced_works": [],
+    "abstract": "Many students study with music playing, often through headphones. We asked whether background music changes how much students remember from a short reading. In three studies, students who studied in silence recalled more main ideas than students who studied with background music. The gap was largest for music with lyrics and smallest for instrumental music. We show that whereas studying longer can help, music listeners tended to reread passages rather than summarize them, and rereading predicted weaker recall. We discuss what this means for students who study in noisy places."
+   },
+   {
+    "id": "https://openalex.org/W0000000109",
+    "doi": null,
+    "title": "Background music and recall in first-year students",
+    "type": "dissertation",
+    "publication_year": 2020,
+    "publication_date": "2020-01-01",
+    "cited_by_count": 0,
+    "is_retracted": false,
+    "open_access": {
+     "oa_status": "closed"
+    },
+    "primary_location": {
+     "source": {
+      "type": "repository",
+      "display_name": "Northvale University Library",
+      "issn_l": null
+     }
+    },
+    "locations": [
+     {
+      "source": {
+       "type": "repository",
+       "display_name": "Northvale University Library",
+       "issn_l": null
+      }
+     }
+    ],
+    "authorships": [
+     {
+      "author": {
+       "display_name": "Bastian Quillon"
+      }
+     }
+    ],
+    "biblio": {
+     "volume": null,
+     "issue": null,
+     "first_page": null,
+     "last_page": null
+    },
+    "referenced_works": [
+     "https://openalex.org/W0000000101",
+     "https://openalex.org/W0000000106"
+    ],
+    "abstract": "This thesis surveyed 220 first-year students about their study habits and compared self-reported music use with end-of-term grades."
+   },
+   {
+    "id": "https://openalex.org/W0000000106",
+    "doi": "https://doi.org/10.5555/nvcl.2013.0062",
+    "title": "Lyrics in the background hinder reading for listeners and nearby classmates",
+    "type": "article",
+    "publication_year": 2012,
+    "publication_date": "2012-10-11",
+    "cited_by_count": 820,
+    "is_retracted": false,
+    "open_access": {
+     "oa_status": "closed"
+    },
+    "primary_location": {
+     "source": {
+      "type": "journal",
+      "display_name": "Northvale Computers & Learning",
+      "issn_l": "0000-0035"
+     }
+    },
+    "locations": [
+     {
+      "source": {
+       "type": "journal",
+       "display_name": "Northvale Computers & Learning",
+       "issn_l": "0000-0035"
+      }
+     }
+    ],
+    "authorships": [
+     {
+      "author": {
+       "display_name": "Aino Saarinen"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Teodor Weissfeld"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Nadia Okoro-Banks"
+      }
+     }
+    ],
+    "biblio": {
+     "volume": "9",
+     "issue": null,
+     "first_page": "55",
+     "last_page": "63"
+    },
+    "referenced_works": [],
+    "abstract": "Students often study with music in shared spaces such as libraries and dorm rooms. In two experiments in a simulated study hall, participants who listened to music with lyrics while reading scored lower on a comprehension test than participants who read in silence, and participants seated next to a listener whose music was audible scored lower than those seated next to a quiet peer. Instrumental music had smaller effects. The results suggest that music with lyrics is a distraction for listeners and for the people around them."
+   },
+   {
+    "id": "https://openalex.org/W0000000105",
+    "doi": "https://doi.org/10.5555/nvjls.2021.0215",
+    "title": "Silence is not golden after all: A multisite replication of Brennholt and Vanstone’s (2014) Study 1",
+    "type": "article",
+    "publication_year": 2021,
+    "publication_date": "2021-01-01",
+    "cited_by_count": 240,
+    "is_retracted": false,
+    "open_access": {
+     "oa_status": "closed"
+    },
+    "primary_location": {
+     "source": {
+      "type": "journal",
+      "display_name": "Northvale Journal of Learning Science",
+      "issn_l": "0000-0019"
+     }
+    },
+    "locations": [
+     {
+      "source": {
+       "type": "journal",
+       "display_name": "Northvale Journal of Learning Science",
+       "issn_l": "0000-0019"
+      }
+     }
+    ],
+    "authorships": [
+     {
+      "author": {
+       "display_name": "Hollis L. Ashworth-Pell"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Corin S. Crane"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Daria Velasquez-Thorne"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Emeka O. Lindgren"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Farah Abernathy"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Gideon P. Moorcroft"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Hana K. Ostrowska"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Idris Fairbairn"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Jolene Achterberg"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Kofi A. Mensah-Ward"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Lucia Brennan-Oduya"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Marius T. Halloran"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Noor Ferraday"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Oren Castellio"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Petra Nyholm"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Quentin R. Ashby"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Rosalind Okereke"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Soren Valdane"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Talia M. Whitlock"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Umar Delacroix-Bey"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Vera Kostadinova"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Wesley Thornbury"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Xiomara Iturbe"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Yusuf Kaldirim"
+      }
+     }
+    ],
+    "biblio": {
+     "volume": "21",
+     "issue": "2",
+     "first_page": "88",
+     "last_page": "104"
+    },
+    "referenced_works": [
+     "https://openalex.org/W0000000101",
+     "https://openalex.org/W0000000106"
+    ],
+    "abstract": "Brennholt and Vanstone’s (2014) Study 1 found that students who studied in silence recalled more main ideas than students who studied with background music. We repeated Study 1 at six sites with 412 students. As in the original study, music participants gave lower focus ratings overall than did silence participants. However, music participants did not perform better or worse than silence participants on the recall test, and mini meta-analyses of seven similar studies showed the same pattern. Lower focus ratings went with weaker recall, but that link was not robust across sites. Overall, these results do not support the idea that background music impairs recall after a short study session."
+   },
+   {
+    "id": "https://openalex.org/W0000000107",
+    "doi": "https://doi.org/10.5555/njca.2016.0031",
+    "title": "Binaural beats double vocabulary retention in a single study session",
+    "type": "article",
+    "publication_year": 2016,
+    "publication_date": "2016-01-01",
+    "cited_by_count": 95,
+    "is_retracted": true,
+    "open_access": {
+     "oa_status": "closed"
+    },
+    "primary_location": {
+     "source": {
+      "type": "journal",
+      "display_name": "Northvale Journal of Classroom Acoustics",
+      "issn_l": "0000-0043"
+     }
+    },
+    "locations": [
+     {
+      "source": {
+       "type": "journal",
+       "display_name": "Northvale Journal of Classroom Acoustics",
+       "issn_l": "0000-0043"
+      }
+     }
+    ],
+    "authorships": [
+     {
+      "author": {
+       "display_name": "Fergus Drummond"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Lise Aubertin"
+      }
+     }
+    ],
+    "biblio": {
+     "volume": "4",
+     "issue": "1",
+     "first_page": "12",
+     "last_page": "19"
+    },
+    "referenced_works": [
+     "https://openalex.org/W0000000101",
+     "https://openalex.org/W0000000106"
+    ],
+    "abstract": "We tested whether listening to binaural beats while studying improves memory for new vocabulary. Sixty students studied 40 word pairs for 20 minutes with binaural beats or in silence. Students in the binaural-beat condition recalled twice as many word pairs one day later. We argue that binaural beats offer a simple, low-cost way to improve study sessions, and we recommend them to students preparing for language exams."
+   }
+  ]
+ }
+}

@@ -1,0 +1,408 @@
+WEBVTT
+Kind: captions
+Language: en-US
+
+NOTE
+Auto-generated captions from the lecture capture. Speaker names come from the roster.
+
+00:00:02.175 --> 00:00:04.097 align:start position:10%
+<v Owen Castellanos-Reid>Alright, let's start. Good afternoon.</v>
+
+00:00:04.368 --> 00:00:09.361 align:start position:10%
+<v Owen Castellanos-Reid>Before anything else, two logistics things, so, uh, write these down. First, Quiz 4.</v>
+
+00:00:09.715 --> 00:00:12.445 align:start position:10%
+<v Owen Castellanos-Reid>It was going to be this Wednesday.</v>
+
+00:00:12.921 --> 00:00:19.123 align:start position:10%
+<v Owen Castellanos-Reid>Since Homework 7 is due Thursday, I don't want you doing both in the same</v>
+
+00:00:19.565 --> 00:00:25.160 align:start position:10%
+<v Owen Castellanos-Reid>two days, so I'm moving the quiz to next Monday, November 9th, in class.</v>
+
+00:00:25.537 --> 00:00:28.709 align:start position:10%
+<v Owen Castellanos-Reid>Same material, interactions and residual plots, which is today.</v>
+
+00:00:29.136 --> 00:00:32.961 align:start position:10%
+<v Owen Castellanos-Reid>So Quiz 4 is Monday the 9th now, not Wednesday.</v>
+
+00:00:33.388 --> 00:00:38.257 align:start position:10%
+<v Owen Castellanos-Reid>Second, Mina's office hours this week are on Wednesday from 2</v>
+
+00:00:38.540 --> 00:00:42.150 align:start position:10%
+<v Owen Castellanos-Reid>to 4 in Pemberton 210, not the usual Tuesday slot.</v>
+
+00:00:42.556 --> 00:00:47.715 align:start position:10%
+<v Owen Castellanos-Reid>She posted that on Slack, but I know not everyone reads Slack. Okay.</v>
+
+00:00:47.922 --> 00:00:51.993 align:start position:10%
+<v Owen Castellanos-Reid>Today we finish interactions, and then we start reading residual</v>
+
+00:00:52.276 --> 00:00:56.164 align:start position:10%
+<v Owen Castellanos-Reid>plots, which is the other half of the homework.</v>
+
+00:00:59.442 --> 00:01:05.385 align:start position:10%
+<v Owen Castellanos-Reid>So here's the model from last time. We're predicting exam score from two things.</v>
+
+00:01:05.628 --> 00:01:10.034 align:start position:10%
+<v Owen Castellanos-Reid>Study is hours studied in the week before the exam, and</v>
+
+00:01:10.209 --> 00:01:14.293 align:start position:10%
+<v Owen Castellanos-Reid>sleep is average hours of sleep per night that week.</v>
+
+00:01:14.552 --> 00:01:17.892 align:start position:10%
+<v Owen Castellanos-Reid>And the new piece is this product term, study</v>
+
+00:01:18.357 --> 00:01:21.913 align:start position:10%
+<v Owen Castellanos-Reid>times sleep, with its own coefficient, beta 3.</v>
+
+00:01:22.085 --> 00:01:26.422 align:start position:10%
+<v Owen Castellanos-Reid>Without that term, the model says an extra hour of studying is</v>
+
+00:01:26.545 --> 00:01:31.541 align:start position:10%
+<v Owen Castellanos-Reid>worth the same amount for everybody, no matter how much they sleep.</v>
+
+00:01:31.875 --> 00:01:36.545 align:start position:10%
+<v Owen Castellanos-Reid>With it, the payoff from studying is allowed to depend on sleep.</v>
+
+00:01:36.747 --> 00:01:38.596 align:start position:10%
+<v Owen Castellanos-Reid>That's all an interaction is.</v>
+
+00:01:38.986 --> 00:01:44.771 align:start position:10%
+<v Owen Castellanos-Reid>The effect of one variable depends on the level of the other one.</v>
+
+00:01:45.162 --> 00:01:50.011 align:start position:10%
+<v Owen Castellanos-Reid>Sleep here is the average for the week, not the night before</v>
+
+00:01:50.318 --> 00:01:54.554 align:start position:10%
+<v Owen Castellanos-Reid>the exam, and that matters for how we talk about it.</v>
+
+00:01:54.921 --> 00:01:57.846 align:start position:10%
+<v Owen Castellanos-Reid>And this is simulated data, 212 students, so,</v>
+
+00:01:58.035 --> 00:02:01.424 align:start position:10%
+<v Owen Castellanos-Reid>um, don't go quoting it to your friends.</v>
+
+00:02:02.049 --> 00:02:08.148 align:start position:10%
+<v Student>Do we still need study and sleep on their own if we have the product?</v>
+
+00:02:09.148 --> 00:02:13.276 align:start position:10%
+<v Owen Castellanos-Reid>Yes. Keep the main effects in whenever you include their product.</v>
+
+00:02:13.697 --> 00:02:19.110 align:start position:10%
+<v Owen Castellanos-Reid>Dropping them forces the model through strange constraints, and the coefficients stop meaning anything sensible.</v>
+
+00:02:19.522 --> 00:02:21.830 align:start position:10%
+<v Owen Castellanos-Reid>People call that the hierarchy principle.</v>
+
+00:02:24.932 --> 00:02:27.422 align:start position:10%
+<v Owen Castellanos-Reid>So how do you interpret it?</v>
+
+00:02:27.695 --> 00:02:30.926 align:start position:10%
+<v Owen Castellanos-Reid>The first line on this slide is the</v>
+
+00:02:31.235 --> 00:02:34.799 align:start position:10%
+<v Owen Castellanos-Reid>most important line today, and, uh, it's wrong.</v>
+
+00:02:35.085 --> 00:02:36.262 align:start position:10%
+<v Owen Castellanos-Reid>Sorry about that.</v>
+
+00:02:36.728 --> 00:02:40.462 align:start position:10%
+<v Owen Castellanos-Reid>It says the effect of a one unit increase in</v>
+
+00:02:40.639 --> 00:02:44.262 align:start position:10%
+<v Owen Castellanos-Reid>x1 is beta 1 plus beta 3 times x1.</v>
+
+00:02:44.669 --> 00:02:50.769 align:start position:10%
+<v Owen Castellanos-Reid>That should be beta 1 plus beta 3 times x2. Times the other variable.</v>
+
+00:02:51.217 --> 00:02:55.177 align:start position:10%
+<v Owen Castellanos-Reid>The effect of x1 depends on the value of</v>
+
+00:02:55.553 --> 00:02:58.642 align:start position:10%
+<v Owen Castellanos-Reid>x2, that's the whole point of an interaction.</v>
+
+00:02:59.126 --> 00:03:05.199 align:start position:10%
+<v Owen Castellanos-Reid>If you copied the slide, fix it now, and I'll post a corrected version tonight.</v>
+
+00:03:05.436 --> 00:03:09.260 align:start position:10%
+<v Owen Castellanos-Reid>The second line, beta 1 on its own, is</v>
+
+00:03:09.485 --> 00:03:12.766 align:start position:10%
+<v Owen Castellanos-Reid>the effect of x1 when x2 equals 0.</v>
+
+00:03:13.106 --> 00:03:17.662 align:start position:10%
+<v Owen Castellanos-Reid>Hold on to that, because it causes trouble in a minute.</v>
+
+00:03:17.850 --> 00:03:21.455 align:start position:10%
+<v Owen Castellanos-Reid>And third, if you want to know whether the effect</v>
+
+00:03:21.601 --> 00:03:25.136 align:start position:10%
+<v Owen Castellanos-Reid>changes at all, you test whether beta 3 is 0.</v>
+
+00:03:25.354 --> 00:03:28.672 align:start position:10%
+<v Owen Castellanos-Reid>Let me say the first line one more time,</v>
+
+00:03:29.071 --> 00:03:32.253 align:start position:10%
+<v Owen Castellanos-Reid>because it's the mistake I see on every homework.</v>
+
+00:03:32.666 --> 00:03:38.001 align:start position:10%
+<v Owen Castellanos-Reid>The effect of x1 is beta 1 plus beta 3 times x2.</v>
+
+00:03:41.849 --> 00:03:43.801 align:start position:10%
+<v Owen Castellanos-Reid>Okay, here's the fitted model.</v>
+
+00:03:43.939 --> 00:03:48.812 align:start position:10%
+<v Owen Castellanos-Reid>Intercept 52, study 3.1, sleep 1.8, and the interaction is 0.4</v>
+
+00:03:49.025 --> 00:03:53.121 align:start position:10%
+<v Owen Castellanos-Reid>with a standard error of 0.12, so it's clearly not 0.</v>
+
+00:03:53.300 --> 00:03:54.846 align:start position:10%
+<v Owen Castellanos-Reid>So let's use it.</v>
+
+00:03:55.251 --> 00:03:58.725 align:start position:10%
+<v Owen Castellanos-Reid>What's the payoff from one more hour of studying</v>
+
+00:03:59.122 --> 00:04:02.414 align:start position:10%
+<v Owen Castellanos-Reid>for a student who sleeps 8 hours a night?</v>
+
+00:04:02.809 --> 00:04:07.257 align:start position:10%
+<v Owen Castellanos-Reid>Let me flip back to the formula for a second.</v>
+
+00:04:10.844 --> 00:04:17.089 align:start position:10%
+<v Owen Castellanos-Reid>Right, beta 1 plus beta 3 times x2, the corrected version. Here x2 is sleep.</v>
+
+00:04:17.263 --> 00:04:20.340 align:start position:10%
+<v Owen Castellanos-Reid>So it's 3.1 plus 0.4 times 8.</v>
+
+00:04:23.479 --> 00:04:25.017 align:start position:10%
+<v Owen Castellanos-Reid>Back to the table.</v>
+
+00:04:25.280 --> 00:04:31.397 align:start position:10%
+<v Owen Castellanos-Reid>0.4 times 8 is 3.2, plus 3.1, so 6.3 points per extra hour of studying.</v>
+
+00:04:31.551 --> 00:04:38.004 align:start position:10%
+<v Owen Castellanos-Reid>And for a student who sleeps 5 hours, it's 3.1 plus 2, so 5.1 points.</v>
+
+00:04:38.462 --> 00:04:43.999 align:start position:10%
+<v Owen Castellanos-Reid>Same hour of studying, worth more if you've slept. And notice the sign.</v>
+
+00:04:44.323 --> 00:04:48.178 align:start position:10%
+<v Owen Castellanos-Reid>The interaction is positive, so sleep makes studying more valuable.</v>
+
+00:04:48.583 --> 00:04:52.848 align:start position:10%
+<v Owen Castellanos-Reid>If it were negative, the payoff from studying would shrink</v>
+
+00:04:53.118 --> 00:04:57.416 align:start position:10%
+<v Owen Castellanos-Reid>the more you sleep, which would be a strange world.</v>
+
+00:04:57.580 --> 00:04:58.389 align:start position:10%
+<v Owen Castellanos-Reid>Yeah, question?</v>
+
+00:04:59.236 --> 00:05:03.255 align:start position:10%
+<v Student>So does the 3.1 by itself mean the effect</v>
+
+00:05:03.587 --> 00:05:07.508 align:start position:10%
+<v Student>of studying for someone who sleeps zero hours?</v>
+
+00:05:08.265 --> 00:05:11.879 align:start position:10%
+<v Owen Castellanos-Reid>Yes. Exactly. And that's a person who doesn't exist.</v>
+
+00:05:12.270 --> 00:05:15.383 align:start position:10%
+<v Owen Castellanos-Reid>Nobody in the data sleeps zero hours.</v>
+
+00:05:15.559 --> 00:05:20.876 align:start position:10%
+<v Owen Castellanos-Reid>So 3.1 is a perfectly correct number that answers a useless question.</v>
+
+00:05:21.049 --> 00:05:22.971 align:start position:10%
+<v Owen Castellanos-Reid>Which brings us to centering.</v>
+
+00:05:26.401 --> 00:05:30.354 align:start position:10%
+<v Owen Castellanos-Reid>Centering means you subtract the mean before you build the product.</v>
+
+00:05:30.632 --> 00:05:36.476 align:start position:10%
+<v Owen Castellanos-Reid>Average sleep in this data is 7 hours, so centered sleep is sleep minus 7.</v>
+
+00:05:36.960 --> 00:05:40.942 align:start position:10%
+<v Owen Castellanos-Reid>Refit, and now the study coefficient is 5.9, which</v>
+
+00:05:41.408 --> 00:05:44.702 align:start position:10%
+<v Owen Castellanos-Reid>is the payoff from studying at average sleep.</v>
+
+00:05:44.989 --> 00:05:49.249 align:start position:10%
+<v Owen Castellanos-Reid>That's a number you can actually say out loud in a sentence.</v>
+
+00:05:49.535 --> 00:05:53.809 align:start position:10%
+<v Owen Castellanos-Reid>And notice what doesn't change. The interaction, beta 3, is still 0.4.</v>
+
+00:05:54.184 --> 00:05:59.325 align:start position:10%
+<v Owen Castellanos-Reid>The predictions are the same and the R squared is the same.</v>
+
+00:05:59.816 --> 00:06:05.120 align:start position:10%
+<v Owen Castellanos-Reid>Centering changes what the main effects mean, not what the model says.</v>
+
+00:06:05.502 --> 00:06:09.191 align:start position:10%
+<v Owen Castellanos-Reid>Quick self-check: if you center, refit, and beta 3</v>
+
+00:06:09.677 --> 00:06:13.020 align:start position:10%
+<v Owen Castellanos-Reid>changed, you made a mistake in your code.</v>
+
+00:06:13.209 --> 00:06:16.961 align:start position:10%
+<v Owen Castellanos-Reid>And a hint, since I just moved the quiz.</v>
+
+00:06:17.352 --> 00:06:21.773 align:start position:10%
+<v Owen Castellanos-Reid>On Quiz 4, I'm going to give you a model that</v>
+
+00:06:22.125 --> 00:06:25.693 align:start position:10%
+<v Owen Castellanos-Reid>is not centered and ask you to interpret beta 1.</v>
+
+00:06:26.085 --> 00:06:30.086 align:start position:10%
+<v Owen Castellanos-Reid>The right answer always says, when the other variable is 0.</v>
+
+00:06:30.310 --> 00:06:35.972 align:start position:10%
+<v Owen Castellanos-Reid>Every year people write at the average, and that's only true after centering.</v>
+
+00:06:39.126 --> 00:06:41.063 align:start position:10%
+<v Owen Castellanos-Reid>Okay, second half. Residual plots.</v>
+
+00:06:41.410 --> 00:06:44.780 align:start position:10%
+<v Owen Castellanos-Reid>This is the residuals versus fitted plot for</v>
+
+00:06:45.051 --> 00:06:47.959 align:start position:10%
+<v Owen Castellanos-Reid>the model we just fit, before any fixes.</v>
+
+00:06:48.321 --> 00:06:51.592 align:start position:10%
+<v Owen Castellanos-Reid>Fitted values along the bottom, residuals up the</v>
+
+00:06:51.921 --> 00:06:55.045 align:start position:10%
+<v Owen Castellanos-Reid>side, and the red dashed line is zero.</v>
+
+00:06:55.487 --> 00:07:01.179 align:start position:10%
+<v Owen Castellanos-Reid>If the model were doing its job, you'd see a shapeless cloud around that line.</v>
+
+00:07:01.338 --> 00:07:04.818 align:start position:10%
+<v Owen Castellanos-Reid>Take 10 seconds and just look at it.</v>
+
+00:07:15.898 --> 00:07:21.554 align:start position:10%
+<v Owen Castellanos-Reid>I'm not going to tell you what's wrong with it, because problem 4 on</v>
+
+00:07:21.675 --> 00:07:26.981 align:start position:10%
+<v Owen Castellanos-Reid>Homework 7 asks you to diagnose a plot that looks a lot like this</v>
+
+00:07:27.271 --> 00:07:32.722 align:start position:10%
+<v Owen Castellanos-Reid>one, and I want you to practice saying it in your own words.</v>
+
+00:07:32.869 --> 00:07:37.353 align:start position:10%
+<v Owen Castellanos-Reid>But I'll tell you this much. It's not about one weird point.</v>
+
+00:07:37.674 --> 00:07:40.518 align:start position:10%
+<v Owen Castellanos-Reid>Look at the whole shape, left to right.</v>
+
+00:07:41.270 --> 00:07:44.896 align:start position:10%
+<v Student>Is it, like, the points at the top right?</v>
+
+00:07:45.750 --> 00:07:52.009 align:start position:10%
+<v Owen Castellanos-Reid>Not just those. Compare the left side with the right side. That's all I'll say.</v>
+
+00:07:54.194 --> 00:07:59.734 align:start position:10%
+<v Owen Castellanos-Reid>So when you see a problem like that, it usually means the variance of</v>
+
+00:08:00.206 --> 00:08:05.307 align:start position:10%
+<v Owen Castellanos-Reid>the errors isn't constant, and there are three standard fixes on this slide.</v>
+
+00:08:05.579 --> 00:08:09.621 align:start position:10%
+<v Owen Castellanos-Reid>One, transform the outcome, often with a log, and refit.</v>
+
+00:08:09.771 --> 00:08:13.012 align:start position:10%
+<v Owen Castellanos-Reid>Two, keep the model and use robust standard errors.</v>
+
+00:08:13.185 --> 00:08:16.382 align:start position:10%
+<v Owen Castellanos-Reid>People call them HC standard errors, for heteroskedasticity-consistent.</v>
+
+00:08:16.679 --> 00:08:20.827 align:start position:10%
+<v Owen Castellanos-Reid>The estimates don't change, but the standard errors get honest.</v>
+
+00:08:20.965 --> 00:08:26.684 align:start position:10%
+<v Owen Castellanos-Reid>Three, weighted least squares, if you can actually model how the variance changes.</v>
+
+00:08:27.139 --> 00:08:31.751 align:start position:10%
+<v Owen Castellanos-Reid>For Homework 7, robust standard errors are all I'm expecting on problem 4.</v>
+
+00:08:32.077 --> 00:08:34.186 align:start position:10%
+<v Owen Castellanos-Reid>You don't need weighted least squares.</v>
+
+00:08:34.636 --> 00:08:39.143 align:start position:10%
+<v Owen Castellanos-Reid>If you do it anyway, great, but it's not worth extra points.</v>
+
+00:08:39.795 --> 00:08:45.180 align:start position:10%
+<v Student>If we log the outcome, do the coefficients mean something different?</v>
+
+00:08:45.892 --> 00:08:46.604 align:start position:10%
+<v Owen Castellanos-Reid>They do.</v>
+
+00:08:46.977 --> 00:08:51.675 align:start position:10%
+<v Owen Castellanos-Reid>After a log, a coefficient is roughly a percent change in the outcome</v>
+
+00:08:51.970 --> 00:08:56.669 align:start position:10%
+<v Owen Castellanos-Reid>for a one unit change in the predictor, at least when it's small.</v>
+
+00:08:56.959 --> 00:08:59.011 align:start position:10%
+<v Owen Castellanos-Reid>We'll practice that next week.</v>
+
+00:08:59.467 --> 00:09:06.095 align:start position:10%
+<v Owen Castellanos-Reid>A log is nice when the outcome is positive and skewed, like income or prices.</v>
+
+00:09:06.514 --> 00:09:12.326 align:start position:10%
+<v Owen Castellanos-Reid>Exam scores are bounded, so for this data I'd reach for robust standard errors first.</v>
+
+00:09:15.020 --> 00:09:19.857 align:start position:10%
+<v Owen Castellanos-Reid>The next slide is leverage and Cook's distance. I'm skipping it today.</v>
+
+00:09:20.160 --> 00:09:25.520 align:start position:10%
+<v Owen Castellanos-Reid>We'll do it properly on Wednesday, and it's not on Homework 7. So, skip.</v>
+
+00:09:27.880 --> 00:09:28.764 align:start position:10%
+<v Owen Castellanos-Reid>Last thing.</v>
+
+00:09:29.228 --> 00:09:32.735 align:start position:10%
+<v Owen Castellanos-Reid>Homework 7 is due Thursday at 11:59 PM, one</v>
+
+00:09:33.196 --> 00:09:36.862 align:start position:10%
+<v Owen Castellanos-Reid>PDF rendered from your notebook, like it says here.</v>
+
+00:09:37.354 --> 00:09:40.904 align:start position:10%
+<v Owen Castellanos-Reid>Problems 3 and 4 use exactly what we did today.</v>
+
+00:09:41.072 --> 00:09:45.570 align:start position:10%
+<v Owen Castellanos-Reid>And remember, Quiz 4 is next Monday now, not this Wednesday.</v>
+
+00:09:45.718 --> 00:09:49.976 align:start position:10%
+<v Owen Castellanos-Reid>In problem 3 you fit an interaction model and interpret every</v>
+
+00:09:50.131 --> 00:09:54.203 align:start position:10%
+<v Owen Castellanos-Reid>coefficient in a sentence, and problem 4 is the residual diagnosis.</v>
+
+00:09:54.418 --> 00:09:57.639 align:start position:10%
+<v Owen Castellanos-Reid>Please label your plots, the graders will thank you.</v>
+
+00:09:57.918 --> 00:10:00.827 align:start position:10%
+<v Owen Castellanos-Reid>On Wednesday we'll do leverage and outliers.</v>
+
+00:10:03.837 --> 00:10:07.173 align:start position:10%
+<v Owen Castellanos-Reid>Any questions? The slide shows the regular office hours.</v>
+
+00:10:07.450 --> 00:10:11.509 align:start position:10%
+<v Owen Castellanos-Reid>Again, this week Mina is Wednesday 2 to 4, not Tuesday.</v>
+
+00:10:11.687 --> 00:10:15.410 align:start position:10%
+<v Owen Castellanos-Reid>Mine are the same as always, Thursday 10 to 11.</v>
+
+00:10:15.577 --> 00:10:19.435 align:start position:10%
+<v Owen Castellanos-Reid>If interactions still feel fuzzy, go to Mina's hours on Wednesday.</v>
+
+00:10:19.594 --> 00:10:24.521 align:start position:10%
+<v Owen Castellanos-Reid>It's the day before the homework is due, so it's a good time.</v>
+
+00:10:24.662 --> 00:10:26.426 align:start position:10%
+<v Owen Castellanos-Reid>Okay, see you Wednesday.</v>

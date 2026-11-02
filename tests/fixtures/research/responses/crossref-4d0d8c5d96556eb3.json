@@ -1,0 +1,142 @@
+{
+ "url": "https://api.crossref.org/works/10.5555/nvjls.2021.0215",
+ "kind": "crossref_work",
+ "doi": "10.5555/nvjls.2021.0215",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "message": {
+   "DOI": "10.5555/nvjls.2021.0215",
+   "title": [
+    "Silence is not golden after all"
+   ],
+   "subtitle": [
+    "A multisite replication of Brennholt and Vanstone’s (2014) Study 1"
+   ],
+   "container-title": [
+    "Northvale Journal of Learning Science"
+   ],
+   "ISSN": [
+    "0000-0019"
+   ],
+   "volume": "21",
+   "issue": "2",
+   "page": "88-104",
+   "type": "journal-article",
+   "published-print": {
+    "date-parts": [
+     [
+      2021,
+      6
+     ]
+    ]
+   },
+   "issued": {
+    "date-parts": [
+     [
+      2021
+     ]
+    ]
+   },
+   "is-referenced-by-count": 240,
+   "author": [
+    {
+     "given": "Hollis L.",
+     "family": "Ashworth-Pell"
+    },
+    {
+     "given": "Corin S.",
+     "family": "Crane"
+    },
+    {
+     "given": "Daria",
+     "family": "Velasquez-Thorne"
+    },
+    {
+     "given": "Emeka O.",
+     "family": "Lindgren"
+    },
+    {
+     "given": "Farah",
+     "family": "Abernathy"
+    },
+    {
+     "given": "Gideon P.",
+     "family": "Moorcroft"
+    },
+    {
+     "given": "Hana K.",
+     "family": "Ostrowska"
+    },
+    {
+     "given": "Idris",
+     "family": "Fairbairn"
+    },
+    {
+     "given": "Jolene",
+     "family": "Achterberg"
+    },
+    {
+     "given": "Kofi A.",
+     "family": "Mensah-Ward"
+    },
+    {
+     "given": "Lucia",
+     "family": "Brennan-Oduya"
+    },
+    {
+     "given": "Marius T.",
+     "family": "Halloran"
+    },
+    {
+     "given": "Noor",
+     "family": "Ferraday"
+    },
+    {
+     "given": "Oren",
+     "family": "Castellio"
+    },
+    {
+     "given": "Petra",
+     "family": "Nyholm"
+    },
+    {
+     "given": "Quentin R.",
+     "family": "Ashby"
+    },
+    {
+     "given": "Rosalind",
+     "family": "Okereke"
+    },
+    {
+     "given": "Soren",
+     "family": "Valdane"
+    },
+    {
+     "given": "Talia M.",
+     "family": "Whitlock"
+    },
+    {
+     "given": "Umar",
+     "family": "Delacroix-Bey"
+    },
+    {
+     "given": "Vera",
+     "family": "Kostadinova"
+    },
+    {
+     "given": "Wesley",
+     "family": "Thornbury"
+    },
+    {
+     "given": "Xiomara",
+     "family": "Iturbe"
+    },
+    {
+     "given": "Yusuf",
+     "family": "Kaldirim"
+    }
+   ]
+  }
+ }
+}

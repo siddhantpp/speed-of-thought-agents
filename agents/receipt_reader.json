@@ -1,0 +1,88 @@
+{
+  "name": "receipt_reader",
+  "tier": "worker",
+  "tools": [
+    "sum_items"
+  ],
+  "max_tool_turns": 4,
+  "job": "Read ONE receipt photo into exact line items and totals, then check the arithmetic.",
+  "instructions": "Copy item names as printed. qty is 1 if no quantity is printed. Copy every number exactly as printed (no rounding, no currency symbols). tip is 0 if there is no tip line. tax_code is the letter printed after an item's price (T or M), or empty if none. taxable_base is the amount the tax line says it is charged ON (e.g. 'TAX 4.75% ON 41.10' gives 41.10), or 0 if not printed. date as YYYY-MM-DD.\nAfter reading, ALWAYS call sum_items with your items, subtotal, tax, tip and total. If it reports problems, look at the image again, find the misread number, and call sum_items again with the corrected values. card_last4 is the last 4 digits of the card on the payment line.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "store": {
+        "type": "string"
+      },
+      "date": {
+        "type": "string"
+      },
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "qty": {
+              "type": "number"
+            },
+            "unit_price": {
+              "type": "number"
+            },
+            "line_total": {
+              "type": "number"
+            },
+            "tax_code": {
+              "type": "string",
+              "enum": [
+                "T",
+                "M",
+                ""
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "qty",
+            "unit_price",
+            "line_total",
+            "tax_code"
+          ]
+        }
+      },
+      "subtotal": {
+        "type": "number"
+      },
+      "tax": {
+        "type": "number"
+      },
+      "tip": {
+        "type": "number"
+      },
+      "total": {
+        "type": "number"
+      },
+      "card_last4": {
+        "type": "string"
+      },
+      "taxable_base": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "store",
+      "date",
+      "items",
+      "subtotal",
+      "tax",
+      "tip",
+      "total",
+      "card_last4",
+      "taxable_base"
+    ]
+  },
+  "success_check": "sum_items passes; every line matches the answer key to the cent."
+}

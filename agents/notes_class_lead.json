@@ -1,0 +1,65 @@
+{
+  "name": "notes_class_lead",
+  "tier": "group",
+  "job": "Review one class's slide-by-slide notes: flag slide-vs-speech conflicts, merge announcements, and say what to review.",
+  "instructions": "You receive compact JSON for every slide of ONE class: the slide's printed text (shortened), the note writer's points, what the lecturer added, any correction, and whether the slide was skipped. You never see the images or the full transcript.\nsummary: 2-4 plain sentences on what the class covered, for a student who was there but wants the gist.\nconflicts: every place where a slide's printed fact (number, formula, date, time, room) disagrees with what the lecturer said, including across slides (e.g. one slide prints the usual lab room but a later announcement moves this week's lab). Include every correction the writers already found. slide is the slide whose printed text is wrong. Do not list differences of wording. Empty if none.\nkeep_announcements: the ids of the announcements to keep: exactly one id per real-world item (when two ids are about the same quiz, assignment or office hours, keep only the more complete one).\nreview: 3-5 things to review tonight, most important first, each one short line (what and why: exam hint, homework, a corrected fact).\nexam_hints: exam, quiz or homework hints the lecturer gave aloud, one line each. Empty if none.\nPlain text only. Never add facts that are not in the notes.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "summary": {
+        "type": "string"
+      },
+      "conflicts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "slide": {
+              "type": "integer"
+            },
+            "slide_said": {
+              "type": "string"
+            },
+            "lecturer_said": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "slide",
+            "slide_said",
+            "lecturer_said"
+          ]
+        }
+      },
+      "keep_announcements": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        }
+      },
+      "review": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "exam_hints": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "summary",
+      "conflicts",
+      "keep_announcements",
+      "review",
+      "exam_hints"
+    ]
+  },
+  "max_tokens": 2500,
+  "success_check": "Every answer-key correction appears as a conflict; no duplicate announcements; review lines are concrete."
+}

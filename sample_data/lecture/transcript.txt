@@ -1,0 +1,131 @@
+CS 152: Data Structures and Systems
+Lecture 9 — Hash Tables: From Arrays to O(1) Lookups
+Thursday, October 29, 2026
+Instructor: Prof. Imogen Vasquez-Hale
+[Transcript generated from the lecture recording and lightly cleaned. Most speech disfluencies have been kept.]
+
+PROF. VASQUEZ-HALE: Okay, let's — can the back row hear me? Thumbs up? Great. Okay. Um, so let's get started. Welcome back. Last time we finished up with sorted arrays and binary search, and we said that if you keep your data sorted, you can find anything in O(log n) time. Which is great! For a million items that's about twenty comparisons. But today I want to be greedy. Today I want lookups that don't depend on n at all. I want O(1). And the data structure that gets us there, most of the time — and I'm going to keep saying "most of the time," so, uh, hold on to that — is the hash table.
+
+So let me start with a, with a question. Suppose I hand you an array and I say, give me the element at index 7. How long does that take?
+
+[pause]
+
+Yeah, constant time. You don't search for it. The computer takes the starting address of the array, adds seven times the size of each element, and jumps straight there. That's the superpower we're going to steal today. Array indexing is O(1) because the index tells you exactly where to look.
+
+So here's the first idea, and it's almost too simple. If my keys are small integers — say I'm storing data about the thirty people in a seminar, and each person has a seat number from 0 to 29 — I just make an array of size thirty and put person k in slot k. Lookup is one step. Insert is one step. Delete is one step. This is called direct addressing. The key is the index.
+
+Okay, but — here's the problem. Real keys aren't like that. Real keys are student IDs with nine digits, or email addresses, or, you know, URLs, or the title of a song. If I wanted to direct-address nine-digit student IDs, I'd need an array with a billion slots to store maybe two thousand students. That's, um, that's a lot of empty seats. And for strings it's even worse, because there isn't even an obvious index. What's the index of "banana"?
+
+So the trick is: we take the key, whatever it is, and we run it through a function that turns it into an integer. That function is called a hash function. And then we take that integer and squash it into the range of our array, usually with the modulo operator. So the index is the hash of the key, mod m, where m is the number of slots. And we call those slots buckets.
+
+Let me write that up. [writing on board] Index equals h of k, mod m. The array is the table, each slot is a bucket, and h is the hash function. That's the whole picture. Everything else today is about what goes wrong with this picture and how we fix it.
+
+Now, what makes a hash function good? I want three things, and I want you to write these down because they show up on the problem set.
+
+One: it has to be deterministic. The same key has to produce the same hash every single time. If I put — er, if I put some name in today and it hashes to bucket 4, and tomorrow the same name hashes to bucket 9, I will never find it again. So equal keys must always give equal hashes.
+
+Two: it should spread keys out uniformly across the buckets. If all my keys land in three buckets out of a thousand, I've basically built a very expensive linked list.
+
+Three: it should be fast to compute. The whole point is O(1) lookups. If the hash function itself takes forever, we've lost before we started.
+
+Let me give you a bad one. Suppose my keys are last names and my hash function is "the first letter of the name." That's deterministic, and it's fast — but it's terrible at spreading things out. And, okay, small tangent. My grandmother had a recipe box, one of those little wooden boxes with index cards, and it had tabs A through Z. And the S section was, like, four inches thick. Soups, stews, scones, something she called "Sunday chicken." And the X section was empty, obviously, and Q had one card for a quiche that I'm pretty sure she never once made. That recipe box is a hash table with a bad hash function. You'd go to S and you'd be flipping for five minutes while the butter burned. Anyway. She was a wonderful cook. The data structure, less so.
+
+A better hash function for strings looks at every character and mixes them all together. A common pattern is a polynomial hash: you go through the characters one at a time, and at each step you multiply the running total by some constant, like 31, and add the next character's code. That way "stop" and "pots" — same letters, different order — end up with different hashes, which the "add up the letters" approach would get wrong. Real libraries use fancier mixing than that, but that's the core idea: every bit of the key should affect the result.
+
+Okay. Now here's the thing you've probably already figured out. If I have more possible keys than buckets — and I always do — then some keys have to share a bucket. That's just the pigeonhole principle. If you have ten pigeons and nine holes, some hole gets two pigeons. When two different keys hash to the same bucket, that's called a collision. And collisions are not a bug in your hash function. They're inevitable. The only question is how you handle them.
+
+And they happen way sooner than your intuition says. This is the birthday problem. How many people do you need in a room before there's a better than even chance that two of them share a birthday? Anybody? Somebody said a hundred and eighty-three — that's the intuitive answer, half of 365. It's only 23. With 70 people it's over 99.9 percent. So if you have 365 buckets and you start throwing keys in at random, you'll probably get your first collision before you've used even 10 percent of the buckets. Collisions are the normal case, not the exception.
+
+So. Two big families of solutions. The first one is called separate chaining, or just chaining.
+
+With chaining, each bucket doesn't hold one item. Each bucket holds a little list — a linked list, or a small dynamic array, it doesn't really matter — of all the items that hashed there. To insert, you hash the key, go to that bucket, and add it to that bucket's list. To look something up, you hash the key, go to that bucket, and walk down the list comparing keys until you find it or you run out. Deleting is just removing it from that list.
+
+Let me draw it. [drawing] Bucket 0 is empty, bucket 1 has "kiwi," bucket 2 has "apple" and then "plum" chained after it, bucket 3 is empty, and so on. Notice we compare the actual keys as we walk the chain, not just the hashes, because two different keys can share a bucket.
+
+So how long does a lookup take? It depends on how long the chains are. And that brings us to probably the most important number in this whole lecture, which is the load factor. The load factor, usually written alpha, is the number of items stored divided by the number of buckets. So n over m. If I have 50 items in 100 buckets, alpha is 0.5. If I have 200 items in 100 buckets, alpha is 2 — and with chaining that's allowed, you just have longer chains.
+
+If your hash function spreads keys out uniformly, the average chain length is alpha. So a lookup costs, on average, the time to compute the hash plus the time to walk a chain of length about alpha. We write that as O(1 + alpha). And as long as we keep alpha bounded by a constant — that's the whole game — the expected cost is O(1).
+
+Java's HashMap, for example, uses chaining, and by default it resizes when the load factor passes 0.75.
+
+Yes — question in the back?
+
+STUDENT: Um, so if the chains are linked lists, couldn't one chain get really long anyway? Like, even if the average is fine?
+
+PROF. VASQUEZ-HALE: Yes! Great question. The average being small doesn't mean every chain is small. If you're unlucky, or if someone is choosing keys specifically to be mean to you, a lot of keys could land in one bucket. In the absolute worst case, every single key lands in the same bucket and your hash table is just a linked list with extra steps. Then lookup is O(n). So I want to be really clear about this: hash table lookups are O(1) on average, or expected, with a good hash function. The worst case is O(n). We'll come back to the "someone being mean to you" part in a few minutes, because that's actually a real security problem.
+
+STUDENT: So when people say hash tables are O(1), they're kind of lying?
+
+PROF. VASQUEZ-HALE: [laughs] They're rounding. They're telling you the expected case, which is the case you'll almost always see in practice. Just don't write "worst case O(1)" on the midterm, because that one I will take points off for.
+
+Okay. The second family is called open addressing. In open addressing, there are no chains. Every item lives directly in the array itself, one item per slot. So when you get a collision, you have to find some other slot in the array. The simplest strategy is called linear probing: if the slot you hashed to is taken, try the next one. If that's taken, try the next one. Wrap around at the end. Keep going until you find an empty slot.
+
+So, insert: hash to slot i. Full? Try i plus 1. Full? Try i plus 2. And so on, all mod m. And lookup does the same walk: start at slot i and keep stepping forward until you either find the key, or you hit an empty slot. If you hit an empty slot, the key isn't there, because if it were, insert would have put it in that empty slot or earlier.
+
+Let's do a tiny example. Table of size 8, slots 0 through 7. Say "fig" hashes to 5, so it goes in slot 5. "Lime" hashes to 5 too — collision — so it probes to 6. "Date" hashes to 6, which is now taken by lime, so date goes to 7. And then "pear" hashes to 7, which is taken, so it wraps around to slot 0. Look at what happened: pear and date never collided with fig directly, but they all got pulled into the same run of filled slots.
+
+So, two consequences. First, with open addressing the load factor can never be more than 1. You only have m slots. And in practice you want to stay well below 1, because — second consequence — linear probing creates clusters. Once you have a run of filled slots, any key that hashes anywhere into that run gets added to the end of it, which makes the run longer, which makes it more likely to catch the next key. It's like a traffic jam on the highway. This is called primary clustering.
+
+And the cost grows fast as the table fills. There's a classic textbook analysis of this: with linear probing, an unsuccessful search takes about one-half times, one plus one over one-minus-alpha squared, probes. You don't need to memorize that formula. But plug in some numbers: at half full, that's about two and a half probes. At 90 percent full, it's about 50. That's the cliff. So linear probing tables usually resize somewhere around half to two-thirds full.
+
+There are other probing strategies — quadratic probing, where you jump by 1, then 4, then 9, and so on, and double hashing, where a second hash function decides the step size. They both reduce clustering. But linear probing has a big practical advantage: it walks through memory in order, which is really friendly to your CPU cache. So it's often faster in real life than the math alone suggests.
+
+Okay, oh — before I forget, logistics. Problem set five is due Friday at 5 pm — and I mean next Friday, November 6th, not tomorrow. It goes up on Canvas tomorrow morning. It's the hash table problem set: you're going to implement linear probing, including deletion, and then measure probe counts as the load factor goes up. Which is actually a nice segue, because deletion is the tricky part.
+
+Yes, go ahead.
+
+STUDENT 2: For deletion in linear probing, can't you just, like, empty out the slot?
+
+PROF. VASQUEZ-HALE: So that's exactly the bug I want everybody to avoid on the problem set. Let's see why. Go back to our example. Fig is in slot 5, and lime hashed to 5, found it full, and got put in slot 6. Now I delete fig by emptying slot 5. Then I look up lime. I hash to 5, I see an empty slot, and I conclude lime isn't in the table. But it is! It's sitting right there in slot 6. Emptying the slot broke the probe chain.
+
+So instead, when you delete, you leave a marker in the slot called a tombstone. A tombstone says "something used to be here, keep probing." Lookups skip over tombstones and keep going. Inserts can reuse a tombstone slot, as long as you've checked the key isn't already sitting further along the probe sequence. And when the table gets resized, you just drop the tombstones. The one catch is that tombstones still make lookups walk farther, so if you do lots of deletes, you can end up with a table full of tombstones that's slow even though it's mostly "empty." That's another reason to rebuild the table every now and then.
+
+STUDENT 2: Okay, so a tombstone counts as full for lookups but empty for inserts?
+
+PROF. VASQUEZ-HALE: That's a really nice way to say it. Yes. Write that down.
+
+Okay. Let's talk about resizing, because that's how we keep alpha small.
+
+The idea: when the load factor crosses some threshold, allocate a new, bigger array — usually twice as big — and move everything over. Now here's the part people get wrong. You cannot just copy the items into the same positions in the new array. Remember, the index is the hash of k mod m. When m changes, the index changes. So every key has to be rehashed and reinserted into the new table. That's why it's called rehashing.
+
+So a single resize is expensive. It's O(n), because you touch every item. And that sounds bad. If an insert can cost O(n), how can we claim inserts are O(1)?
+
+The answer is amortized analysis, which you saw on problem set four with dynamic arrays. Same argument. If you double the table each time, the resizes happen at sizes 1, 2, 4, 8, and so on, up to n. The total copying work is 1 plus 2 plus 4 plus up to n, which is less than 2n. Spread that over n inserts, and each insert pays a constant amount extra. So any one insert might be slow, but the average cost per insert, over any sequence of inserts, is O(1). That's what amortized O(1) means. It's a guarantee about the total, not about each individual operation.
+
+And notice it matters that we double, rather than add a fixed number of slots. If you grow by, say, a hundred slots each time, you resize every hundred inserts, and the total copying work becomes quadratic. Growing geometrically is what makes the math work.
+
+Okay, so, let's make this concrete with something you use every day: the Python dictionary. A Python dict is a hash table. When you write d, bracket, "riley," bracket, equals 3, Python calls hash on the string "riley," uses some of the bits of that hash to pick a slot, and stores the key and value there.
+
+A few things about Python's dict that I think are fun. First, it uses open addressing, not chaining. It doesn't use plain linear probing, though — it uses a probe sequence that gradually mixes in the higher bits of the hash, so that keys that collide once don't keep colliding forever. Second, the table size is always a power of two, so instead of computing mod m, it can just grab the low bits of the hash, which is very fast. Some other implementations prefer prime table sizes, because primes are more forgiving when the hash function is weak. Third, CPython resizes the dict when it gets about two-thirds full. And fourth, since Python 3.7, dictionaries are guaranteed to remember insertion order. That's done with a separate compact array of entries, and the hash table itself just stores small indexes into that array.
+
+Also, only hashable things can be keys. Strings, numbers, tuples of hashable things — fine. But if you try to use a list as a dictionary key, you get a TypeError: unhashable type: 'list'. And that's not Python being fussy. Think about it: if you could put a list in as a key and then append to it, its hash would change, and it'd be sitting in the wrong bucket forever. Mutable keys break the "equal keys, equal hashes, every time" rule.
+
+Little bit of trivia, since we're here. Try hash of 42 in Python. You get 42. Small integers hash to themselves. Now try hash of negative 1. You get negative 2. And the reason is — this is a great piece of C history — inside CPython, a hash function returns negative 1 to signal an error, so a real hash of negative 1 had to be bumped to negative 2. Nobody needs to know that. But now you do.
+
+Okay, so, the security thing I promised. Remember: the worst case is every key in one bucket, O(n) per operation. If an attacker knows your hash function, they can craft thousands of keys that all collide — say, as the parameter names in a web request — and your server's dictionary turns into a linked list, and processing one request takes quadratic time. This is called a hash flooding attack, and around 2011 it was shown to work against a bunch of popular web frameworks. The fix in Python: string hashes are salted with a random seed each time the interpreter starts. That's why, if you print the hash of a string in two different Python sessions, you'll get two different numbers. Your program shouldn't depend on those values anyway. The rule is still same key in, same hash out — within one run.
+
+Um, how are we on time? Okay, good. One more real-world aside and then we'll wrap up.
+
+Hash tables are everywhere in systems, and two patterns you'll see over and over are deduplication and caching.
+
+Deduplication: say you've got a log with ten million events and you want to know how many distinct users showed up. The naive approach compares every event against every other event — that's O(n squared), and with ten million events you will be waiting a very long time. Instead, you keep a set — which in Python is also a hash table, just keys with no values — and for each event you ask "have I seen this user before?" That's an O(1) check on average, so the whole thing is O(n). One pass through the log.
+
+Caching: suppose you have a function that's expensive — it calls a slow web API, or it recomputes some big feature for a model. You keep a dictionary from inputs to outputs. Before doing the expensive work, you check the dictionary. If the answer's already there, return it. That's memoization, and Python's functools.lru_cache decorator does it for you with a dictionary under the hood. Your web browser does the same thing with pages and images, keyed by URL. Same idea, bigger scale. Your project teams are basically building one of these right now, so, uh, this is fair game.
+
+[pause]
+
+Okay, let me summarize, and then I'll maybe let you go a couple of minutes early.
+
+One: a hash function turns a key into an integer, and mod m turns that into a bucket index. Good hash functions are deterministic, uniform, and fast.
+
+Two: collisions are inevitable — pigeonhole — and they happen early — birthday problem.
+
+Three: chaining keeps a list per bucket. Open addressing, like linear probing, stores everything in the array and probes for a free slot. With linear probing, you delete with tombstones, not by emptying the slot.
+
+Four: the load factor, n over m, is the knob. Keep it bounded by resizing — doubling the table and rehashing every key — and you get O(1) average lookups and amortized O(1) inserts.
+
+Five: the worst case is still O(n). That's why hash function quality, and randomization, matter.
+
+And one thing hash tables are bad at: order. They don't keep keys sorted, so if you want all the students with IDs between this one and that one, or just the smallest key, a hash table can't help you without looking at everything. Which is exactly why next time we're doing binary search trees.
+
+Okay. That's it. Have a great afternoon, see you Tuesday.

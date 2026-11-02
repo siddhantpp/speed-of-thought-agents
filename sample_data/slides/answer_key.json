@@ -1,0 +1,479 @@
+{
+  "description": "Answer key for the slides workflow (sample_data/slides). Graded by scoring/slides.py.",
+  "inputs": [
+    "brief.md",
+    "notes.md",
+    "data.csv"
+  ],
+  "slide_count": {
+    "min": 6,
+    "max": 8
+  },
+  "limits": {
+    "max_bullets_per_slide": 4,
+    "max_words_per_slide": 45,
+    "notes_min_words_per_slide": 15,
+    "notes_max_total_words": 700,
+    "words_counted": "visible slide text outside <svg> and outside .slide-number: title, bullets, captions"
+  },
+  "requires": {
+    "chart": true,
+    "diagram": true
+  },
+  "required_messages": [
+    {
+      "id": "default",
+      "text": "First-years are put on the largest plan, 19 meals a week, unless they switch.",
+      "parts": [
+        [
+          [
+            "default"
+          ],
+          [
+            "\\b19\\b|nineteen|largest|biggest"
+          ],
+          [
+            "first.?year|unless|put on|assigned|start|everyone|automatic"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "it_sticks",
+      "text": "31 of the 40 surveyed first-years are still on the default.",
+      "parts": [
+        [
+          [
+            "\\b31\\b[^.;]{0,30}\\b40\\b|\\b31 ?/ ?40\\b|\\b78 ?%"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "doesnt_fit",
+      "text": "Default-plan students use 11.2 meals a week (7.8 unused), and the default costs $260 more per semester than 14 meals.",
+      "parts": [
+        [
+          [
+            "\\b11\\.2\\b|\\b7\\.8\\b"
+          ],
+          [
+            "\\buse|\\beat|unused|wast|left over"
+          ]
+        ],
+        [
+          [
+            "\\b260\\b|3,?150[^.;]{0,40}2,?890"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "why_it_sticks",
+      "text": "Endorsement first (14 of 31 thought 19 was the recommended amount), then effort (9 meant to switch).",
+      "parts": [
+        [
+          [
+            "endors|recommended amount|what they recommend|figured|assum|thought"
+          ],
+          [
+            "\\b14\\b(?!\\s*-?\\s*meal)|\\b45 ?%"
+          ]
+        ],
+        [
+          [
+            "effort|inertia|never got around|meant to|never switched|never did|procrastinat|hassle"
+          ],
+          [
+            "\\b9\\b(?!\\s*-?\\s*meal)|\\b29 ?%"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "recommendation",
+      "text": "Make the 14-meal plan the default, keep the two-week switch window, send a one-click reminder in week 1.",
+      "parts": [
+        [
+          [
+            "\\b14[- ]?meals?\\b|middle plan"
+          ],
+          [
+            "default"
+          ],
+          [
+            "\\bmake\\b|\\bshould\\b|recommend|propos|new default|\\bset\\b|\\bchange\\b|\\bbecome|\\bfix(es)?\\b|\\binstead\\b"
+          ]
+        ],
+        [
+          [
+            "two.week|2.week|switch window|first two weeks|\\bwindow\\b"
+          ]
+        ],
+        [
+          [
+            "remind|e-?mail|one.click|1.click|nudge"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "caveat",
+      "text": "A small, self-reported, non-random survey: a pilot, not proof.",
+      "parts": [
+        [
+          [
+            "pilot|not proof|caveat|limitation|\\blimits?\\b|grain of salt|careful"
+          ],
+          [
+            "small|self.report|non.?random|not random|\\b40\\b|snapshot|one dorm|survey"
+          ]
+        ]
+      ]
+    }
+  ],
+  "message_matching": "Each part's regex groups must all match the text of ONE slide (title, bullets, captions, chart and diagram labels; not the speaker notes), case-insensitive. A message lands when all its parts land (on any slides).",
+  "chart_values": {
+    "label_column": "plan",
+    "rows": {
+      "19 meals (default)": {
+        "meals_per_week": 19.0,
+        "first_years": 31.0,
+        "avg_meals_used": 11.2,
+        "avg_meals_unused": 7.8,
+        "price_usd": 3150.0
+      },
+      "14 meals": {
+        "meals_per_week": 14.0,
+        "first_years": 6.0,
+        "avg_meals_used": 10.4,
+        "avg_meals_unused": 3.6,
+        "price_usd": 2890.0
+      },
+      "10 meals": {
+        "meals_per_week": 10.0,
+        "first_years": 3.0,
+        "avg_meals_used": 8.7,
+        "avg_meals_unused": 1.3,
+        "price_usd": 2620.0
+      }
+    }
+  },
+  "numbers": [
+    {
+      "value": "1",
+      "sources": [
+        "brief.md: Length: 6 to 8 slides. Slide 1 is a title slide; the last slide is my recommendation.",
+        "brief.md: 1. The default: first-years are put on the largest meal plan, 19 meals a week, unless they switch.",
+        "brief.md: 5. Recommendation: make the 14-meal plan the default, keep the two-week switch window, and send a one-click reminder in week 1.",
+        "notes.md: week 1 email: \"you're on 14. want more? switch here\" (one click)"
+      ]
+    },
+    {
+      "value": "1.3",
+      "sources": [
+        "notes.md: 10 plan: avg 8.7 used, 1.3 unused",
+        "data.csv: avg_meals_unused, row '10 meals' = 1.3"
+      ]
+    },
+    {
+      "value": "2",
+      "sources": [
+        "brief.md: Time: 5 minutes, hard stop, then 2 minutes of questions. At about 140 words a minute that is at most 700 words of speaker notes for the whole talk.",
+        "brief.md: 2. It sticks: 31 of the 40 first-years I surveyed are still on the default plan.",
+        "notes.md: \"I actually want 19\" 2 (6%)",
+        "notes.md: > endorsement biggest, effort 2nd. matches the class answer!",
+        "notes.md: keep the 2 week switch window, anyone can still pick 19",
+        "notes.md: hana: max 4 bullets/slide!! notes on every slide. 5 min HARD stop, then 2 min Qs"
+      ]
+    },
+    {
+      "value": "3",
+      "sources": [
+        "brief.md: 3. It doesn't fit: people on the default use 11.2 meals a week on average, so 7.8 of their 19 go unused, and the default costs $260 more per semester than the 14-meal plan.",
+        "notes.md: 40 first-years answered (only first-years count, dropped 3 sophomores)",
+        "notes.md: 9 switched: 6 to the 14 plan, 3 to the 10 plan. nobody on a block plan",
+        "notes.md: 3 channels: effort, endorsement, reference point",
+        "data.csv: first_years, row '10 meals' = 3"
+      ]
+    },
+    {
+      "value": "3.6",
+      "sources": [
+        "notes.md: 14 plan: avg 10.4 used, 3.6 unused",
+        "data.csv: avg_meals_unused, row '14 meals' = 3.6"
+      ]
+    },
+    {
+      "value": "4",
+      "sources": [
+        "brief.md: Course: ECON 140: Behavioral Economics, Section 4 (TF: Hana Whitcombe)",
+        "brief.md: Every slide: a short title, at most 4 bullets, at most 45 words on the slide (chart and diagram labels don't count), and speaker notes.",
+        "brief.md: 4. Why it sticks: endorsement first (14 of the 31 figured 19 was the recommended amount), then effort (9 meant to switch and never did).",
+        "notes.md: hana: max 4 bullets/slide!! notes on every slide. 5 min HARD stop, then 2 min Qs"
+      ]
+    },
+    {
+      "value": "5",
+      "sources": [
+        "brief.md: Time: 5 minutes, hard stop, then 2 minutes of questions. At about 140 words a minute that is at most 700 words of speaker notes for the whole talk.",
+        "brief.md: 5. Recommendation: make the 14-meal plan the default, keep the two-week switch window, and send a one-click reminder in week 1.",
+        "notes.md: hana: max 4 bullets/slide!! notes on every slide. 5 min HARD stop, then 2 min Qs"
+      ]
+    },
+    {
+      "value": "6",
+      "sources": [
+        "brief.md: Length: 6 to 8 slides. Slide 1 is a title slide; the last slide is my recommendation.",
+        "brief.md: 6. Caveat: a small, self-reported, non-random survey. Treat it as a pilot, not proof.",
+        "notes.md: 9 switched: 6 to the 14 plan, 3 to the 10 plan. nobody on a block plan",
+        "notes.md: \"switching felt like losing meals\" 6 (19%)  <- reference point, loss aversion wk 7",
+        "notes.md: \"I actually want 19\" 2 (6%)",
+        "data.csv: first_years, row '14 meals' = 6"
+      ]
+    },
+    {
+      "value": "7",
+      "sources": [
+        "notes.md: \"switching felt like losing meals\" 6 (19%)  <- reference point, loss aversion wk 7"
+      ]
+    },
+    {
+      "value": "7.8",
+      "sources": [
+        "brief.md: 3. It doesn't fit: people on the default use 11.2 meals a week on average, so 7.8 of their 19 go unused, and the default costs $260 more per semester than the 14-meal plan.",
+        "notes.md: 19 plan: avg 11.2 used -> 7.8 unused per wk (!!)",
+        "data.csv: avg_meals_unused, row '19 meals (default)' = 7.8"
+      ]
+    },
+    {
+      "value": "8",
+      "sources": [
+        "brief.md: Length: 6 to 8 slides. Slide 1 is a title slide; the last slide is my recommendation."
+      ]
+    },
+    {
+      "value": "8.7",
+      "sources": [
+        "notes.md: 10 plan: avg 8.7 used, 1.3 unused",
+        "data.csv: avg_meals_used, row '10 meals' = 8.7"
+      ]
+    },
+    {
+      "value": "9",
+      "sources": [
+        "brief.md: 4. Why it sticks: endorsement first (14 of the 31 figured 19 was the recommended amount), then effort (9 meant to switch and never did).",
+        "notes.md: 9 switched: 6 to the 14 plan, 3 to the 10 plan. nobody on a block plan",
+        "notes.md: \"meant to switch, never got around to it\" 9 (29%)  <- effort / inertia"
+      ]
+    },
+    {
+      "value": "10",
+      "sources": [
+        "notes.md: 9 switched: 6 to the 14 plan, 3 to the 10 plan. nobody on a block plan",
+        "notes.md: 10 plan: avg 8.7 used, 1.3 unused",
+        "notes.md: 19 = $3,150, 14 = $2,890, 10 = $2,620",
+        "data.csv: meals_per_week, row '10 meals' = 10"
+      ]
+    },
+    {
+      "value": "10.4",
+      "sources": [
+        "notes.md: 14 plan: avg 10.4 used, 3.6 unused",
+        "notes.md: so ppl on the default eat about the same as the ones who switched (11.2 vs 10.4) but pay for 19",
+        "notes.md: make 14 the default (closest to what ppl actually eat, 11.2 / 10.4)",
+        "data.csv: avg_meals_used, row '14 meals' = 10.4"
+      ]
+    },
+    {
+      "value": "11",
+      "sources": [
+        "notes.md: meal plan pres - notes (econ 140 section, fri 11/13)"
+      ]
+    },
+    {
+      "value": "11.2",
+      "sources": [
+        "brief.md: 3. It doesn't fit: people on the default use 11.2 meals a week on average, so 7.8 of their 19 go unused, and the default costs $260 more per semester than the 14-meal plan.",
+        "notes.md: 19 plan: avg 11.2 used -> 7.8 unused per wk (!!)",
+        "notes.md: so ppl on the default eat about the same as the ones who switched (11.2 vs 10.4) but pay for 19",
+        "notes.md: make 14 the default (closest to what ppl actually eat, 11.2 / 10.4)",
+        "data.csv: avg_meals_used, row '19 meals (default)' = 11.2"
+      ]
+    },
+    {
+      "value": "13",
+      "sources": [
+        "brief.md: When: Friday, November 13, 2026, in section",
+        "notes.md: meal plan pres - notes (econ 140 section, fri 11/13)"
+      ]
+    },
+    {
+      "value": "14",
+      "sources": [
+        "brief.md: 3. It doesn't fit: people on the default use 11.2 meals a week on average, so 7.8 of their 19 go unused, and the default costs $260 more per semester than the 14-meal plan.",
+        "brief.md: 4. Why it sticks: endorsement first (14 of the 31 figured 19 was the recommended amount), then effort (9 meant to switch and never did).",
+        "brief.md: 5. Recommendation: make the 14-meal plan the default, keep the two-week switch window, and send a one-click reminder in week 1.",
+        "notes.md: 9 switched: 6 to the 14 plan, 3 to the 10 plan. nobody on a block plan",
+        "notes.md: 14 plan: avg 10.4 used, 3.6 unused",
+        "notes.md: \"figured 19 is what they recommend\" 14 (45%)  <- endorsement",
+        "notes.md: 19 = $3,150, 14 = $2,890, 10 = $2,620",
+        "notes.md: default costs $260 more than 14 per semester",
+        "notes.md: make 14 the default (closest to what ppl actually eat, 11.2 / 10.4)",
+        "notes.md: week 1 email: \"you're on 14. want more? switch here\" (one click)",
+        "data.csv: meals_per_week, row '14 meals' = 14"
+      ]
+    },
+    {
+      "value": "17",
+      "sources": [
+        "brief.md: Audience: about 18 classmates and the TF. Everyone took Lecture 17 on defaults, so no textbook definitions. Nobody has seen my survey yet."
+      ]
+    },
+    {
+      "value": "18",
+      "sources": [
+        "brief.md: Audience: about 18 classmates and the TF. Everyone took Lecture 17 on defaults, so no textbook definitions. Nobody has seen my survey yet."
+      ]
+    },
+    {
+      "value": "19",
+      "sources": [
+        "brief.md: 1. The default: first-years are put on the largest meal plan, 19 meals a week, unless they switch.",
+        "brief.md: 3. It doesn't fit: people on the default use 11.2 meals a week on average, so 7.8 of their 19 go unused, and the default costs $260 more per semester than the 14-meal plan.",
+        "brief.md: 4. Why it sticks: endorsement first (14 of the 31 figured 19 was the recommended amount), then effort (9 meant to switch and never did).",
+        "notes.md: idea: the L17 activity was literally OUR meal plan. first-years get defaulted into the biggest plan (19 meals/wk). the class answer in L17 was \"make the middle plan the default, b/c endorsement\". can I back that up w/ data?? -> yes, ran a survey",
+        "notes.md: 19 plan: avg 11.2 used -> 7.8 unused per wk (!!)",
+        "notes.md: so ppl on the default eat about the same as the ones who switched (11.2 vs 10.4) but pay for 19",
+        "notes.md: why still on 19? (the 31, pick your main reason)",
+        "notes.md: \"figured 19 is what they recommend\" 14 (45%)  <- endorsement",
+        "notes.md: \"switching felt like losing meals\" 6 (19%)  <- reference point, loss aversion wk 7",
+        "notes.md: \"I actually want 19\" 2 (6%)",
+        "notes.md: 19 = $3,150, 14 = $2,890, 10 = $2,620",
+        "notes.md: keep the 2 week switch window, anyone can still pick 19",
+        "data.csv: meals_per_week, row '19 meals (default)' = 19"
+      ]
+    },
+    {
+      "value": "26",
+      "sources": [
+        "notes.md: google form in the Tamsin Hall group chat + asked ppl in the Larkmoor Commons line at lunch, Oct 26-30"
+      ]
+    },
+    {
+      "value": "29",
+      "sources": [
+        "notes.md: \"meant to switch, never got around to it\" 9 (29%)  <- effort / inertia"
+      ]
+    },
+    {
+      "value": "30",
+      "sources": [
+        "notes.md: google form in the Tamsin Hall group chat + asked ppl in the Larkmoor Commons line at lunch, Oct 26-30"
+      ]
+    },
+    {
+      "value": "31",
+      "sources": [
+        "brief.md: 2. It sticks: 31 of the 40 first-years I surveyed are still on the default plan.",
+        "brief.md: 4. Why it sticks: endorsement first (14 of the 31 figured 19 was the recommended amount), then effort (9 meant to switch and never did).",
+        "notes.md: RECOUNT tues: 31 of 40 (I double counted the thurs sheet) = 78%",
+        "notes.md: why still on 19? (the 31, pick your main reason)",
+        "data.csv: first_years, row '19 meals (default)' = 31"
+      ]
+    },
+    {
+      "value": "40",
+      "sources": [
+        "brief.md: 2. It sticks: 31 of the 40 first-years I surveyed are still on the default plan.",
+        "notes.md: 40 first-years answered (only first-years count, dropped 3 sophomores)",
+        "notes.md: RECOUNT tues: 31 of 40 (I double counted the thurs sheet) = 78%",
+        "notes.md: small (40), my dorm + one dining hall line, not random"
+      ]
+    },
+    {
+      "value": "41",
+      "sources": [
+        "notes.md: Fernhill: opt-in 41% -> auto enroll 88%. defaults move behavior a LOT"
+      ]
+    },
+    {
+      "value": "45",
+      "sources": [
+        "brief.md: Every slide: a short title, at most 4 bullets, at most 45 words on the slide (chart and diagram labels don't count), and speaker notes.",
+        "notes.md: \"figured 19 is what they recommend\" 14 (45%)  <- endorsement"
+      ]
+    },
+    {
+      "value": "78",
+      "sources": [
+        "notes.md: RECOUNT tues: 31 of 40 (I double counted the thurs sheet) = 78%"
+      ]
+    },
+    {
+      "value": "88",
+      "sources": [
+        "notes.md: Fernhill: opt-in 41% -> auto enroll 88%. defaults move behavior a LOT"
+      ]
+    },
+    {
+      "value": "140",
+      "sources": [
+        "brief.md: Course: ECON 140: Behavioral Economics, Section 4 (TF: Hana Whitcombe)",
+        "brief.md: Time: 5 minutes, hard stop, then 2 minutes of questions. At about 140 words a minute that is at most 700 words of speaker notes for the whole talk.",
+        "notes.md: meal plan pres - notes (econ 140 section, fri 11/13)"
+      ]
+    },
+    {
+      "value": "260",
+      "sources": [
+        "brief.md: 3. It doesn't fit: people on the default use 11.2 meals a week on average, so 7.8 of their 19 go unused, and the default costs $260 more per semester than the 14-meal plan.",
+        "notes.md: default costs $260 more than 14 per semester"
+      ]
+    },
+    {
+      "value": "700",
+      "sources": [
+        "brief.md: Time: 5 minutes, hard stop, then 2 minutes of questions. At about 140 words a minute that is at most 700 words of speaker notes for the whole talk."
+      ]
+    },
+    {
+      "value": "2026",
+      "sources": [
+        "brief.md: When: Friday, November 13, 2026, in section"
+      ]
+    },
+    {
+      "value": "2620",
+      "sources": [
+        "notes.md: 19 = $3,150, 14 = $2,890, 10 = $2,620",
+        "data.csv: price_usd, row '10 meals' = 2620"
+      ]
+    },
+    {
+      "value": "2890",
+      "sources": [
+        "notes.md: 19 = $3,150, 14 = $2,890, 10 = $2,620",
+        "data.csv: price_usd, row '14 meals' = 2890"
+      ]
+    },
+    {
+      "value": "3150",
+      "sources": [
+        "notes.md: 19 = $3,150, 14 = $2,890, 10 = $2,620",
+        "data.csv: price_usd, row '19 meals (default)' = 3150"
+      ]
+    }
+  ],
+  "stale_numbers": [
+    {
+      "value": "35",
+      "why": "struck out in notes.md ('~~35 of 40 still on the 19 plan~~'): a miscount; the recount is 31 of 40"
+    }
+  ],
+  "trap_notes": [
+    "notes.md crosses out a miscount (35 of 40); the recount is 31 of 40. Code removes struck-out text before workers see the notes and before building the allowed-number set.",
+    "Derived numbers a model might compute (77.5% on the default, 22.5% switched, $520 a year) are not in any source, so they fail the traceability check unless the notes already state them (78%, 7.8, $260).",
+    "The brief caps every slide at 4 bullets and 45 words and the talk at 5 minutes (700 words of notes at 140 wpm)."
+  ]
+}

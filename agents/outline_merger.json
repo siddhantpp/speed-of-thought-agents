@@ -1,0 +1,89 @@
+{
+  "name": "outline_merger",
+  "tier": "group",
+  "job": "Merge per-chunk notes into one ordered lecture outline and a de-duplicated glossary.",
+  "instructions": "You receive notes from several workers, one per transcript chunk, in lecture order.\nBuild 4 to 7 sections that follow the lecture's teaching order. Each section: a clear title, 2 to 6 points, and the chunk numbers it came from.\nGlossary: one entry per term (merge duplicates, keep the clearest definition).\nLogistics: merge duplicates. Do not add facts that are not in the notes.\nPlain text only: no LaTeX, no Markdown, no backslashes. Write x^2, sqrt(n), theta, etc. as plain text.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "sections": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "chunks": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          },
+          "required": [
+            "title",
+            "points",
+            "chunks"
+          ]
+        }
+      },
+      "glossary": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "term": {
+              "type": "string"
+            },
+            "definition": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "term",
+            "definition"
+          ]
+        }
+      },
+      "logistics": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "item": {
+              "type": "string"
+            },
+            "when": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "item",
+            "when"
+          ]
+        }
+      }
+    },
+    "required": [
+      "title",
+      "sections",
+      "glossary",
+      "logistics"
+    ]
+  },
+  "success_check": "Sections follow the lecture order; glossary has no duplicates."
+}

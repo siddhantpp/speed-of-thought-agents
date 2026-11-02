@@ -1,0 +1,66 @@
+{
+ "url": "https://api.crossref.org/works/10.5555/njca.2016.0031",
+ "kind": "crossref_work",
+ "doi": "10.5555/njca.2016.0031",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "message": {
+   "DOI": "10.5555/njca.2016.0031",
+   "title": [
+    "Binaural beats double vocabulary retention in a single study session"
+   ],
+   "container-title": [
+    "Northvale Journal of Classroom Acoustics"
+   ],
+   "ISSN": [
+    "0000-0043"
+   ],
+   "volume": "4",
+   "issue": "1",
+   "page": "12-19",
+   "type": "journal-article",
+   "published-print": {
+    "date-parts": [
+     [
+      2016,
+      6
+     ]
+    ]
+   },
+   "issued": {
+    "date-parts": [
+     [
+      2016
+     ]
+    ]
+   },
+   "is-referenced-by-count": 95,
+   "updated-by": [
+    {
+     "type": "retraction",
+     "DOI": "10.5555/njca.2020.0009",
+     "updated": {
+      "date-parts": [
+       [
+        2020,
+        3,
+        9
+       ]
+      ]
+     }
+    }
+   ],
+   "author": [
+    {
+     "given": "Fergus",
+     "family": "Drummond"
+    },
+    {
+     "given": "Lise",
+     "family": "Aubertin"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "fact_checker",
+  "tier": "group",
+  "job": "Check a batch of flashcards against the transcript excerpt and keep, fix or drop each one.",
+  "instructions": "For each card decide:\n- keep: the back is correct and supported by its quote.\n- fix: the idea is right but the back is wrong, vague or overstated; give a corrected back (max 30 words).\n- drop: unsupported, wrong, trivial, or a duplicate of another card in the batch.\nJudge only against the excerpt, not outside knowledge. Keep reasons under 15 words.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "verdicts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "verdict": {
+              "type": "string",
+              "enum": [
+                "keep",
+                "fix",
+                "drop"
+              ]
+            },
+            "fixed_back": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "verdict",
+            "fixed_back",
+            "reason"
+          ]
+        }
+      }
+    },
+    "required": [
+      "verdicts"
+    ]
+  },
+  "success_check": "No false claims survive into flashcards.csv."
+}

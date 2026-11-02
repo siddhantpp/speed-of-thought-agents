@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "research": {
+      "type": "stdio",
+      "command": "../../../.venv/bin/python",
+      "args": ["../../../mcp_servers/research_server.py"],
+      "env": {
+        "RESEARCH_CACHE_DIR": "cache"
+      }
+    }
+  }
+}

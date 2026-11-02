@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "gcal": {
+      "type": "stdio",
+      "command": "../../../.venv/bin/python",
+      "args": ["../../../mcp_servers/gcal_server.py"],
+      "env": {
+        "GCAL_BACKEND": "sandbox",
+        "GCAL_SANDBOX_FILE": "calendar_after.json",
+        "GCAL_SANDBOX_SEED": "calendar_before.json"
+      }
+    }
+  }
+}

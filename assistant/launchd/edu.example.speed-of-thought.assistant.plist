@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  SAMPLE ONLY: a LaunchAgent that starts the phone assistant when you log in and restarts it if it crashes.
+  Nothing installs this file for you. Read assistant/README.md ("Keep it running") first.
+
+  Before you use it:
+    1. Run the server once by hand (.venv/bin/python assistant/server.py) so it makes your token, and sign in once.
+    2. Change "speed-of-thought-agents" below if your copy of the repo lives somewhere else under your home folder.
+    3. Check it:    plutil -lint edu.example.speed-of-thought.assistant.plist
+  Install (your user only, no admin rights):
+       cp edu.example.speed-of-thought.assistant.plist ~/Library/LaunchAgents/
+       launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/edu.example.speed-of-thought.assistant.plist
+  Stop and remove:
+       launchctl bootout gui/$(id -u)/edu.example.speed-of-thought.assistant
+       rm ~/Library/LaunchAgents/edu.example.speed-of-thought.assistant.plist
+
+  caffeinate -s keeps the Mac from sleeping while the server runs and the Mac is on power (on battery the Mac
+  sleeps as usual, which is what you want). It does not keep a closed lid awake. The server still binds
+  127.0.0.1 only. Add the host option with your Tailscale address only after reading the server's warning.
+  launchd does not expand ~ or $HOME in paths, so the command runs through zsh, which does.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>edu.example.speed-of-thought.assistant</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>-c</string>
+    <string>cd "$HOME/speed-of-thought-agents" &amp;&amp; mkdir -p "$HOME/.config/speed-of-thought-assistant" &amp;&amp; exec /usr/bin/caffeinate -s .venv/bin/python assistant/server.py --now live &gt;&gt; "$HOME/.config/speed-of-thought-assistant/server.log" 2&gt;&amp;1</string>
+  </array>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <!-- Restart after a crash, not after a clean stop (launchctl bootout). -->
+  <key>KeepAlive</key>
+  <dict>
+    <key>SuccessfulExit</key>
+    <false/>
+  </dict>
+  <key>ThrottleInterval</key>
+  <integer>30</integer>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+</dict>
+</plist>

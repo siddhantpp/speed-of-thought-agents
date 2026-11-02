@@ -1,0 +1,87 @@
+{
+  "name": "deadline_extractor",
+  "tier": "worker",
+  "job": "Pull every deadline and event out of ONE message, with exact times.",
+  "tools": [
+    "resolve_date"
+  ],
+  "max_tool_turns": 5,
+  "instructions": "For each separate thing with a date in the message:\n1. Copy the date words exactly as written (e.g. 'the Tuesday after next at 10:50am', 'Dec 12, 8:50 am CT').\n2. Call resolve_date(phrase, reference) with reference = the message's received time. Never compute dates yourself. For a time range like '1:10 to 2:25 pm', pass the whole range; the tool returns the start.\n3. Decide status:\n   - 'new': a fresh deadline or event.\n   - 'update': the message MOVES or EXTENDS a deadline/event. Output ONE item with the NEW time only. Never output the old time as an item.\n   - 'cancelled': the item is called off. Still output it, with its original time: the calendar team needs it to remove the event.\n   - 'past': the date is before the current time you are given.\nDo not create items for end times, for regular slots that are being replaced, or for things only mentioned in passing (like 'last week's lab').\nkind is 'deadline' for things to submit/complete, 'event' for things to attend.\ncourse: the course code like 'CHEM 263' if mentioned in the subject, body or sender, else the sender's organization.\ntask: a short name like 'Lab report 4' or 'Reading response 3'.\nevidence: the shortest quote from the message that shows the date.\nends: for an event, the end-time words exactly as written (e.g. 'until 8:45', '3:40 pm'), not a converted time; '' for a deadline or if no end is given.\nwhere: the room or place if the message gives one, else ''.\nIf the message has no dated items, return an empty list.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "deadline",
+                "event"
+              ]
+            },
+            "course": {
+              "type": "string"
+            },
+            "task": {
+              "type": "string"
+            },
+            "phrase": {
+              "type": "string"
+            },
+            "due": {
+              "type": "string",
+              "description": "ISO 8601 from resolve_date"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "new",
+                "update",
+                "cancelled",
+                "past"
+              ]
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "evidence": {
+              "type": "string"
+            },
+            "ends": {
+              "type": "string"
+            },
+            "where": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "course",
+            "task",
+            "phrase",
+            "due",
+            "status",
+            "confidence",
+            "evidence",
+            "ends",
+            "where"
+          ]
+        }
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "success_check": "Every 'due' came from resolve_date; final deadlines and events (with end times) match the answer key."
+}

@@ -1,0 +1,6 @@
+How is the load factor (alpha) calculated?,It is the number of items stored divided by the number of buckets.,hash-tables
+Why are collisions inevitable in a hash table?,There are more possible keys than buckets (the pigeonhole principle).,hash-tables
+How does linear probing handle a collision?,It checks the next slot along and wraps around at the end of the array.,hash-tables
+What is the average lookup cost with chaining?,"O(1 + alpha), which stays O(1) while the load factor is bounded.",hash-tables
+Why does resizing rehash every key?,Each key's slot depends on the table size; a new size means new slots.,hash-tables
+What is the worst-case cost of a hash table lookup?,"O(n), when every key lands in the same bucket.",hash-tables

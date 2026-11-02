@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-02",
+  "student": "Riley Park",
+  "note": "Test fixture for the phone assistant: the same shape as outputs/class_notes/notes.json, much shorter.",
+  "classes": [
+    {
+      "id": "econ140",
+      "course": "ECON 140: Behavioral Economics",
+      "session": "Lecture 17",
+      "start": "2026-11-02T10:30:00-05:00",
+      "summary": "Defaults stick through three channels: effort, endorsement and reference points. Automatic enrollment raised participation, but a low default rate can anchor savings.",
+      "announcements": [
+        {"text": "Essay 2 draft due 11:59 pm", "when": "Mon Nov 9", "due": "2026-11-09T23:59:00-05:00"}
+      ],
+      "corrections": [
+        {"slide": 9, "slide_said": "Thursday, November 5th", "correct": "Monday, November 9th"}
+      ]
+    },
+    {
+      "id": "stat121",
+      "course": "STAT 121: Applied Regression",
+      "session": "Lecture 18",
+      "start": "2026-11-02T12:00:00-05:00",
+      "summary": "Interaction terms let one predictor's effect depend on another; centering makes the main effects readable; a fanning residual plot means non-constant variance.",
+      "announcements": [
+        {"text": "Quiz 4 moved", "when": "Mon Nov 9", "due": "2026-11-09T12:00:00-05:00"}
+      ],
+      "corrections": []
+    },
+    {
+      "id": "cs152",
+      "course": "CS 152: Data Structures and Systems",
+      "session": "Section 6",
+      "start": "2026-11-02T16:00:00-05:00",
+      "summary": "Resizing an open-addressing table rehashes every key; tombstones count as occupied when deciding to resize; benchmark only the operation you measure.",
+      "announcements": [],
+      "corrections": []
+    }
+  ]
+}

@@ -1,0 +1,552 @@
+WEBVTT
+
+1
+00:00:03.955 --> 00:00:05.969
+Priya Lindqvist: Hi everyone, welcome to section.
+
+2
+00:00:06.144 --> 00:00:11.076
+Priya Lindqvist: Let's give it one more minute
+for people coming from the other building. Okay.
+
+3
+00:00:11.499 --> 00:00:17.211
+Priya Lindqvist: So this is Section 6, and
+today is all about Problem Set 5 and Milestone
+
+4
+00:00:17.674 --> 00:00:23.003
+Priya Lindqvist: 2, because, uh, they're due two
+days apart and they use the same ideas.
+
+5
+00:00:23.133 --> 00:00:27.562
+Priya Lindqvist: We'll do tombstones one more
+time, then resizing, and then I want
+
+6
+00:00:27.911 --> 00:00:32.241
+Priya Lindqvist: to spend real time on
+how to benchmark your key-value store, because
+
+7
+00:00:32.454 --> 00:00:36.677
+Priya Lindqvist: last year that's where teams
+lost the most points on the milestone.
+
+8
+00:00:37.072 --> 00:00:42.022
+Priya Lindqvist: Bring up questions whenever, this
+is section, it's supposed to be loose.
+
+9
+00:00:42.349 --> 00:00:48.533
+Priya Lindqvist: Quick poll, who's started PS5? Okay,
+about half. Who's started the milestone? Fewer hands.
+
+10
+00:00:48.769 --> 00:00:50.987
+Priya Lindqvist: That's fine, that's why we're here.
+
+11
+00:00:51.230 --> 00:00:54.914
+Priya Lindqvist: Also, the room after us has a lab, so
+
+12
+00:00:55.389 --> 00:00:58.243
+Priya Lindqvist: we have to be out at 4:50 sharp.
+
+13
+00:01:01.740 --> 00:01:07.067
+Priya Lindqvist: Okay. Tombstones, one more time, because
+this is the part of PS5 people get wrong.
+
+14
+00:01:07.221 --> 00:01:11.964
+Priya Lindqvist: This is the same
+little table from Thursday's lecture, 8 slots.
+
+15
+00:01:12.109 --> 00:01:16.354
+Priya Lindqvist: Fig was in slot
+5, and we deleted it, so
+
+16
+00:01:16.639 --> 00:01:20.706
+Priya Lindqvist: now slot 5 holds
+a tombstone instead of being empty.
+
+17
+00:01:20.899 --> 00:01:26.315
+Priya Lindqvist: Lime had collided with fig, so
+it lives in slot 6. So, look up lime.
+
+18
+00:01:26.519 --> 00:01:30.922
+Priya Lindqvist: You hash to 5, you
+see the tombstone, and you keep going,
+
+19
+00:01:31.113 --> 00:01:35.185
+Priya Lindqvist: because a tombstone means
+something used to be here, keep probing.
+
+20
+00:01:35.481 --> 00:01:38.132
+Priya Lindqvist: Then you find lime in slot 6.
+
+21
+00:01:38.510 --> 00:01:43.017
+Priya Lindqvist: If slot 5 were
+just empty, you'd stop and say lime
+
+22
+00:01:43.383 --> 00:01:47.893
+Priya Lindqvist: isn't in the table,
+which is exactly the bug from lecture.
+
+23
+00:01:48.373 --> 00:01:53.824
+Priya Lindqvist: Draw this on paper for
+your own table before you write any code.
+
+24
+00:01:54.315 --> 00:01:59.178
+Priya Lindqvist: Seriously, five minutes with a
+pencil saves an hour of print statements.
+
+25
+00:01:59.938 --> 00:02:05.464
+Student: What happens if you insert
+a new key that hashes to 5?
+
+26
+00:02:06.661 --> 00:02:12.131
+Priya Lindqvist: You can reuse the tombstone slot,
+but only after you've checked the rest of the
+
+27
+00:02:12.467 --> 00:02:17.420
+Priya Lindqvist: probe chain to make sure the
+key isn't already in the table further along.
+
+28
+00:02:17.897 --> 00:02:22.028
+Priya Lindqvist: Otherwise you end up
+with the same key in the
+
+29
+00:02:22.266 --> 00:02:26.597
+Priya Lindqvist: table twice, and that's
+a really annoying bug to find.
+
+30
+00:02:30.005 --> 00:02:32.009
+Priya Lindqvist: Next. When do you resize?
+
+31
+00:02:32.212 --> 00:02:37.163
+Priya Lindqvist: You track the load factor, alpha,
+which is n over m, after every insert.
+
+32
+00:02:37.587 --> 00:02:41.398
+Priya Lindqvist: When it passes your
+threshold, you double m and rehash
+
+33
+00:02:41.765 --> 00:02:45.647
+Priya Lindqvist: every key, because every key's slot depends on m.
+
+34
+00:02:45.940 --> 00:02:49.765
+Priya Lindqvist: And, oh, wait, that third bullet is wrong. Sorry.
+
+35
+00:02:50.104 --> 00:02:54.476
+Priya Lindqvist: I mixed up my
+languages when I made this slide.
+
+36
+00:02:54.804 --> 00:02:58.900
+Priya Lindqvist: CPython's dict resizes at
+about two-thirds full, not three quarters.
+
+37
+00:02:59.173 --> 00:03:02.347
+Priya Lindqvist: Three quarters, 0.75, is the default for Java's HashMap.
+
+38
+00:03:02.645 --> 00:03:07.426
+Priya Lindqvist: Professor Vasquez-Hale said this in
+lecture, so don't let my slide confuse you.
+
+39
+00:03:07.551 --> 00:03:11.895
+Priya Lindqvist: For PS5, the threshold
+is given to you in the starter
+
+40
+00:03:12.205 --> 00:03:16.357
+Priya Lindqvist: code, it's 0.7, so
+you don't have to pick one.
+
+41
+00:03:16.834 --> 00:03:22.032
+Priya Lindqvist: You can play with it in
+your own copy, but the tests assume 0.7.
+
+42
+00:03:23.036 --> 00:03:26.899
+Student: Why do we double the table instead of
+
+43
+00:03:27.123 --> 00:03:30.848
+Student: just adding, like, a hundred slots each time?
+
+44
+00:03:31.979 --> 00:03:34.836
+Priya Lindqvist: Because doubling is what makes inserts amortized O(1).
+
+45
+00:03:34.970 --> 00:03:38.817
+Priya Lindqvist: If you add a
+fixed hundred slots, you resize every
+
+46
+00:03:39.215 --> 00:03:43.477
+Priya Lindqvist: hundred inserts, and the
+total copying grows like n squared.
+
+47
+00:03:43.792 --> 00:03:50.024
+Priya Lindqvist: With doubling, the total copying stays
+under 2n. Same argument as dynamic arrays on PS4.
+
+48
+00:03:50.448 --> 00:03:53.666
+Priya Lindqvist: It's also why Python lists grow by a fraction
+
+49
+00:03:54.077 --> 00:03:57.250
+Priya Lindqvist: of their size, not by a fixed amount.
+
+50
+00:03:59.550 --> 00:04:03.242
+Priya Lindqvist: Okay, now the one
+that bites people every single year.
+
+51
+00:04:03.562 --> 00:04:09.559
+Priya Lindqvist: When you decide whether to resize,
+count tombstones as occupied slots, not just live keys.
+
+52
+00:04:09.891 --> 00:04:10.979
+Priya Lindqvist: Think about it.
+
+53
+00:04:11.167 --> 00:04:17.250
+Priya Lindqvist: If you only count live keys,
+a table that does a lot of deletes
+
+54
+00:04:17.744 --> 00:04:23.732
+Priya Lindqvist: never looks full, so it never
+resizes, and it slowly fills up with tombstones.
+
+55
+00:04:24.196 --> 00:04:28.404
+Priya Lindqvist: And then every lookup for
+a missing key walks the whole table.
+
+56
+00:04:28.822 --> 00:04:32.677
+Priya Lindqvist: There's a hidden test
+on PS5 that does exactly this.
+
+57
+00:04:33.019 --> 00:04:36.216
+Priya Lindqvist: It inserts and deletes 10,000 times in a loop,
+
+58
+00:04:36.402 --> 00:04:40.154
+Priya Lindqvist: and if you don't count tombstones, it times out.
+
+59
+00:04:40.505 --> 00:04:45.237
+Priya Lindqvist: So, count them. And
+the good news is on the slide.
+
+60
+00:04:45.486 --> 00:04:51.025
+Priya Lindqvist: When you do resize, the tombstones
+disappear, because you only reinsert the live keys.
+
+61
+00:04:51.746 --> 00:04:57.369
+Student: So for the experiment part, should
+the load factor we report include tombstones too?
+
+62
+00:04:58.612 --> 00:05:01.568
+Priya Lindqvist: For deciding when to resize, yes, count them.
+
+63
+00:05:01.859 --> 00:05:07.758
+Priya Lindqvist: For the experiment, report live keys
+over slots, and say so in your write-up.
+
+64
+00:05:08.114 --> 00:05:11.141
+Priya Lindqvist: Just be explicit about which one you mean.
+
+65
+00:05:13.144 --> 00:05:17.835
+Priya Lindqvist: This is the picture I
+want you to keep in your head.
+
+66
+00:05:18.246 --> 00:05:23.481
+Priya Lindqvist: It's the expected number of
+probes for a lookup that misses, as
+
+67
+00:05:23.738 --> 00:05:27.631
+Priya Lindqvist: the load factor goes
+up, for chaining and for linear probing.
+
+68
+00:05:27.933 --> 00:05:31.140
+Priya Lindqvist: These are the textbook estimates, not our measurements.
+
+69
+00:05:31.519 --> 00:05:35.468
+Priya Lindqvist: Look at how flat
+one line stays, and then look
+
+70
+00:05:35.675 --> 00:05:39.229
+Priya Lindqvist: at what the other
+one does at the right edge.
+
+71
+00:05:39.376 --> 00:05:43.912
+Priya Lindqvist: That's the whole reason we
+resize long before the table is full.
+
+72
+00:05:44.084 --> 00:05:47.682
+Priya Lindqvist: On PS5 you measure
+this yourself for linear probing, so
+
+73
+00:05:48.057 --> 00:05:52.056
+Priya Lindqvist: you should get a
+curve shaped like one of these.
+
+74
+00:05:53.172 --> 00:05:57.839
+Student: Why does linear probing
+get so much worse than chaining?
+
+75
+00:05:58.556 --> 00:05:59.277
+Priya Lindqvist: Primary clustering.
+
+76
+00:05:59.557 --> 00:06:04.289
+Priya Lindqvist: Runs of filled slots grow
+and merge, so a miss has to
+
+77
+00:06:04.670 --> 00:06:08.786
+Priya Lindqvist: walk all the way
+to the end of a long run.
+
+78
+00:06:09.152 --> 00:06:12.354
+Priya Lindqvist: With chaining, a miss only walks one bucket's list.
+
+79
+00:06:12.833 --> 00:06:16.431
+Priya Lindqvist: It's also roughly what your PS5 experiment should show.
+
+80
+00:06:16.925 --> 00:06:21.211
+Priya Lindqvist: If your measured curve
+doesn't bend up like this one,
+
+81
+00:06:21.475 --> 00:06:24.638
+Priya Lindqvist: something is off, and it's usually your hash function.
+
+82
+00:06:27.491 --> 00:06:28.701
+Priya Lindqvist: Okay, Milestone 2.
+
+83
+00:06:29.197 --> 00:06:32.389
+Priya Lindqvist: Your write-up has to compare your store against a
+
+84
+00:06:32.862 --> 00:06:36.841
+Priya Lindqvist: plain Python dict for at least two workload sizes.
+
+85
+00:06:37.138 --> 00:06:40.953
+Priya Lindqvist: Three rules on the slide. Use time.perf_counter, not time.time.
+
+86
+00:06:41.361 --> 00:06:44.702
+Priya Lindqvist: Repeat each measurement 5 times and report the median.
+
+87
+00:06:44.939 --> 00:06:47.863
+Priya Lindqvist: And time the operations, not the setup, so
+
+88
+00:06:48.318 --> 00:06:51.710
+Priya Lindqvist: build your keys before you start the timer.
+
+89
+00:06:51.833 --> 00:06:53.131
+Priya Lindqvist: Here's a story.
+
+90
+00:06:53.625 --> 00:06:58.930
+Priya Lindqvist: Last year, one team reported that
+their table was 40 times slower than dict.
+
+91
+00:06:59.078 --> 00:07:03.582
+Priya Lindqvist: It turned out they were
+generating random strings inside the timed loop,
+
+92
+00:07:03.872 --> 00:07:08.230
+Priya Lindqvist: so most of what
+they measured was the random number generator.
+
+93
+00:07:08.443 --> 00:07:13.185
+Priya Lindqvist: And honestly, you will be
+slower than dict. Dict is written in C.
+
+94
+00:07:13.524 --> 00:07:17.795
+Priya Lindqvist: If you're within 10 times
+of dict at a million keys, that's
+
+95
+00:07:18.092 --> 00:07:22.933
+Priya Lindqvist: a good result, and nobody
+loses points for being slower than dict.
+
+96
+00:07:23.078 --> 00:07:28.795
+Priya Lindqvist: Also, run the benchmark on a
+quiet machine. Close the browser with a hundred tabs.
+
+97
+00:07:29.131 --> 00:07:33.851
+Priya Lindqvist: And put the machine
+details in the write-up, the CPU and
+
+98
+00:07:34.234 --> 00:07:39.068
+Priya Lindqvist: the Python version, so
+we can make sense of your numbers.
+
+99
+00:07:40.303 --> 00:07:43.473
+Student: Do we have to benchmark delete too?
+
+100
+00:07:44.560 --> 00:07:47.573
+Priya Lindqvist: Get and put are required in the benchmark.
+
+101
+00:07:47.714 --> 00:07:52.320
+Priya Lindqvist: Delete has to work in
+the prototype, but benchmarking it is optional.
+
+102
+00:07:52.777 --> 00:07:56.281
+Priya Lindqvist: If you do benchmark
+it, run it after a big
+
+103
+00:07:56.484 --> 00:07:59.772
+Priya Lindqvist: batch of inserts, so the tombstones actually show up.
+
+104
+00:08:03.001 --> 00:08:07.580
+Priya Lindqvist: Here's the checklist, same
+as the email I sent this morning.
+
+105
+00:08:07.833 --> 00:08:12.759
+Priya Lindqvist: A repo link with a
+working get, put and delete, no persistence yet.
+
+106
+00:08:12.933 --> 00:08:19.260
+Priya Lindqvist: The two-page write-up with the benchmark.
+And one paragraph on how you split the work.
+
+107
+00:08:19.742 --> 00:08:22.922
+Priya Lindqvist: If someone on your team has been quiet, the
+
+108
+00:08:23.339 --> 00:08:26.756
+Priya Lindqvist: split paragraph is where we notice, so be honest.
+
+109
+00:08:26.909 --> 00:08:30.141
+Priya Lindqvist: It's not graded on how even the split is.
+
+110
+00:08:30.613 --> 00:08:36.139
+Priya Lindqvist: It's due Sunday, November 8th at
+11:59 PM, and only one person per team submits.
+
+111
+00:08:39.639 --> 00:08:44.875
+Priya Lindqvist: Last slide. PS5 is due Friday
+at 5 PM, code and experiment write-up together.
+
+112
+00:08:45.256 --> 00:08:49.267
+Priya Lindqvist: And one new thing that's not on the slide.
+
+113
+00:08:49.476 --> 00:08:53.279
+Priya Lindqvist: The autograder for PS5 opens this Wednesday at noon.
+
+114
+00:08:53.404 --> 00:08:57.562
+Priya Lindqvist: You get 10 submissions
+a day, so please don't use
+
+115
+00:08:57.953 --> 00:09:01.362
+Priya Lindqvist: it as your debugger, run the local tests first.
+
+116
+00:09:01.621 --> 00:09:04.775
+Priya Lindqvist: And if you use a late day, you don't
+
+117
+00:09:05.242 --> 00:09:08.114
+Priya Lindqvist: need to email anyone, the portal tracks it.
+
+118
+00:09:08.528 --> 00:09:09.707
+Priya Lindqvist: Okay, that's it.
+
+119
+00:09:10.150 --> 00:09:15.442
+Priya Lindqvist: Go get some sleep, and, um,
+I'll see some of you at office hours.

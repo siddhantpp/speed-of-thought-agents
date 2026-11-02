@@ -1,0 +1,529 @@
+WEBVTT
+
+1
+00:00:03.543 --> 00:00:07.453
+Leona Brandt-Okoye: Okay, good morning, everybody. Let's, um, let's get going.
+
+2
+00:00:07.674 --> 00:00:11.177
+Leona Brandt-Okoye: Can people in the back hear me okay? Great.
+
+3
+00:00:11.317 --> 00:00:16.901
+Leona Brandt-Okoye: So today is Lecture 17, and it's the one your second essay is built on.
+
+4
+00:00:17.027 --> 00:00:21.688
+Leona Brandt-Okoye: We've spent three weeks on frameworks, present bias, loss aversion, mental
+
+5
+00:00:22.077 --> 00:00:26.066
+Leona Brandt-Okoye: accounting, and today I want to put them to work on
+
+6
+00:00:26.334 --> 00:00:29.496
+Leona Brandt-Okoye: one very specific design tool, which is the default.
+
+7
+00:00:29.955 --> 00:00:35.407
+Leona Brandt-Okoye: The default is what happens to you when you don't make a choice.
+
+8
+00:00:35.599 --> 00:00:41.038
+Leona Brandt-Okoye: By the end of today you should be able to look at any default out
+
+9
+00:00:41.422 --> 00:00:46.764
+Leona Brandt-Okoye: in the world and say why it sticks and, uh, when it's going to backfire.
+
+10
+00:00:49.426 --> 00:00:52.963
+Leona Brandt-Okoye: So, first question. Why do defaults stick at all?
+
+11
+00:00:53.352 --> 00:00:56.376
+Leona Brandt-Okoye: Standard economics says a default shouldn't matter much.
+
+12
+00:00:56.551 --> 00:01:00.875
+Leona Brandt-Okoye: If switching is cheap and you know what you want, you switch.
+
+13
+00:01:01.246 --> 00:01:04.576
+Leona Brandt-Okoye: But defaults matter a lot, and there are three
+
+14
+00:01:04.921 --> 00:01:07.941
+Leona Brandt-Okoye: channels, three reasons, and they're on the slide.
+
+15
+00:01:08.424 --> 00:01:10.251
+Leona Brandt-Okoye: The first one is effort.
+
+16
+00:01:10.552 --> 00:01:16.866
+Leona Brandt-Okoye: Switching takes time and attention, and attention is scarce, so people stay put. That's inertia.
+
+17
+00:01:17.078 --> 00:01:22.654
+Leona Brandt-Okoye: It's the boring explanation, but it's a big one. Think about your phone.
+
+18
+00:01:22.969 --> 00:01:29.511
+Leona Brandt-Okoye: How many of you have changed the default ringtone? Right, almost nobody. That's mostly effort.
+
+19
+00:01:29.820 --> 00:01:34.537
+Leona Brandt-Okoye: The second is endorsement. People read the default as a recommendation.
+
+20
+00:01:34.975 --> 00:01:40.229
+Leona Brandt-Okoye: If my employer picked this plan for me, they probably know something, right?
+
+21
+00:01:40.665 --> 00:01:44.989
+Leona Brandt-Okoye: The default sends a signal. And the third is the reference point.
+
+22
+00:01:45.435 --> 00:01:48.610
+Leona Brandt-Okoye: Once something is the default, it becomes the status
+
+23
+00:01:48.910 --> 00:01:52.294
+Leona Brandt-Okoye: quo, and leaving it feels like giving something up.
+
+24
+00:01:52.644 --> 00:01:55.846
+Leona Brandt-Okoye: That's loss aversion from week 7 doing its work.
+
+25
+00:01:56.865 --> 00:01:59.812
+Leona Brandt-Okoye: Now, here's something I want you to hear
+
+26
+00:02:00.189 --> 00:02:03.029
+Leona Brandt-Okoye: clearly, because it matters in a few weeks.
+
+27
+00:02:03.280 --> 00:02:08.680
+Leona Brandt-Okoye: On the final exam, I will give you a scenario, some default out
+
+28
+00:02:08.876 --> 00:02:14.137
+Leona Brandt-Okoye: in the world, and I'll ask you which channel is doing the work.
+
+29
+00:02:14.481 --> 00:02:18.121
+Leona Brandt-Okoye: And the honest answer is usually more than one.
+
+30
+00:02:18.556 --> 00:02:23.659
+Leona Brandt-Okoye: The best answers name the channel that matters most and say why.
+
+31
+00:02:24.112 --> 00:02:27.762
+Leona Brandt-Okoye: So, um, practice that on every example we see today.
+
+32
+00:02:30.525 --> 00:02:36.954
+Leona Brandt-Okoye: Okay. Here's a case I like a lot. This is a mid-sized company, Fernhill Logistics.
+
+33
+00:02:37.447 --> 00:02:41.724
+Leona Brandt-Okoye: It's a teaching case, so the numbers are cleaned up.
+
+34
+00:02:41.917 --> 00:02:46.558
+Leona Brandt-Okoye: In 2023, new hires had to opt in to the retirement plan.
+
+35
+00:02:46.928 --> 00:02:51.081
+Leona Brandt-Okoye: They had to find a form and fill it out.
+
+36
+00:02:51.239 --> 00:02:57.920
+Leona Brandt-Okoye: In 2024, the company switched to automatic enrollment. Same plan, same employer match, same everything.
+
+37
+00:02:58.279 --> 00:03:02.786
+Leona Brandt-Okoye: The only thing that changed is what happens if you do nothing.
+
+38
+00:03:02.996 --> 00:03:07.868
+Leona Brandt-Okoye: And, um, look at the two bars. Just look at the gap.
+
+39
+00:03:08.113 --> 00:03:13.549
+Leona Brandt-Okoye: I'm not even going to read the numbers to you, you can see it.
+
+40
+00:03:13.806 --> 00:03:20.029
+Leona Brandt-Okoye: This is one of the most replicated results in this whole part of the course.
+
+41
+00:03:20.303 --> 00:03:23.626
+Leona Brandt-Okoye: Change the default and participation moves by a huge
+
+42
+00:03:24.030 --> 00:03:27.225
+Leona Brandt-Okoye: amount, and nobody's preferences changed between 2023 and 2024.
+
+43
+00:03:28.257 --> 00:03:31.595
+Student: Were the 2024 people just different, though?
+
+44
+00:03:31.924 --> 00:03:36.946
+Student: Like, maybe the company hired different kinds of people that year?
+
+45
+00:03:38.207 --> 00:03:42.782
+Leona Brandt-Okoye: Good question, that's exactly the right worry. The case checks that.
+
+46
+00:03:43.123 --> 00:03:46.998
+Leona Brandt-Okoye: The two groups of hires look very similar on age and
+
+47
+00:03:47.464 --> 00:03:51.228
+Leona Brandt-Okoye: salary, so it's not a story about who got hired.
+
+48
+00:03:51.608 --> 00:03:52.709
+Leona Brandt-Okoye: It's the default.
+
+49
+00:03:55.386 --> 00:03:58.830
+Leona Brandt-Okoye: But. There's always a but. Here's the catch.
+
+50
+00:03:59.049 --> 00:04:02.685
+Leona Brandt-Okoye: When Fernhill auto-enrolled people, it had to pick a
+
+51
+00:04:03.000 --> 00:04:06.181
+Leona Brandt-Okoye: contribution rate, and it picked 3% of pay.
+
+52
+00:04:06.560 --> 00:04:10.768
+Leona Brandt-Okoye: And most auto-enrolled workers stayed at exactly 3%, year after year.
+
+53
+00:04:10.976 --> 00:04:15.412
+Leona Brandt-Okoye: Now, under opt-in, the people who did join picked their own
+
+54
+00:04:15.863 --> 00:04:19.827
+Leona Brandt-Okoye: rate, and a lot of them picked more than 3.
+
+55
+00:04:20.228 --> 00:04:23.742
+Leona Brandt-Okoye: So some of the people who would have saved 6
+
+56
+00:04:24.215 --> 00:04:27.826
+Leona Brandt-Okoye: or 8% on their own got anchored at 3.
+
+57
+00:04:28.307 --> 00:04:30.460
+Leona Brandt-Okoye: The default pulled them down.
+
+58
+00:04:30.882 --> 00:04:34.522
+Leona Brandt-Okoye: So participation went way up, but total savings went
+
+59
+00:04:34.773 --> 00:04:38.292
+Leona Brandt-Okoye: up by less than you'd guess from that chart.
+
+60
+00:04:38.767 --> 00:04:44.214
+Leona Brandt-Okoye: Keep that in mind. A default fixes one thing and can quietly break another.
+
+61
+00:04:45.100 --> 00:04:48.690
+Student: Why not just set the default at 6% then?
+
+62
+00:04:49.190 --> 00:04:50.483
+Leona Brandt-Okoye: Some firms do.
+
+63
+00:04:50.636 --> 00:04:55.760
+Leona Brandt-Okoye: But a higher default also makes more people opt out entirely, because
+
+64
+00:04:56.026 --> 00:04:59.970
+Leona Brandt-Okoye: the hit to their paycheck is bigger and they notice it.
+
+65
+00:05:00.164 --> 00:05:03.435
+Leona Brandt-Okoye: So there's a trade-off between participation and the rate.
+
+66
+00:05:03.881 --> 00:05:08.788
+Leona Brandt-Okoye: That's exactly the kind of tension I want to see in your essays.
+
+67
+00:05:11.956 --> 00:05:17.162
+Leona Brandt-Okoye: So how do you fix that? There are two standard fixes on this slide.
+
+68
+00:05:17.536 --> 00:05:18.981
+Leona Brandt-Okoye: The first is auto-escalation.
+
+69
+00:05:19.306 --> 00:05:24.206
+Leona Brandt-Okoye: The default rate goes up a little every year unless you opt out.
+
+70
+00:05:24.565 --> 00:05:29.144
+Leona Brandt-Okoye: At Fernhill, the escalation is one percentage point a year, capped at 10%.
+
+71
+00:05:29.496 --> 00:05:34.347
+Leona Brandt-Okoye: So you start at 3, next year 4, and so on.
+
+72
+00:05:34.803 --> 00:05:38.442
+Leona Brandt-Okoye: Inertia, which was the problem, now works for you.
+
+73
+00:05:38.807 --> 00:05:43.481
+Leona Brandt-Okoye: Some plans tie each increase to a raise, so your take-home pay
+
+74
+00:05:43.921 --> 00:05:48.758
+Leona Brandt-Okoye: never actually goes down, which takes the loss aversion out of it.
+
+75
+00:05:49.115 --> 00:05:53.080
+Leona Brandt-Okoye: The second fix is active choice. No default at all.
+
+76
+00:05:53.402 --> 00:05:56.567
+Leona Brandt-Okoye: Everyone has to pick a rate on day
+
+77
+00:05:56.972 --> 00:06:00.186
+Leona Brandt-Okoye: one, you can't start the job without picking.
+
+78
+00:06:00.366 --> 00:06:02.634
+Leona Brandt-Okoye: And the trade-off is pretty clear.
+
+79
+00:06:02.781 --> 00:06:07.561
+Leona Brandt-Okoye: Active choice respects people's preferences, but it costs effort, and some people will
+
+80
+00:06:08.017 --> 00:06:13.313
+Leona Brandt-Okoye: pick badly or, um, just pick whatever number is first on the form.
+
+81
+00:06:15.467 --> 00:06:18.405
+Leona Brandt-Okoye: Okay, let's try one. It's on the slide.
+
+82
+00:06:18.748 --> 00:06:22.707
+Leona Brandt-Okoye: Right now, first-years here are defaulted into the largest meal plan.
+
+83
+00:06:23.059 --> 00:06:28.883
+Leona Brandt-Okoye: Should that be the default? Take 2 minutes with the person next to you.
+
+84
+00:06:29.110 --> 00:06:32.819
+Leona Brandt-Okoye: Which channel matters most, and what would you change?
+
+85
+00:08:18.541 --> 00:08:24.171
+Leona Brandt-Okoye: Okay, okay, let's come back. Who wants to share? Yes, in the middle.
+
+86
+00:08:24.980 --> 00:08:30.150
+Student: We said the default should be the middle plan, not the
+
+87
+00:08:30.294 --> 00:08:34.440
+Student: biggest, because people treat the default like the recommended amount.
+
+88
+00:08:34.842 --> 00:08:40.242
+Student: So the biggest plan makes first-years think they need that much food.
+
+89
+00:08:41.105 --> 00:08:43.268
+Leona Brandt-Okoye: Nice. So that's the endorsement channel.
+
+90
+00:08:43.712 --> 00:08:48.462
+Leona Brandt-Okoye: The default is telling first-years, this is how much a normal person eats.
+
+91
+00:08:48.600 --> 00:08:54.028
+Leona Brandt-Okoye: The other answer people usually give is effort, nobody bothers to downgrade. Both are fine.
+
+92
+00:08:54.389 --> 00:08:58.673
+Leona Brandt-Okoye: The best answer says which one matters more and why.
+
+93
+00:09:01.432 --> 00:09:04.789
+Leona Brandt-Okoye: The next slide is the beta-delta model, the present
+
+94
+00:09:05.110 --> 00:09:08.050
+Leona Brandt-Okoye: bias math from the appendix of the reading.
+
+95
+00:09:08.548 --> 00:09:11.049
+Leona Brandt-Okoye: I'm going to skip it today.
+
+96
+00:09:11.260 --> 00:09:16.305
+Leona Brandt-Okoye: We'll do present bias properly on Wednesday, so don't worry about this one now.
+
+97
+00:09:16.441 --> 00:09:17.196
+Leona Brandt-Okoye: Skipping it.
+
+98
+00:09:19.791 --> 00:09:23.656
+Leona Brandt-Okoye: So, when do defaults backfire? Three ways on the slide.
+
+99
+00:09:23.918 --> 00:09:29.090
+Leona Brandt-Okoye: First, a default can be chosen for the firm, not for the person.
+
+100
+00:09:29.561 --> 00:09:32.432
+Leona Brandt-Okoye: People call that sludge. Here's my favorite example.
+
+101
+00:09:32.819 --> 00:09:36.663
+Leona Brandt-Okoye: A gym membership that renews automatically every year, where the
+
+102
+00:09:36.950 --> 00:09:40.705
+Leona Brandt-Okoye: only way to cancel is to mail a certified letter.
+
+103
+00:09:41.070 --> 00:09:46.080
+Leona Brandt-Okoye: That's a default too. It's just pointed at you instead of working for you.
+
+104
+00:09:46.404 --> 00:09:49.911
+Leona Brandt-Okoye: Second, one-size defaults can be wrong for lots of people.
+
+105
+00:09:50.238 --> 00:09:54.380
+Leona Brandt-Okoye: Remember, 3% is too low for the person who wanted 8.
+
+106
+00:09:54.535 --> 00:09:59.263
+Leona Brandt-Okoye: And a default that's fine for the average worker can be bad
+
+107
+00:09:59.577 --> 00:10:04.858
+Leona Brandt-Okoye: for someone at the edges, like a person with a lot of
+
+108
+00:10:05.022 --> 00:10:08.577
+Leona Brandt-Okoye: credit card debt who shouldn't be saving for retirement yet.
+
+109
+00:10:08.794 --> 00:10:10.062
+Leona Brandt-Okoye: And third, trust.
+
+110
+00:10:10.438 --> 00:10:15.275
+Leona Brandt-Okoye: If people find out a default was set to manipulate them, it loses
+
+111
+00:10:15.588 --> 00:10:19.905
+Leona Brandt-Okoye: its endorsement power, and sometimes people move away from it on purpose.
+
+112
+00:10:20.305 --> 00:10:24.804
+Leona Brandt-Okoye: Actually, let me go back to the Fernhill chart for one second.
+
+113
+00:10:28.143 --> 00:10:32.791
+Leona Brandt-Okoye: So remember the gap between those bars. Who's in the gap?
+
+114
+00:10:32.920 --> 00:10:35.654
+Leona Brandt-Okoye: Who are the extra people who joined?
+
+115
+00:10:36.034 --> 00:10:39.560
+Leona Brandt-Okoye: In the case, they're mostly younger, lower-paid workers, the people
+
+116
+00:10:39.761 --> 00:10:43.321
+Leona Brandt-Okoye: who are least likely to go find a form.
+
+117
+00:10:43.644 --> 00:10:47.108
+Leona Brandt-Okoye: That's the good news part of this story.
+
+118
+00:10:47.378 --> 00:10:52.761
+Leona Brandt-Okoye: The default helped the people who needed the help most. Okay, forward again.
+
+119
+00:10:54.647 --> 00:10:59.573
+Leona Brandt-Okoye: So when you evaluate a default in your essay, ask both questions.
+
+120
+00:11:00.031 --> 00:11:03.517
+Leona Brandt-Okoye: Who does it help, and who does it hurt?
+
+121
+00:11:06.070 --> 00:11:09.576
+Leona Brandt-Okoye: Okay, last slide, logistics. And I need to fix something.
+
+122
+00:11:09.899 --> 00:11:14.969
+Leona Brandt-Okoye: The slide says the Essay 2 draft is due Thursday, November 5th.
+
+123
+00:11:15.293 --> 00:11:18.844
+Leona Brandt-Okoye: That's the old date, I didn't update the slide.
+
+124
+00:11:19.218 --> 00:11:24.891
+Leona Brandt-Okoye: As I emailed yesterday, the draft is due Monday, November 9th at 11:59 PM.
+
+125
+00:11:25.382 --> 00:11:31.343
+Leona Brandt-Okoye: Monday the 9th. Please don't go by the slide. Everything else is the same.
+
+126
+00:11:31.504 --> 00:11:35.123
+Leona Brandt-Okoye: Pick one real-world default and evaluate it using at
+
+127
+00:11:35.471 --> 00:11:38.373
+Leona Brandt-Okoye: least two frameworks from weeks 6 to 8.
+
+128
+00:11:38.757 --> 00:11:43.596
+Leona Brandt-Okoye: And since a few of you asked about peer review, I'll
+
+129
+00:11:44.036 --> 00:11:48.903
+Leona Brandt-Okoye: go through the details in section, but here are the dates.
+
+130
+00:11:49.142 --> 00:11:53.921
+Leona Brandt-Okoye: Pairings go out Tuesday, November 10th, and your review of your
+
+131
+00:11:54.205 --> 00:11:58.616
+Leona Brandt-Okoye: partner's draft is due Monday, November 16th at 11:59 PM.
+
+132
+00:11:58.812 --> 00:12:03.888
+Leona Brandt-Okoye: On Wednesday we start present bias and commitment devices. Have a good day, everyone.

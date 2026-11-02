@@ -1,0 +1,2292 @@
+{
+  "student": "Riley Park",
+  "date": "2026-11-02",
+  "timezone": "America/New_York",
+  "note": "Everything is fictional. Match groups are regexes over normalized notes text: every group must match; an alternative starting with 'c:' is matched against the compact formula form (beta->b, no spaces or multiplication signs), e.g. b1+b3x2.",
+  "classes": [
+    {
+      "id": "econ140",
+      "course": "ECON 140: Behavioral Economics",
+      "session": "Lecture 17",
+      "title": "Defaults: Why They Stick, and When They Backfire",
+      "instructor": "Prof. Leona Brandt-Okoye",
+      "start": "2026-11-02T10:30:00-05:00",
+      "end": "2026-11-02T11:45:00-05:00",
+      "slides_dir": "econ140/slides",
+      "transcript": "econ140/transcript.vtt",
+      "speakers": [
+        "Leona Brandt-Okoye",
+        "Student"
+      ],
+      "vtt_flavor": "zoom",
+      "n_slides": 9,
+      "transcript_words": 1382,
+      "n_cues": 132,
+      "slides": [
+        {
+          "slide": 1,
+          "file": "Slide1.png",
+          "kind": "title",
+          "title": "Defaults: Why They Stick, and When They Backfire",
+          "on_slide": [
+            "Defaults: Why They Stick, and When They Backfire",
+            "Lecture 17",
+            "Prof. Leona Brandt-Okoye",
+            "Monday, November 2, 2026"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:00:03.543",
+              "00:00:46.764"
+            ]
+          ],
+          "key_points": []
+        },
+        {
+          "slide": 2,
+          "file": "Slide2.png",
+          "kind": "bullets",
+          "title": "Why do defaults stick? Three channels",
+          "on_slide": [
+            "Why do defaults stick? Three channels",
+            "Effort: switching takes time and attention, so people stay put (inertia)",
+            "Endorsement: the default reads as a recommendation",
+            "Reference point: the default becomes the status quo, and leaving it feels like a loss"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:00:49.426",
+              "00:02:27.762"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Effort: switching costs time and attention, so people stay put (inertia)",
+              "source": "slide",
+              "match": [
+                [
+                  "effort|inertia"
+                ]
+              ]
+            },
+            {
+              "text": "Endorsement: people read the default as a recommendation",
+              "source": "slide",
+              "match": [
+                [
+                  "endorse|recommend"
+                ]
+              ]
+            },
+            {
+              "text": "Reference point: the default becomes the status quo; leaving it feels like a loss",
+              "source": "slide",
+              "match": [
+                [
+                  "reference point|status quo"
+                ]
+              ]
+            },
+            {
+              "text": "Exam hint: the final gives a scenario and asks which channel is doing the work; name the one that matters most and say why",
+              "source": "speech",
+              "match": [
+                [
+                  "\\bexam|\\bfinal\\b"
+                ],
+                [
+                  "scenario|which channel"
+                ]
+              ],
+              "quote": "On the final exam, I will give you a scenario"
+            }
+          ]
+        },
+        {
+          "slide": 3,
+          "file": "Slide3.png",
+          "kind": "bars",
+          "title": "Fernhill Logistics: plan participation after 12 months",
+          "on_slide": [
+            "Fernhill Logistics: plan participation after 12 months",
+            "Opt-in (2023 hires): 41%",
+            "Automatic enrollment at 3% (2024 hires): 88%",
+            "% of new hires contributing",
+            "Teaching case; numbers simplified."
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:02:30.525",
+              "00:03:52.709"
+            ],
+            [
+              "00:10:28.143",
+              "00:10:52.761"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Participation was 41% under opt-in vs 88% with automatic enrollment",
+              "source": "image",
+              "match": [
+                [
+                  "\\b41\\b"
+                ],
+                [
+                  "\\b88\\b"
+                ]
+              ]
+            },
+            {
+              "text": "Same plan and match; only the default changed between the 2023 and 2024 hires",
+              "source": "speech",
+              "match": [
+                [
+                  "same plan|same .{0,20}match|(remained|stayed|were|was) (the )?same|unchanged|only (thing )?(that )?changed|only the default|only difference|nothing else changed"
+                ]
+              ],
+              "quote": "The only thing that changed is what happens if you do nothing"
+            },
+            {
+              "text": "Student question: the two groups of hires were similar on age and salary, so it is not a story about who got hired",
+              "source": "speech",
+              "match": [
+                [
+                  "\\bage\\b|salar"
+                ],
+                [
+                  "similar|same|composition|who got hired|not .*different"
+                ]
+              ],
+              "quote": "The two groups of hires look very similar on age and salary"
+            },
+            {
+              "text": "On a return to this chart: the extra participants were mostly younger, lower-paid workers",
+              "source": "speech",
+              "match": [
+                [
+                  "young"
+                ],
+                [
+                  "low(er)?[- ]paid|low(er)? (income|wage|salar)"
+                ]
+              ],
+              "quote": "they're mostly younger, lower-paid workers"
+            }
+          ]
+        },
+        {
+          "slide": 4,
+          "file": "Slide4.png",
+          "kind": "bullets",
+          "title": "The catch: people stick to the default rate, too",
+          "on_slide": [
+            "The catch: people stick to the default rate, too",
+            "Most auto-enrolled workers stayed at the 3% default rate",
+            "Under opt-in, many joiners chose more than 3%",
+            "Participation rose a lot; total savings rose by less"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:03:55.386",
+              "00:05:08.788"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Most auto-enrolled workers stayed at the 3% default rate",
+              "source": "slide",
+              "match": [
+                [
+                  "\\b3 ?%|3 percent|three percent"
+                ],
+                [
+                  "stay|stuck|stick|remain|anchor"
+                ]
+              ]
+            },
+            {
+              "text": "Participation rose a lot, but total savings rose by less",
+              "source": "slide",
+              "match": [
+                [
+                  "saving"
+                ],
+                [
+                  "\\bless\\b|smaller|not as much"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "slide": 5,
+          "file": "Slide5.png",
+          "kind": "bullets",
+          "title": "Two fixes",
+          "on_slide": [
+            "Two fixes",
+            "Auto-escalation: the default rate rises every year unless you opt out",
+            "Active choice: no default; everyone must pick a rate",
+            "Trade-off: active choice respects preferences but costs effort"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:05:11.956",
+              "00:06:13.313"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Auto-escalation raises the default rate every year unless you opt out",
+              "source": "slide",
+              "match": [
+                [
+                  "escalat"
+                ]
+              ]
+            },
+            {
+              "text": "Fernhill escalates one percentage point a year, capped at 10%",
+              "source": "speech",
+              "match": [
+                [
+                  "one percentage point|1 percentage point|one point|\\b1 point|\\b1 ?%|one percent"
+                ],
+                [
+                  "\\b10 ?%|10 percent|ten percent|\\bcap"
+                ]
+              ],
+              "quote": "the escalation is one percentage point a year, capped at 10%"
+            },
+            {
+              "text": "Active choice: no default, everyone must pick; respects preferences but costs effort",
+              "source": "slide",
+              "match": [
+                [
+                  "active choice"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "slide": 6,
+          "file": "Slide6.png",
+          "kind": "activity",
+          "title": "Your turn: design the default",
+          "on_slide": [
+            "Your turn: design the default",
+            "First-years are defaulted into the largest campus meal plan.",
+            "Should they be? Which channel matters most? What would you change?",
+            "2 minutes with a neighbor"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:06:15.467",
+              "00:08:58.673"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Class answer: make the middle plan the default, because a default reads as the recommended amount (endorsement)",
+              "source": "speech",
+              "match": [
+                [
+                  "meal plan|dining|middle plan|biggest plan|largest"
+                ],
+                [
+                  "endorse|recommend"
+                ]
+              ],
+              "quote": "So that's the endorsement channel"
+            }
+          ]
+        },
+        {
+          "slide": 7,
+          "file": "Slide7.png",
+          "kind": "formula",
+          "title": "Appendix: present bias (the β–δ model)",
+          "on_slide": [
+            "Appendix: present bias (the β–δ model)",
+            "U0 = u(c0) + β Σ δ^t u(ct),   t = 1 … T",
+            "β < 1 puts extra weight on today",
+            "δ is the usual per-period discount factor"
+          ],
+          "skipped": true,
+          "time_ranges": [
+            [
+              "00:09:01.432",
+              "00:09:17.196"
+            ]
+          ],
+          "key_points": []
+        },
+        {
+          "slide": 8,
+          "file": "Slide8.png",
+          "kind": "bullets",
+          "title": "When defaults backfire",
+          "on_slide": [
+            "When defaults backfire",
+            "Chosen for the firm, not the person (“sludge”)",
+            "One-size defaults can be wrong for many people",
+            "Trust: a default seen as manipulative loses its endorsement power"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:09:19.791",
+              "00:10:24.804"
+            ],
+            [
+              "00:10:54.647",
+              "00:11:03.517"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Sludge: a default chosen for the firm, not the person",
+              "source": "slide",
+              "match": [
+                [
+                  "sludge|for the firm"
+                ]
+              ]
+            },
+            {
+              "text": "A default seen as manipulative loses its endorsement power (trust)",
+              "source": "slide",
+              "match": [
+                [
+                  "trust|manipulat"
+                ]
+              ]
+            },
+            {
+              "text": "Example said aloud: a gym membership that auto-renews and can only be cancelled by certified letter",
+              "source": "speech",
+              "match": [
+                [
+                  "gym"
+                ]
+              ],
+              "quote": "A gym membership that renews automatically every year"
+            }
+          ]
+        },
+        {
+          "slide": 9,
+          "file": "Slide9.png",
+          "kind": "bullets",
+          "title": "Essay 2 and what’s next",
+          "on_slide": [
+            "Essay 2 and what’s next",
+            "Essay 2 draft due Thu Nov 5, 11:59 pm on Canvas",
+            "Evaluate ONE real-world default using at least two frameworks (weeks 6–8)",
+            "Next: present bias and commitment devices"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:11:06.070",
+              "00:12:03.888"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Evaluate one real-world default with at least two frameworks from weeks 6-8",
+              "source": "slide",
+              "match": [
+                [
+                  "two frameworks|2 frameworks|two of the frameworks|two .{0,20}frameworks"
+                ]
+              ]
+            },
+            {
+              "text": "Next: present bias and commitment devices",
+              "source": "slide",
+              "match": [
+                [
+                  "commitment device"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "slide": 9,
+          "slide_said": "Essay 2 draft due Thu Nov 5, 11:59 pm",
+          "lecturer_said": "Essay 2 draft is due Mon Nov 9, 11:59 pm (the slide has the old date)",
+          "quote": "That's the old date, I didn't update the slide",
+          "right": [
+            [
+              "essay|draft"
+            ],
+            [
+              "nov(ember)?\\.? 9|11/9|\\b9 nov"
+            ]
+          ],
+          "wrong": [
+            [
+              "essay|draft"
+            ],
+            [
+              "nov(ember)?\\.? 5\\b|11/5\\b|\\b5 nov|thu(rsday)?,? nov"
+            ]
+          ]
+        }
+      ],
+      "verbal_only": [
+        {
+          "slide": 2,
+          "text": "Exam hint: the final gives a scenario and asks which channel is doing the work; name the one that matters most and say why",
+          "match": [
+            [
+              "\\bexam|\\bfinal\\b"
+            ],
+            [
+              "scenario|which channel"
+            ]
+          ],
+          "quote": "On the final exam, I will give you a scenario"
+        },
+        {
+          "slide": 3,
+          "text": "Same plan and match; only the default changed between the 2023 and 2024 hires",
+          "match": [
+            [
+              "same plan|same .{0,20}match|(remained|stayed|were|was) (the )?same|unchanged|only (thing )?(that )?changed|only the default|only difference|nothing else changed"
+            ]
+          ],
+          "quote": "The only thing that changed is what happens if you do nothing"
+        },
+        {
+          "slide": 3,
+          "text": "Student question: the two groups of hires were similar on age and salary, so it is not a story about who got hired",
+          "match": [
+            [
+              "\\bage\\b|salar"
+            ],
+            [
+              "similar|same|composition|who got hired|not .*different"
+            ]
+          ],
+          "quote": "The two groups of hires look very similar on age and salary"
+        },
+        {
+          "slide": 3,
+          "text": "On a return to this chart: the extra participants were mostly younger, lower-paid workers",
+          "match": [
+            [
+              "young"
+            ],
+            [
+              "low(er)?[- ]paid|low(er)? (income|wage|salar)"
+            ]
+          ],
+          "quote": "they're mostly younger, lower-paid workers"
+        },
+        {
+          "slide": 5,
+          "text": "Fernhill escalates one percentage point a year, capped at 10%",
+          "match": [
+            [
+              "one percentage point|1 percentage point|one point|\\b1 point|\\b1 ?%|one percent"
+            ],
+            [
+              "\\b10 ?%|10 percent|ten percent|\\bcap"
+            ]
+          ],
+          "quote": "the escalation is one percentage point a year, capped at 10%"
+        },
+        {
+          "slide": 6,
+          "text": "Class answer: make the middle plan the default, because a default reads as the recommended amount (endorsement)",
+          "match": [
+            [
+              "meal plan|dining|middle plan|biggest plan|largest"
+            ],
+            [
+              "endorse|recommend"
+            ]
+          ],
+          "quote": "So that's the endorsement channel"
+        },
+        {
+          "slide": 8,
+          "text": "Example said aloud: a gym membership that auto-renews and can only be cancelled by certified letter",
+          "match": [
+            [
+              "gym"
+            ]
+          ],
+          "quote": "A gym membership that renews automatically every year"
+        }
+      ],
+      "vision_only": [
+        {
+          "slide": 3,
+          "text": "Participation was 41% under opt-in vs 88% with automatic enrollment",
+          "match": [
+            [
+              "\\b41\\b"
+            ],
+            [
+              "\\b88\\b"
+            ]
+          ]
+        }
+      ],
+      "skipped_slides": [
+        7
+      ],
+      "skip_quotes": {
+        "7": "I'm going to skip it today"
+      },
+      "announcements": [
+        {
+          "slide": 9,
+          "text": "Essay 2 draft due Mon Nov 9, 11:59 pm on Canvas (the slide's Nov 5 date is old)",
+          "when": "2026-11-09T23:59:00-05:00",
+          "source": "slide (wrong) + speech (correction)",
+          "match": [
+            [
+              "essay|draft"
+            ],
+            [
+              "nov(ember)?\\.? 9|11/9|\\b9 nov"
+            ]
+          ],
+          "quote": "the draft is due Monday, November 9th at 11:59 PM"
+        },
+        {
+          "slide": 9,
+          "text": "Essay 2 peer review: pairings go out Tue Nov 10; reviews due Mon Nov 16, 11:59 pm",
+          "when": "2026-11-16T23:59:00-05:00",
+          "source": "speech only",
+          "match": [
+            [
+              "peer review|review"
+            ],
+            [
+              "nov(ember)?\\.? 16|11/16|\\b16 nov"
+            ]
+          ],
+          "quote": "your review of your partner's draft is due Monday, November 16th at 11:59 PM"
+        }
+      ],
+      "returns": [
+        {
+          "slide": 3,
+          "from_slide": 8,
+          "time_range": [
+            "00:10:28.143",
+            "00:10:52.761"
+          ]
+        }
+      ],
+      "cue_slides": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ]
+    },
+    {
+      "id": "stat121",
+      "course": "STAT 121: Applied Regression",
+      "session": "Lecture 18",
+      "title": "Interactions in Practice, and Reading Residual Plots",
+      "instructor": "Dr. Owen Castellanos-Reid",
+      "start": "2026-11-02T12:00:00-05:00",
+      "end": "2026-11-02T13:15:00-05:00",
+      "slides_dir": "stat121/slides",
+      "transcript": "stat121/transcript.vtt",
+      "speakers": [
+        "Owen Castellanos-Reid",
+        "Student"
+      ],
+      "vtt_flavor": "teams",
+      "n_slides": 10,
+      "transcript_words": 1349,
+      "n_cues": 134,
+      "slides": [
+        {
+          "slide": 1,
+          "file": "Slide1.png",
+          "kind": "title",
+          "title": "Interactions in Practice, and Reading Residual Plots",
+          "on_slide": [
+            "Interactions in Practice, and Reading Residual Plots",
+            "Lecture 18",
+            "Dr. Owen Castellanos-Reid",
+            "Monday, November 2, 2026"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:00:02.175",
+              "00:00:56.164"
+            ]
+          ],
+          "key_points": []
+        },
+        {
+          "slide": 2,
+          "file": "Slide2.png",
+          "kind": "formula",
+          "title": "A model with an interaction",
+          "on_slide": [
+            "A model with an interaction",
+            "score = β0 + β1·study + β2·sleep + β3·(study × sleep) + ε",
+            "study = hours studied in the week before the exam",
+            "sleep = average hours of sleep per night that week",
+            "β3 lets the payoff from studying depend on sleep",
+            "Simulated data, n = 212 students"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:00:59.442",
+              "00:02:21.830"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "The product term study × sleep (coefficient β3) lets the effect of studying depend on sleep",
+              "source": "slide",
+              "match": [
+                [
+                  "interaction|product"
+                ],
+                [
+                  "depend"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "slide": 3,
+          "file": "Slide3.png",
+          "kind": "bullets",
+          "title": "Interpreting the interaction",
+          "on_slide": [
+            "Interpreting the interaction",
+            "Effect of a 1-unit increase in x1:   β1 + β3·x1",
+            "β1 alone = effect of x1 when x2 = 0",
+            "Does the effect change at all? Test H0: β3 = 0"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:02:24.932",
+              "00:03:38.001"
+            ],
+            [
+              "00:04:10.844",
+              "00:04:20.340"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "β1 alone is the effect of x1 when x2 = 0",
+              "source": "slide",
+              "match": [
+                [
+                  "c:x2=0|c:x2is(0|zero)|c:x2equals(0|zero)|c:(zero|0)sleep|c:sleep(=|is|of)(0|zero)|c:sleeps?(0|zero)hours|c:(0|zero)hours"
+                ]
+              ]
+            },
+            {
+              "text": "Test H0: β3 = 0 to ask whether the effect changes at all",
+              "source": "slide",
+              "match": [
+                [
+                  "c:b3=0|c:b3is(0|zero)|c:b3equals(0|zero)|c:h0"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "slide": 4,
+          "file": "Slide4.png",
+          "kind": "table",
+          "title": "Fitted model: score ~ study × sleep",
+          "on_slide": [
+            "Fitted model: score ~ study × sleep",
+            "term | estimate | std. error",
+            "(Intercept) | 52.0 | 4.1",
+            "study | 3.1 | 0.9",
+            "sleep | 1.8 | 0.6",
+            "study × sleep | 0.4 | 0.12",
+            "R² = 0.46     n = 212"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:03:41.849",
+              "00:04:07.257"
+            ],
+            [
+              "00:04:23.479",
+              "00:05:22.971"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Interaction estimate 0.4 (SE 0.12): clearly not zero",
+              "source": "slide",
+              "match": [
+                [
+                  "0\\.4\\b|\\.4\\b"
+                ],
+                [
+                  "0?\\.12\\b|not (0|zero)|nonzero|non-zero|significant"
+                ]
+              ]
+            },
+            {
+              "text": "Worked example said aloud: at 8 hours of sleep, an extra study hour is worth 3.1 + 0.4 × 8 = 6.3 points",
+              "source": "speech",
+              "match": [
+                [
+                  "6\\.3\\b"
+                ]
+              ],
+              "quote": "so 6.3 points per extra hour of studying"
+            },
+            {
+              "text": "At 5 hours of sleep it is 3.1 + 2 = 5.1 points",
+              "source": "speech",
+              "match": [
+                [
+                  "5\\.1\\b"
+                ]
+              ],
+              "quote": "so 5.1 points"
+            },
+            {
+              "text": "Student question: 3.1 alone is the effect of studying at zero sleep, a person who doesn't exist",
+              "source": "speech",
+              "match": [
+                [
+                  "zero|\\b0 hours|no sleep"
+                ],
+                [
+                  "(doesn.t|does not|don.t) exist|nonsense|meaningless|useless|nobody|no one|not meaningful|unrealistic|impossible|not realistic"
+                ]
+              ],
+              "quote": "And that's a person who doesn't exist"
+            }
+          ]
+        },
+        {
+          "slide": 5,
+          "file": "Slide5.png",
+          "kind": "bullets",
+          "title": "Centering",
+          "on_slide": [
+            "Centering",
+            "Subtract the mean before forming the product: sleepc = sleep − 7",
+            "Centered fit: study coefficient = 5.9 (the effect at average sleep)",
+            "β3, the predictions and R² do not change"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:05:26.401",
+              "00:06:35.972"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Centering: subtract the mean (sleep minus 7) before forming the product",
+              "source": "slide",
+              "match": [
+                [
+                  "center"
+                ],
+                [
+                  "mean|average"
+                ]
+              ]
+            },
+            {
+              "text": "Centered study coefficient 5.9 = effect at average sleep",
+              "source": "slide",
+              "match": [
+                [
+                  "5\\.9\\b"
+                ]
+              ]
+            },
+            {
+              "text": "β3, predictions and R² do not change",
+              "source": "slide",
+              "match": [
+                [
+                  "c:b3|interaction"
+                ],
+                [
+                  "(not|n.t) change|unchanged|same|stays"
+                ]
+              ]
+            },
+            {
+              "text": "Quiz 4 hint: you'll get an uncentered model and must interpret β1 as the effect when the other variable is 0",
+              "source": "speech",
+              "match": [
+                [
+                  "quiz"
+                ],
+                [
+                  "not centered|uncentered|un-centered|isn.t centered|without centering|non-centered"
+                ]
+              ],
+              "quote": "On Quiz 4, I'm going to give you a model that is not centered"
+            }
+          ]
+        },
+        {
+          "slide": 6,
+          "file": "Slide6.png",
+          "kind": "scatter",
+          "title": "Residuals vs. fitted: Model 2",
+          "on_slide": [
+            "Residuals vs. fitted: Model 2",
+            "(scatter of residuals vs fitted values 55-97; the vertical spread grows from about ±3 at the left to about ±25 at the right)",
+            "Model 2: score ~ study × sleep (n = 212)"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:06:39.126",
+              "00:07:52.009"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "The plot fans out: residual spread grows as fitted values increase (non-constant variance)",
+              "source": "image",
+              "match": [
+                [
+                  "\\bfan|funnel|cone|megaphone|trumpet|wid(en|ens|ening|er)\\b|spread(s|ing)? out|more spread|spread (grows|increases|gets (larger|bigger|wider))|(increasing|growing|larger|bigger|wider) spread|grow(s|ing)? (larger|wider|bigger)|get(s)? (larger|wider|bigger) (as|with|for)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "slide": 7,
+          "file": "Slide7.png",
+          "kind": "bullets",
+          "title": "If the error variance is not constant: three fixes",
+          "on_slide": [
+            "If the error variance is not constant: three fixes",
+            "Transform the outcome (e.g., log y) and refit",
+            "Robust (HC) standard errors: same estimates, honest SEs",
+            "Weighted least squares, if you can model the variance"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:07:54.194",
+              "00:09:12.326"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Transform the outcome (e.g., log) and refit",
+              "source": "slide",
+              "match": [
+                [
+                  "\\blog"
+                ]
+              ]
+            },
+            {
+              "text": "Robust (HC) standard errors: same estimates, honest SEs",
+              "source": "slide",
+              "match": [
+                [
+                  "robust|\\bhc\\b"
+                ]
+              ]
+            },
+            {
+              "text": "Weighted least squares if you can model the variance",
+              "source": "slide",
+              "match": [
+                [
+                  "weighted least squares|wls"
+                ]
+              ]
+            },
+            {
+              "text": "HW7 hint: robust standard errors are all that's expected on problem 4 (no WLS needed)",
+              "source": "speech",
+              "match": [
+                [
+                  "robust"
+                ],
+                [
+                  "problem 4|problem four|hw ?7|homework 7"
+                ]
+              ],
+              "quote": "robust standard errors are all I'm expecting on problem 4"
+            },
+            {
+              "text": "Student question: after a log, a coefficient is roughly a percent change",
+              "source": "speech",
+              "match": [
+                [
+                  "percent|%"
+                ],
+                [
+                  "\\blog"
+                ]
+              ],
+              "quote": "a coefficient is roughly a percent change"
+            }
+          ]
+        },
+        {
+          "slide": 8,
+          "file": "Slide8.png",
+          "kind": "formula",
+          "title": "Leverage and Cook’s distance",
+          "on_slide": [
+            "Leverage and Cook’s distance",
+            "Di = ( ei^2 / (p · MSE) ) · hii / (1 − hii)^2",
+            "hii: leverage of point i",
+            "Rule of thumb: look closer when Di > 4/n"
+          ],
+          "skipped": true,
+          "time_ranges": [
+            [
+              "00:09:15.020",
+              "00:09:25.520"
+            ]
+          ],
+          "key_points": []
+        },
+        {
+          "slide": 9,
+          "file": "Slide9.png",
+          "kind": "bullets",
+          "title": "Homework 7 and next time",
+          "on_slide": [
+            "Homework 7 and next time",
+            "HW7 due Thu Nov 5, 11:59 pm: one PDF rendered from your notebook",
+            "Problems 3–4 use today’s material",
+            "Wednesday: leverage and outliers"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:09:27.880",
+              "00:10:00.827"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "HW7 due Thu Nov 5, 11:59 pm as one PDF from the notebook",
+              "source": "slide",
+              "match": [
+                [
+                  "hw ?7|homework 7"
+                ],
+                [
+                  "nov(ember)?\\.? 5\\b|11/5\\b|thu"
+                ]
+              ]
+            },
+            {
+              "text": "Wednesday: leverage and outliers",
+              "source": "slide",
+              "match": [
+                [
+                  "leverage|outlier"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "slide": 10,
+          "file": "Slide10.png",
+          "kind": "bullets",
+          "title": "Questions?",
+          "on_slide": [
+            "Questions?",
+            "Office hours: Dr. Castellanos-Reid, Thu 10–11 am, Pemberton 214",
+            "TF office hours: Mina Haddad-Byrne, Tue 3–5 pm, Pemberton 210"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:10:03.837",
+              "00:10:26.426"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Instructor office hours Thu 10-11 am, Pemberton 214",
+              "source": "slide",
+              "match": [
+                [
+                  "214|thu.{0,12}10"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "slide": 3,
+          "slide_said": "Effect of a 1-unit increase in x1: β1 + β3·x1",
+          "lecturer_said": "The effect of x1 is β1 + β3·x2 (times the other variable)",
+          "quote": "That should be beta 1 plus beta 3 times x2",
+          "right": [
+            [
+              "c:b1\\+b3x2|c:b1\\+b3sleep|c:b3x2\\+b1|c:b1\\+x2b3"
+            ]
+          ],
+          "wrong": [
+            [
+              "c:b1\\+b3x1(?!\\d)|c:b1\\+b3study"
+            ]
+          ]
+        }
+      ],
+      "verbal_only": [
+        {
+          "slide": 4,
+          "text": "Worked example said aloud: at 8 hours of sleep, an extra study hour is worth 3.1 + 0.4 × 8 = 6.3 points",
+          "match": [
+            [
+              "6\\.3\\b"
+            ]
+          ],
+          "quote": "so 6.3 points per extra hour of studying"
+        },
+        {
+          "slide": 4,
+          "text": "At 5 hours of sleep it is 3.1 + 2 = 5.1 points",
+          "match": [
+            [
+              "5\\.1\\b"
+            ]
+          ],
+          "quote": "so 5.1 points"
+        },
+        {
+          "slide": 4,
+          "text": "Student question: 3.1 alone is the effect of studying at zero sleep, a person who doesn't exist",
+          "match": [
+            [
+              "zero|\\b0 hours|no sleep"
+            ],
+            [
+              "(doesn.t|does not|don.t) exist|nonsense|meaningless|useless|nobody|no one|not meaningful|unrealistic|impossible|not realistic"
+            ]
+          ],
+          "quote": "And that's a person who doesn't exist"
+        },
+        {
+          "slide": 5,
+          "text": "Quiz 4 hint: you'll get an uncentered model and must interpret β1 as the effect when the other variable is 0",
+          "match": [
+            [
+              "quiz"
+            ],
+            [
+              "not centered|uncentered|un-centered|isn.t centered|without centering|non-centered"
+            ]
+          ],
+          "quote": "On Quiz 4, I'm going to give you a model that is not centered"
+        },
+        {
+          "slide": 7,
+          "text": "HW7 hint: robust standard errors are all that's expected on problem 4 (no WLS needed)",
+          "match": [
+            [
+              "robust"
+            ],
+            [
+              "problem 4|problem four|hw ?7|homework 7"
+            ]
+          ],
+          "quote": "robust standard errors are all I'm expecting on problem 4"
+        },
+        {
+          "slide": 7,
+          "text": "Student question: after a log, a coefficient is roughly a percent change",
+          "match": [
+            [
+              "percent|%"
+            ],
+            [
+              "\\blog"
+            ]
+          ],
+          "quote": "a coefficient is roughly a percent change"
+        }
+      ],
+      "vision_only": [
+        {
+          "slide": 6,
+          "text": "The plot fans out: residual spread grows as fitted values increase (non-constant variance)",
+          "match": [
+            [
+              "\\bfan|funnel|cone|megaphone|trumpet|wid(en|ens|ening|er)\\b|spread(s|ing)? out|more spread|spread (grows|increases|gets (larger|bigger|wider))|(increasing|growing|larger|bigger|wider) spread|grow(s|ing)? (larger|wider|bigger)|get(s)? (larger|wider|bigger) (as|with|for)"
+            ]
+          ]
+        }
+      ],
+      "skipped_slides": [
+        8
+      ],
+      "skip_quotes": {
+        "8": "I'm skipping it today"
+      },
+      "announcements": [
+        {
+          "slide": 1,
+          "text": "Quiz 4 moved from Wed Nov 4 to Mon Nov 9, in class (same material: interactions and residual plots)",
+          "when": "2026-11-09T12:00:00-05:00",
+          "source": "speech only",
+          "match": [
+            [
+              "quiz"
+            ],
+            [
+              "nov(ember)?\\.? 9|11/9|\\b9 nov"
+            ]
+          ],
+          "wrong": [
+            [
+              "quiz"
+            ],
+            [
+              "nov(ember)?\\.? 4\\b|11/4\\b|wed"
+            ]
+          ],
+          "quote": "I'm moving the quiz to next Monday, November 9th, in class"
+        },
+        {
+          "slide": 1,
+          "text": "TF office hours this week: Wed Nov 4, 2-4 pm, Pemberton 210 (not the usual Tuesday)",
+          "when": "2026-11-04T14:00:00-05:00",
+          "source": "speech only (slide 10 shows the usual Tuesday slot)",
+          "match": [
+            [
+              "office hours|mina"
+            ],
+            [
+              "wed|nov(ember)?\\.? 4\\b|11/4\\b"
+            ]
+          ],
+          "wrong": [
+            [
+              "office hours|mina"
+            ],
+            [
+              "tue"
+            ]
+          ],
+          "quote": "Mina's office hours this week are on Wednesday from 2 to 4 in Pemberton 210"
+        },
+        {
+          "slide": 9,
+          "text": "HW7 due Thu Nov 5, 11:59 pm (one PDF rendered from the notebook)",
+          "when": "2026-11-05T23:59:00-05:00",
+          "source": "slide + speech",
+          "match": [
+            [
+              "hw ?7|homework 7"
+            ],
+            [
+              "nov(ember)?\\.? 5\\b|11/5\\b"
+            ]
+          ],
+          "quote": "Homework 7 is due Thursday at 11:59 PM"
+        }
+      ],
+      "returns": [
+        {
+          "slide": 3,
+          "from_slide": 4,
+          "time_range": [
+            "00:04:10.844",
+            "00:04:20.340"
+          ]
+        }
+      ],
+      "cue_slides": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    {
+      "id": "cs152",
+      "course": "CS 152: Data Structures and Systems",
+      "session": "Section 6",
+      "title": "Section 6: Resizing, Tombstones, and Benchmarking",
+      "instructor": "Priya Lindqvist (TF)",
+      "start": "2026-11-02T16:00:00-05:00",
+      "end": "2026-11-02T16:50:00-05:00",
+      "slides_dir": "cs152/slides",
+      "transcript": "cs152/transcript.vtt",
+      "speakers": [
+        "Priya Lindqvist",
+        "Student"
+      ],
+      "vtt_flavor": "zoom2",
+      "n_slides": 8,
+      "transcript_words": 1245,
+      "n_cues": 119,
+      "slides": [
+        {
+          "slide": 1,
+          "file": "Slide1.png",
+          "kind": "title",
+          "title": "Section 6: Resizing, Tombstones, and Benchmarking",
+          "on_slide": [
+            "Section 6: Resizing, Tombstones, and Benchmarking",
+            "PS5 + Project Milestone 2",
+            "Priya Lindqvist (TF)",
+            "Monday, November 2, 2026"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:00:03.955",
+              "00:00:58.243"
+            ]
+          ],
+          "key_points": []
+        },
+        {
+          "slide": 2,
+          "file": "Slide2.png",
+          "kind": "slots",
+          "title": "Tombstones, one more time",
+          "on_slide": [
+            "Tombstones, one more time",
+            "slot 0: pear",
+            "slot 1: empty",
+            "slot 2: empty",
+            "slot 3: empty",
+            "slot 4: empty",
+            "slot 5: †",
+            "slot 6: lime",
+            "slot 7: date",
+            "lookup(\"lime\"): slot 5 (tombstone, keep going) → slot 6, found",
+            "after delete(\"fig\")"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:01:01.740",
+              "00:02:26.597"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "After deleting fig, slot 5 holds a tombstone; lookup(lime) probes past it and finds lime in slot 6",
+              "source": "slide",
+              "match": [
+                [
+                  "tombstone"
+                ],
+                [
+                  "lime|keep (going|probing)|continue(s)? (probing|past|to probe)|probes? past|skip"
+                ]
+              ]
+            },
+            {
+              "text": "An empty slot would stop the lookup and wrongly report lime missing",
+              "source": "speech",
+              "match": [
+                [
+                  "empty"
+                ],
+                [
+                  "stop|missing|not (in|there|found)|isn.t (in|there)|break|broke"
+                ]
+              ],
+              "quote": "If slot 5 were just empty, you'd stop and say lime isn't in the table"
+            },
+            {
+              "text": "Student question: insert may reuse a tombstone slot only after checking the rest of the probe chain, or the same key ends up in the table twice",
+              "source": "speech",
+              "match": [
+                [
+                  "reuse"
+                ],
+                [
+                  "twice|duplicate|already in|further along|rest of the (probe )?chain|whole (probe )?chain|(keep|continue) probing|end of the (probe )?chain"
+                ]
+              ],
+              "quote": "only after you've checked the rest of the probe chain"
+            }
+          ]
+        },
+        {
+          "slide": 3,
+          "file": "Slide3.png",
+          "kind": "bullets",
+          "title": "When should you resize?",
+          "on_slide": [
+            "When should you resize?",
+            "Track the load factor α = n / m after every insert",
+            "Past the threshold: double m and rehash every key",
+            "CPython’s dict resizes at α ≈ 3/4",
+            "PS5 starter code: threshold = 0.7"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:02:30.005",
+              "00:03:57.250"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Track the load factor alpha = n/m after every insert",
+              "source": "slide",
+              "match": [
+                [
+                  "load factor"
+                ]
+              ]
+            },
+            {
+              "text": "Past the threshold, double m and rehash every key",
+              "source": "slide",
+              "match": [
+                [
+                  "doubl"
+                ],
+                [
+                  "rehash|reinsert|re-insert"
+                ]
+              ]
+            },
+            {
+              "text": "PS5 starter code fixes the threshold at 0.7",
+              "source": "slide",
+              "match": [
+                [
+                  "0\\.7\\b|\\.7\\b"
+                ]
+              ]
+            },
+            {
+              "text": "Student question: doubling makes inserts amortized O(1); adding a fixed 100 slots makes total copying grow like n squared",
+              "source": "speech",
+              "match": [
+                [
+                  "amortized"
+                ],
+                [
+                  "n squared|n\\^?2|n²|quadratic|fixed|hundred|\\b100\\b"
+                ]
+              ],
+              "quote": "doubling is what makes inserts amortized O(1)"
+            }
+          ]
+        },
+        {
+          "slide": 4,
+          "file": "Slide4.png",
+          "kind": "bullets",
+          "title": "Deletion and resizing",
+          "on_slide": [
+            "Deletion and resizing",
+            "delete() leaves a tombstone; insert() may reuse it",
+            "Lookups probe past tombstones; they stop only at an empty slot",
+            "Resizing drops every tombstone: only live keys are reinserted"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:03:59.550",
+              "00:05:11.141"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Lookups probe past tombstones and stop only at an empty slot",
+              "source": "slide",
+              "match": [
+                [
+                  "tombstone"
+                ],
+                [
+                  "empty"
+                ]
+              ]
+            },
+            {
+              "text": "Resizing drops every tombstone: only live keys are reinserted",
+              "source": "slide",
+              "match": [
+                [
+                  "live keys|only .{0,20}keys"
+                ],
+                [
+                  "reinsert|re-insert|rehash|drop|disappear|remov|clear"
+                ]
+              ]
+            },
+            {
+              "text": "PS5 hint: count tombstones as occupied when deciding to resize; a hidden test inserts and deletes 10,000 times and times out otherwise",
+              "source": "speech",
+              "match": [
+                [
+                  "tombstone"
+                ],
+                [
+                  "occupied|count (them|tombstones)|counting (them|tombstones)|tombstones (count|are counted|as occupied|toward)|include tombstones|including tombstones|counted as|as full|toward(s)? the load"
+                ]
+              ],
+              "quote": "count tombstones as occupied slots, not just live keys"
+            },
+            {
+              "text": "A hidden PS5 test inserts and deletes 10,000 times in a loop",
+              "source": "speech",
+              "match": [
+                [
+                  "hidden.{0,12}test"
+                ]
+              ],
+              "quote": "There's a hidden test on PS5 that does exactly this"
+            }
+          ]
+        },
+        {
+          "slide": 5,
+          "file": "Slide5.png",
+          "kind": "lines",
+          "title": "Expected probes for a lookup that misses",
+          "on_slide": [
+            "Expected probes for a lookup that misses",
+            "Linear probing: 2.5 at α=0.5, 8.5 at 0.75, 50.5 at 0.9",
+            "Separate chaining: 1.5 at 0.5, 1.75 at 0.75, 1.9 at 0.9",
+            "Textbook estimates: linear probing ½(1 + 1/(1 − α)²); chaining 1 + α"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:05:13.144",
+              "00:06:24.638"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Linear probing explodes near full: about 50 probes per miss at load factor 0.9",
+              "source": "image",
+              "match": [
+                [
+                  "\\b50(\\.5)?\\b"
+                ],
+                [
+                  "0\\.9\\b|90 ?%|90 percent|\\.9\\b"
+                ]
+              ]
+            },
+            {
+              "text": "At load factor 0.75, a linear-probing miss averages about 8.5 probes",
+              "source": "image",
+              "match": [
+                [
+                  "8\\.5\\b"
+                ]
+              ]
+            },
+            {
+              "text": "Chaining stays flat, under 2 probes per miss even at 0.9",
+              "source": "image",
+              "match": [
+                [
+                  "chain"
+                ],
+                [
+                  "1\\.9\\b|under 2\\b|below 2\\b|less than 2\\b|fewer than 2\\b|about 2\\b|~ ?2\\b|\\b2 probes"
+                ]
+              ]
+            },
+            {
+              "text": "If your measured PS5 curve doesn't bend up like this, suspect your hash function",
+              "source": "speech",
+              "match": [
+                [
+                  "hash function"
+                ]
+              ],
+              "quote": "it's usually your hash function"
+            }
+          ]
+        },
+        {
+          "slide": 6,
+          "file": "Slide6.png",
+          "kind": "bullets",
+          "title": "Benchmarking for Milestone 2",
+          "on_slide": [
+            "Benchmarking for Milestone 2",
+            "Compare against a plain Python dict at ≥ 2 workload sizes",
+            "Time with time.perf_counter(); repeat 5×, report the median",
+            "Time the operations, not the setup: build keys before the timer"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:06:27.491",
+              "00:07:59.772"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Compare against a plain Python dict at 2 or more workload sizes",
+              "source": "slide",
+              "match": [
+                [
+                  "dict"
+                ],
+                [
+                  "two|\\b2\\b|sizes"
+                ]
+              ]
+            },
+            {
+              "text": "Use time.perf_counter, repeat 5 times and report the median",
+              "source": "slide",
+              "match": [
+                [
+                  "perf_?counter|perf counter"
+                ],
+                [
+                  "median"
+                ]
+              ]
+            },
+            {
+              "text": "Story: a team looked 40 times slower than dict because it generated random strings inside the timed loop",
+              "source": "speech",
+              "match": [
+                [
+                  "\\b40\\b|forty|random (string|key|number)"
+                ]
+              ],
+              "quote": "their table was 40 times slower than dict"
+            },
+            {
+              "text": "Being within 10x of dict at a million keys is a good result; nobody loses points for being slower than dict",
+              "source": "speech",
+              "match": [
+                [
+                  "10 ?x|10 ?×|10 times|ten times|within 10|order of magnitude"
+                ]
+              ],
+              "quote": "If you're within 10 times of dict at a million keys, that's a good result"
+            },
+            {
+              "text": "Student question: get and put must be benchmarked; benchmarking delete is optional",
+              "source": "speech",
+              "match": [
+                [
+                  "delete"
+                ],
+                [
+                  "optional|not required|don.t have to|not needed"
+                ]
+              ],
+              "quote": "but benchmarking it is optional"
+            }
+          ]
+        },
+        {
+          "slide": 7,
+          "file": "Slide7.png",
+          "kind": "bullets",
+          "title": "Milestone 2 checklist (due Sun Nov 8, 11:59 pm)",
+          "on_slide": [
+            "Milestone 2 checklist (due Sun Nov 8, 11:59 pm)",
+            "Repo link: working get / put / delete (no persistence yet)",
+            "Two-page write-up with the dict benchmark",
+            "One paragraph on how you split the work",
+            "One submission per team"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:08:03.001",
+              "00:08:36.139"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "Repo with working get/put/delete, no persistence yet",
+              "source": "slide",
+              "match": [
+                [
+                  "persist|get.{0,10}put"
+                ]
+              ]
+            },
+            {
+              "text": "Two-page write-up with the dict benchmark, plus a work-split paragraph",
+              "source": "slide",
+              "match": [
+                [
+                  "two-page|two page|2-page|2 page"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "slide": 8,
+          "file": "Slide8.png",
+          "kind": "bullets",
+          "title": "PS5: before Friday",
+          "on_slide": [
+            "PS5: before Friday",
+            "Due Fri Nov 6, 5:00 pm: code + experiment write-up, submitted together",
+            "Run the local tests before you submit",
+            "3 late days per semester (24 h each)"
+          ],
+          "skipped": false,
+          "time_ranges": [
+            [
+              "00:08:39.639",
+              "00:09:15.442"
+            ]
+          ],
+          "key_points": [
+            {
+              "text": "3 late days per semester, 24 hours each",
+              "source": "slide",
+              "match": [
+                [
+                  "late day"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "slide": 3,
+          "slide_said": "CPython's dict resizes at α ≈ 3/4",
+          "lecturer_said": "CPython's dict resizes at about two-thirds full; 0.75 is Java's HashMap default",
+          "quote": "CPython's dict resizes at about two-thirds full, not three quarters",
+          "right": [
+            [
+              "2/3|two.thirds|0?\\.6[67]|6[67] ?%"
+            ]
+          ],
+          "wrong": [
+            [
+              "python|dict"
+            ],
+            [
+              "3/4|three.quarters?|0?\\.75|75 ?%"
+            ]
+          ],
+          "allow": "java"
+        }
+      ],
+      "verbal_only": [
+        {
+          "slide": 2,
+          "text": "An empty slot would stop the lookup and wrongly report lime missing",
+          "match": [
+            [
+              "empty"
+            ],
+            [
+              "stop|missing|not (in|there|found)|isn.t (in|there)|break|broke"
+            ]
+          ],
+          "quote": "If slot 5 were just empty, you'd stop and say lime isn't in the table"
+        },
+        {
+          "slide": 2,
+          "text": "Student question: insert may reuse a tombstone slot only after checking the rest of the probe chain, or the same key ends up in the table twice",
+          "match": [
+            [
+              "reuse"
+            ],
+            [
+              "twice|duplicate|already in|further along|rest of the (probe )?chain|whole (probe )?chain|(keep|continue) probing|end of the (probe )?chain"
+            ]
+          ],
+          "quote": "only after you've checked the rest of the probe chain"
+        },
+        {
+          "slide": 3,
+          "text": "Student question: doubling makes inserts amortized O(1); adding a fixed 100 slots makes total copying grow like n squared",
+          "match": [
+            [
+              "amortized"
+            ],
+            [
+              "n squared|n\\^?2|n²|quadratic|fixed|hundred|\\b100\\b"
+            ]
+          ],
+          "quote": "doubling is what makes inserts amortized O(1)"
+        },
+        {
+          "slide": 4,
+          "text": "PS5 hint: count tombstones as occupied when deciding to resize; a hidden test inserts and deletes 10,000 times and times out otherwise",
+          "match": [
+            [
+              "tombstone"
+            ],
+            [
+              "occupied|count (them|tombstones)|counting (them|tombstones)|tombstones (count|are counted|as occupied|toward)|include tombstones|including tombstones|counted as|as full|toward(s)? the load"
+            ]
+          ],
+          "quote": "count tombstones as occupied slots, not just live keys"
+        },
+        {
+          "slide": 4,
+          "text": "A hidden PS5 test inserts and deletes 10,000 times in a loop",
+          "match": [
+            [
+              "hidden.{0,12}test"
+            ]
+          ],
+          "quote": "There's a hidden test on PS5 that does exactly this"
+        },
+        {
+          "slide": 5,
+          "text": "If your measured PS5 curve doesn't bend up like this, suspect your hash function",
+          "match": [
+            [
+              "hash function"
+            ]
+          ],
+          "quote": "it's usually your hash function"
+        },
+        {
+          "slide": 6,
+          "text": "Story: a team looked 40 times slower than dict because it generated random strings inside the timed loop",
+          "match": [
+            [
+              "\\b40\\b|forty|random (string|key|number)"
+            ]
+          ],
+          "quote": "their table was 40 times slower than dict"
+        },
+        {
+          "slide": 6,
+          "text": "Being within 10x of dict at a million keys is a good result; nobody loses points for being slower than dict",
+          "match": [
+            [
+              "10 ?x|10 ?×|10 times|ten times|within 10|order of magnitude"
+            ]
+          ],
+          "quote": "If you're within 10 times of dict at a million keys, that's a good result"
+        },
+        {
+          "slide": 6,
+          "text": "Student question: get and put must be benchmarked; benchmarking delete is optional",
+          "match": [
+            [
+              "delete"
+            ],
+            [
+              "optional|not required|don.t have to|not needed"
+            ]
+          ],
+          "quote": "but benchmarking it is optional"
+        }
+      ],
+      "vision_only": [
+        {
+          "slide": 5,
+          "text": "Linear probing explodes near full: about 50 probes per miss at load factor 0.9",
+          "match": [
+            [
+              "\\b50(\\.5)?\\b"
+            ],
+            [
+              "0\\.9\\b|90 ?%|90 percent|\\.9\\b"
+            ]
+          ]
+        },
+        {
+          "slide": 5,
+          "text": "At load factor 0.75, a linear-probing miss averages about 8.5 probes",
+          "match": [
+            [
+              "8\\.5\\b"
+            ]
+          ]
+        },
+        {
+          "slide": 5,
+          "text": "Chaining stays flat, under 2 probes per miss even at 0.9",
+          "match": [
+            [
+              "chain"
+            ],
+            [
+              "1\\.9\\b|under 2\\b|below 2\\b|less than 2\\b|fewer than 2\\b|about 2\\b|~ ?2\\b|\\b2 probes"
+            ]
+          ]
+        }
+      ],
+      "skipped_slides": [],
+      "skip_quotes": {},
+      "announcements": [
+        {
+          "slide": 8,
+          "text": "PS5 autograder opens Wed Nov 4 at noon; 10 submissions per day",
+          "source": "speech only",
+          "when": "2026-11-04T12:00:00-05:00",
+          "match": [
+            [
+              "autograder"
+            ],
+            [
+              "wed|nov(ember)?\\.? 4\\b|11/4\\b"
+            ]
+          ],
+          "quote": "The autograder for PS5 opens this Wednesday at noon"
+        },
+        {
+          "slide": 7,
+          "text": "Project Milestone 2 due Sun Nov 8, 11:59 pm (one submission per team)",
+          "when": "2026-11-08T23:59:00-05:00",
+          "source": "slide + speech",
+          "match": [
+            [
+              "milestone"
+            ],
+            [
+              "nov(ember)?\\.? 8\\b|11/8\\b|sun"
+            ]
+          ],
+          "quote": "It's due Sunday, November 8th at 11:59 PM"
+        },
+        {
+          "slide": 8,
+          "text": "PS5 due Fri Nov 6, 5:00 pm (code + experiment write-up together)",
+          "when": "2026-11-06T17:00:00-05:00",
+          "source": "slide + speech",
+          "match": [
+            [
+              "ps ?5|problem set 5"
+            ],
+            [
+              "nov(ember)?\\.? 6\\b|11/6\\b|fri"
+            ]
+          ],
+          "quote": "PS5 is due Friday at 5 PM"
+        }
+      ],
+      "returns": [],
+      "cue_slides": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    }
+  ]
+}

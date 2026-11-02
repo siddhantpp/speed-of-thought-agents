@@ -1,0 +1,62 @@
+{
+  "name": "chunk_summarizer",
+  "tier": "worker",
+  "job": "Turn ONE chunk of a lecture transcript into key points, terms and course logistics.",
+  "instructions": "Ignore filler (um, false starts, jokes) and tangents that teach nothing.\nkey_points: 3 to 6 short, factual statements that the chunk actually says. No outside knowledge.\nterms: technical terms the chunk defines or uses centrally, each with a one-sentence definition based on the chunk.\nlogistics: announcements about the course (due dates, exams, office hours), with the date words exactly as spoken. Empty if none.\nPlain text only: no LaTeX, no Markdown, no backslashes. Write x^2, sqrt(n), theta, etc. as plain text.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "key_points": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "terms": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "term": {
+              "type": "string"
+            },
+            "definition": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "term",
+            "definition"
+          ]
+        }
+      },
+      "logistics": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "item": {
+              "type": "string"
+            },
+            "when": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "item",
+            "when"
+          ]
+        }
+      }
+    },
+    "required": [
+      "key_points",
+      "terms",
+      "logistics"
+    ]
+  },
+  "success_check": "Points are supported by the chunk; terms cover the answer key's key concepts."
+}

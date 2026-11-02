@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16171a" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Assistant">
+  <title>Local Assistant</title>
+  <link rel="icon" href="/static/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/static/icon.svg">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="bar">
+    <div class="who">
+      <img src="/static/icon.svg" alt="" width="28" height="28">
+      <div>
+        <h1>Local assistant</h1>
+        <p class="sub" id="clock">Runs on your laptop. Nothing leaves it.</p>
+      </div>
+    </div>
+    <button class="ghost" id="signout" hidden>Sign out</button>
+  </header>
+
+  <main id="login" class="login" hidden>
+    <form id="login-form" class="panel" autocomplete="off">
+      <h2>Sign in</h2>
+      <p>Type the access token the server printed when it started. It is also in
+        <code>~/.config/speed-of-thought-assistant/token</code> on the laptop.</p>
+      <label for="token">Access token</label>
+      <input id="token" name="token" type="password" inputmode="text" autocapitalize="none" autocorrect="off"
+             spellcheck="false" placeholder="xxxx-xxxx-xxxx-xxxx-xxxx-xxxx" required>
+      <button type="submit" class="primary">Sign in</button>
+      <p class="error" id="login-error" role="alert"></p>
+    </form>
+  </main>
+
+  <main id="chat" class="chat" hidden>
+    <section class="intro" id="intro">
+      <p>I can do five things, and only these:</p>
+      <div class="chips" id="capabilities"></div>
+      <p class="fine">Calendar adds wait for your tap. I never send, pay, delete or run anything.</p>
+    </section>
+    <ol class="log" id="log" aria-live="polite"></ol>
+  </main>
+
+  <footer class="composer" id="composer" hidden>
+    <div class="attach" id="attach-preview" hidden>
+      <img id="attach-img" alt="Photo to send">
+      <span id="attach-name"></span>
+      <button class="ghost small" id="attach-clear" type="button" aria-label="Remove photo">Remove</button>
+    </div>
+    <div class="samples" id="samples" hidden>
+      <span>Sample receipts:</span>
+      <div class="chips" id="sample-chips"></div>
+    </div>
+    <form id="send-form" class="row">
+      <label class="icon-btn" for="photo" title="Add a photo">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 8h3l1.6-2.4A1 1 0 0 1 9.4 5h5.2a1 1 0 0 1 .8.4L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="sr">Add a photo</span>
+      </label>
+      <input id="photo" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/*" hidden>
+      <input id="text" type="text" placeholder="Message" autocomplete="off" maxlength="1000" enterkeyhint="send">
+      <button type="submit" class="primary send" id="send" aria-label="Send">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </footer>
+</body>
+</html>

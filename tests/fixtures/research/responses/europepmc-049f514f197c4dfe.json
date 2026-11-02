@@ -1,0 +1,12 @@
+{
+ "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.5555%2Fnvjls.2018.0007%22&format=json&resultType=core&pageSize=1",
+ "kind": "europepmc_search",
+ "doi": "10.5555/nvjls.2018.0007",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "resultList": {
+   "result": []
+  }
+ }
+}

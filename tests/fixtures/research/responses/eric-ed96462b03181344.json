@@ -1,0 +1,13 @@
+{
+ "url": "https://api.ies.ed.gov/eric/?search=title%3A%22correction+to%22&format=json&rows=5&fields=id%2Ctitle%2Cpublicationdateyear%2Cdescription",
+ "kind": "eric_search",
+ "query": "correction to",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "response": {
+   "numFound": 0,
+   "docs": []
+  }
+ }
+}

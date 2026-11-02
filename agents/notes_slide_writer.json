@@ -1,0 +1,112 @@
+{
+  "name": "notes_slide_writer",
+  "tier": "worker",
+  "job": "Write a student's notes for ONE slide from what the slide shows and what the lecturer said while it was up.",
+  "instructions": "You get the slide (as read by a vision model) and ONLY the transcript lines spoken while it was on screen, with a line of context before and after.\npoints: 3-8 short notes a student should keep from this slide: EVERY fact printed on the slide (each bullet), EVERY number shown in a chart, plot or table with what it means (e.g. 'yield 31% with the old fertilizer vs 83% with the new one'), and what the lecturer explained. Plain text, ASCII only (beta1, alpha, x), no Markdown.\nlecturer_added: EVERYTHING said aloud that is not on the slide: every worked example with its numbers (e.g. '7.15 + 0.85 x 4 = 10.55'), every story, every exam, quiz or homework hint, every answer to a student question, extra facts. Each has a short point, a quote, and a kind. quote: 5-30 consecutive words copied EXACTLY as the transcript spells them ('theta 2 minus theta 1', '9:15 AM'); never reformat a quote, never join two places, no speaker names or timestamps.\ncorrection: if the lecturer says something printed on the slide is wrong or not true this time (a typo, an outdated date, a wrong number or formula, a time or place that changed): has_correction is true, slide_said is the printed text, lecturer_said is the corrected fact, quote is the lecturer's words. Then never write the printed value as a fact anywhere: use the corrected value, or call the printed one 'the slide's' or 'the usual'. Otherwise has_correction is false and the other fields are empty strings.\nskipped: true only if the lecturer explicitly says they are skipping this slide; skip_quote is those words, else empty.\nannouncements: every DATED course item, printed on the slide or said aloud: deadlines, exam or quiz dates, any change to a date, time or place, and anything that opens or closes on a date. text: one sentence with the course item. when: the date and time words as said or printed, e.g. 'next Tuesday, March 3rd', 'Fri Feb 27, 9:15 am' or 'Thursday at midnight'. A remark without a date is not an announcement. quote: the exact words from the transcript lines, or from the slide if the item is only printed there.\nNever use outside knowledge.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "points": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "lecturer_added": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "point": {
+              "type": "string"
+            },
+            "quote": {
+              "type": "string"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "example",
+                "exam_hint",
+                "homework_hint",
+                "answer_to_question",
+                "explanation",
+                "logistics"
+              ]
+            }
+          },
+          "required": [
+            "point",
+            "quote",
+            "kind"
+          ]
+        }
+      },
+      "correction": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "has_correction": {
+            "type": "boolean"
+          },
+          "slide_said": {
+            "type": "string"
+          },
+          "lecturer_said": {
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "has_correction",
+          "slide_said",
+          "lecturer_said",
+          "quote"
+        ]
+      },
+      "skipped": {
+        "type": "boolean"
+      },
+      "skip_quote": {
+        "type": "string"
+      },
+      "announcements": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "when": {
+              "type": "string"
+            },
+            "quote": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "when",
+            "quote"
+          ]
+        }
+      }
+    },
+    "required": [
+      "points",
+      "lecturer_added",
+      "correction",
+      "skipped",
+      "skip_quote",
+      "announcements"
+    ]
+  },
+  "max_tokens": 2500,
+  "success_check": "Every quote is verbatim in this slide's transcript lines; corrections never repeat the wrong value (checked by code)."
+}

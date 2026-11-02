@@ -1,0 +1,58 @@
+{
+  "name": "research_extractor",
+  "tier": "worker",
+  "job": "Read ONE source's abstract and record what it found, each finding backed by an exact quote.",
+  "instructions": "design: the kind of study, as the abstract describes it.\nsample: who and how many, in at most 12 words, only if the abstract says so; otherwise 'not stated'.\nfindings: 1 to 4 of the source's most important results for the sub-questions (a study that tests the question, repeats an earlier study or pools many studies always has some). Use an empty list only if the abstract is about something else entirely. For each:\n- sub_question: the number of the sub-question it answers.\n- claim: one sentence of at most 30 words, in plain words, saying only what THIS abstract says. Keep its hedges ('modest', 'preliminary', 'may', 'only in one of two samples'); never make a claim stronger than the abstract; no outside knowledge.\n- quote: 8 to 40 consecutive words copied EXACTLY from the abstract that support the claim. Do not change words, shorten with '...', fix grammar or join two sentences.\nPlain text only: no Markdown, no LaTeX.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "design": {
+        "type": "string",
+        "enum": [
+          "experiment",
+          "replication",
+          "meta-analysis",
+          "systematic review",
+          "review",
+          "correlational",
+          "survey",
+          "other"
+        ]
+      },
+      "sample": {
+        "type": "string"
+      },
+      "findings": {
+        "type": "array",
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "sub_question": {
+              "type": "integer"
+            },
+            "claim": {
+              "type": "string"
+            },
+            "quote": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "sub_question",
+            "claim",
+            "quote"
+          ]
+        }
+      }
+    },
+    "required": [
+      "design",
+      "sample",
+      "findings"
+    ]
+  },
+  "success_check": "Every quote appears verbatim in the abstract (checked by code)."
+}

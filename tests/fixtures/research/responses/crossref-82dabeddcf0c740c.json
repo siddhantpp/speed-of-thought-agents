@@ -1,0 +1,132 @@
+{
+ "url": "https://api.crossref.org/works?query.bibliographic=silence+study+replication&rows=20&filter=from-pub-date%3A2000",
+ "kind": "search",
+ "query": "silence study replication",
+ "backend": "crossref",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "message": {
+   "total-results": 2210,
+   "items": [
+    {
+     "DOI": "10.5555/nvrss.2019.0208",
+     "title": [
+      "How Much Does Silence Help? A Replication and Extension of Brennholt and Vanstone (2014)"
+     ],
+     "container-title": [
+      "Northvale Review of Study Strategies"
+     ],
+     "ISSN": [
+      "0000-0027"
+     ],
+     "volume": "8",
+     "issue": "2",
+     "page": "145-171",
+     "type": "journal-article",
+     "published-print": {
+      "date-parts": [
+       [
+        2019,
+        6
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        2019
+       ]
+      ]
+     },
+     "is-referenced-by-count": 186,
+     "author": [
+      {
+       "given": "Kestrel",
+       "family": "Marwood"
+      },
+      {
+       "given": "Juniper",
+       "family": "Ashdown"
+      },
+      {
+       "given": "Ronan T.",
+       "family": "Blevins"
+      }
+     ]
+    },
+    {
+     "DOI": "10.5555/nvjls.2014.0412",
+     "title": [
+      "Quiet rooms help"
+     ],
+     "subtitle": [
+      "Advantages of silent study over background music for recall"
+     ],
+     "container-title": [
+      "Northvale Journal of Learning Science"
+     ],
+     "ISSN": [
+      "0000-0019"
+     ],
+     "volume": "12",
+     "issue": "4",
+     "page": "301-317",
+     "type": "journal-article",
+     "published-print": {
+      "date-parts": [
+       [
+        2014,
+        6
+       ]
+      ]
+     },
+     "published-online": {
+      "date-parts": [
+       [
+        2014,
+        4,
+        23
+       ]
+      ]
+     },
+     "issued": {
+      "date-parts": [
+       [
+        2014,
+        4,
+        23
+       ]
+      ]
+     },
+     "is-referenced-by-count": 1450,
+     "updated-by": [
+      {
+       "type": "correction",
+       "DOI": "10.5555/nvjls.2018.0007",
+       "updated": {
+        "date-parts": [
+         [
+          2018,
+          7,
+          31
+         ]
+        ]
+       }
+      }
+     ],
+     "author": [
+      {
+       "given": "Ingrid M.",
+       "family": "Brennholt"
+      },
+      {
+       "given": "Tobiah R.",
+       "family": "Vanstone"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

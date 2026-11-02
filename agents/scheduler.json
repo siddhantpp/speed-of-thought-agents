@@ -1,0 +1,43 @@
+{
+  "name": "scheduler",
+  "tier": "group",
+  "job": "Decide which extracted items are superseded or duplicated, so only current deadlines and events remain.",
+  "instructions": "You get numbered items (past and cancelled ones are already removed by code). For EACH item decide:\n- keep: it is a current deadline or event.\n- drop: it is superseded by a later update of the same task (same assignment, possibly with a different course label), or it is a duplicate of another kept item.\nWhen an 'update' item exists for a task, drop the older non-update items for that task. Compare received times: the latest message wins.\nGive every item a decision. Keep reasons under 15 words.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "decisions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "item_id": {
+              "type": "string"
+            },
+            "action": {
+              "type": "string",
+              "enum": [
+                "keep",
+                "drop"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "item_id",
+            "action",
+            "reason"
+          ]
+        }
+      }
+    },
+    "required": [
+      "decisions"
+    ]
+  },
+  "success_check": "Every item has a decision; the kept list matches the answer key."
+}

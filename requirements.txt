@@ -1,0 +1,5 @@
+openai>=3.42.1    # agentkit/llm.py, agentkit/providers.py, bench.py, experiments/context_probe.py and 2 more
+anthropic>=2.3.0    # agentkit/providers.py, tests/test_providers.py
+mcp>=2.3.0    # mcp_servers/gcal_server.py, mcp_servers/research_server.py, tests/test_gcal.py
+pillow>=13.0.0    # assistant/core.py, probe_lmstudio.py, sample_data/classes/make_slides.py, sample_data/receipts/make_receipts.py and 1 more
+numpy>=2.5.4    # sample_data/classes/make_slides.py, sample_data/receipts/make_receipts.py

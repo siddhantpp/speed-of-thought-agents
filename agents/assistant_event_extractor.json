@@ -1,0 +1,36 @@
+{
+  "name": "assistant_event_extractor",
+  "tier": "worker",
+  "job": "Copy the event and its date words out of ONE message that asks to add an event.",
+  "instructions": "Return:\n- title: what the event is, 2 to 8 words, in the student's own words, without the date or time. Example: 'add CHEM 263 lab prep friday 4:40pm' gives 'CHEM 263 lab prep'.\n- date_phrase: the date and time words copied exactly as written, typos included, e.g. 'friday 4:40pm', 'Dec 12 at 8:50 am', 'tmw at 6:10 pm', 'sat dec 5 1-2pm'. Empty if the message gives no date.\n- duration_minutes: only if the message states a length or an end time ('1-2pm' is 60, 'for 90 minutes' is 90, '5 to 7:15pm' is 135); otherwise 0.\n- location: where, if the message says; otherwise empty.\nDo not work out dates yourself: code turns date_phrase into an exact time. Do not invent anything the message does not say.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "date_phrase": {
+        "type": "string"
+      },
+      "duration_minutes": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 720
+      },
+      "location": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "title",
+      "date_phrase",
+      "duration_minutes",
+      "location"
+    ]
+  },
+  "reasoning": "none",
+  "temperature": 0.0,
+  "max_tokens": 200,
+  "success_check": "date_phrase is a substring of the message and resolve_date turns it into the answer key's start time; the title contains the key's keywords."
+}

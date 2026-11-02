@@ -1,0 +1,85 @@
+{
+  "name": "research_evidence_lead",
+  "tier": "group",
+  "job": "Group the extracted findings by sub-question and flag where the studies disagree.",
+  "instructions": "You receive findings that workers extracted from credible, peer-reviewed sources. Each has an id (like F7), its source (authors, year, design) and a claim. You do not see the abstracts, so never add facts.\nsections: one per sub-question that has findings. points: 2 to 4 sentences that synthesize its findings, each listing the finding ids it rests on (at least one). Put the strongest evidence first (replications, meta-analyses, larger samples) and say when findings agree.\nconflicts: findings that disagree, for example a famous original result versus direct replications, or single experiments versus a meta-analysis. description: one sentence on what differs, and why only if the findings themselves say (for example who was studied, the dose, or how the outcome was measured).\ncaveats: up to 3 limits of the evidence as a whole that the findings state.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "sections": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "sub_question": {
+              "type": "integer"
+            },
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "point": {
+                    "type": "string"
+                  },
+                  "finding_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "point",
+                  "finding_ids"
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "sub_question",
+            "points"
+          ]
+        }
+      },
+      "conflicts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "finding_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "description",
+            "finding_ids"
+          ]
+        }
+      },
+      "caveats": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "sections",
+      "conflicts",
+      "caveats"
+    ]
+  },
+  "success_check": "Every finding id it cites exists; conflicts include the original-vs-replication split when present."
+}

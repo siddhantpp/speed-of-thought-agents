@@ -1,0 +1,56 @@
+{
+ "url": "https://api.openalex.org/works/doi:10.5555/nvjls.2014.0412?select=id,doi,title,publication_year,publication_date,type,cited_by_count,is_retracted,open_access,primary_location,locations,authorships,biblio,abstract_inverted_index,referenced_works",
+ "kind": "openalex_work",
+ "key": "doi:10.5555/nvjls.2014.0412",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "id": "https://openalex.org/W0000000101",
+  "doi": "https://doi.org/10.5555/nvjls.2014.0412",
+  "title": "Quiet rooms help: Advantages of silent study over background music for recall",
+  "type": "article",
+  "publication_year": 2014,
+  "publication_date": "2014-04-23",
+  "cited_by_count": 1450,
+  "is_retracted": false,
+  "open_access": {
+   "oa_status": "closed"
+  },
+  "primary_location": {
+   "source": {
+    "type": "journal",
+    "display_name": "Northvale Journal of Learning Science",
+    "issn_l": "0000-0019"
+   }
+  },
+  "locations": [
+   {
+    "source": {
+     "type": "journal",
+     "display_name": "Northvale Journal of Learning Science",
+     "issn_l": "0000-0019"
+    }
+   }
+  ],
+  "authorships": [
+   {
+    "author": {
+     "display_name": "Ingrid M. Brennholt"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Tobiah R. Vanstone"
+    }
+   }
+  ],
+  "biblio": {
+   "volume": "12",
+   "issue": "4",
+   "first_page": "301",
+   "last_page": "317"
+  },
+  "referenced_works": [],
+  "abstract": "Many students study with music playing, often through headphones. We asked whether background music changes how much students remember from a short reading. In three studies, students who studied in silence recalled more main ideas than students who studied with background music. The gap was largest for music with lyrics and smallest for instrumental music. We show that whereas studying longer can help, music listeners tended to reread passages rather than summarize them, and rereading predicted weaker recall. We discuss what this means for students who study in noisy places."
+ }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "assistant_phraser",
+  "tier": "worker",
+  "job": "Write ONE short opening sentence for a phone reply from calendar facts that code already chose.",
+  "instructions": "You get the window the student asked about and a list of calendar items (weekday, title). Write lead: one friendly sentence of at most 18 words that sums the list up, e.g. 'A lab report lands Tuesday morning, then band practice on Wednesday.'\nRules: write no digits, times or dates (the list under your sentence shows them); name only weekdays that appear in the facts; mention nothing that is not in the facts; no greetings, no questions, no emoji.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "lead": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "lead"
+    ]
+  },
+  "reasoning": "none",
+  "temperature": 0.3,
+  "max_tokens": 80,
+  "success_check": "Code check: no digits, only weekdays from the facts, at most 25 words; otherwise code's own template is used."
+}

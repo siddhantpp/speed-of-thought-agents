@@ -1,0 +1,669 @@
+{
+  "currency": "USD",
+  "people": [
+    "Alex",
+    "Sam",
+    "Jordan"
+  ],
+  "cards": {
+    "Alex": "VISA ****4821",
+    "Sam": "MC ****3307",
+    "Jordan": "DEBIT ****6650"
+  },
+  "tax_rates": {
+    "grocery": 0.0,
+    "general": 0.0625,
+    "alcohol": 0.0,
+    "prepared_meal": 0.07
+  },
+  "tax_note": "MA-style: groceries/food 0%, general merchandise 6.25%, prepared meals 7% (meals tax). Package-store alcohol is 0% in MA. Each receipt prints its tax line(s) explicitly, and tax is rounded half-up to the cent per tax line.",
+  "rounding_rule": "For each receipt, compute every person's exact share (items split equally among the people assigned; each tax line split in proportion to each person's share of the items taxed on that line; tip split in proportion to each person's share of the pre-tax subtotal). Round each NON-payer's share to the nearest cent, half-up. The payer's share is the receipt total minus the other people's rounded shares, so the payer absorbs any leftover cent. Every payer in this house is part of the split of their own receipt.",
+  "receipts": [
+    {
+      "id": "r1",
+      "file": "r1.png",
+      "kind": "grocery run (shared food)",
+      "store": "Kettle & Crate Market",
+      "store_as_printed": "KETTLE & CRATE MARKET",
+      "address": "212 Alder Row, Brookhollow, MA",
+      "date": "2026-10-24",
+      "time": "11:42",
+      "payer": "Alex",
+      "payment": "VISA ****4821",
+      "items": [
+        {
+          "name": "EGGS LARGE DOZEN",
+          "qty": 1,
+          "unit_price": 4.29,
+          "line_total": 4.29,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "WHOLE MILK GAL",
+          "qty": 2,
+          "unit_price": 3.89,
+          "line_total": 7.78,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "SOURDOUGH LOAF",
+          "qty": 1,
+          "unit_price": 5.49,
+          "line_total": 5.49,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "CHICKEN THIGHS",
+          "qty": 2,
+          "unit_price": 7.45,
+          "line_total": 14.9,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "PENNE PASTA 1LB",
+          "qty": 3,
+          "unit_price": 1.79,
+          "line_total": 5.37,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "MARINARA SAUCE",
+          "qty": 2,
+          "unit_price": 3.99,
+          "line_total": 7.98,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "BABY SPINACH",
+          "qty": 1,
+          "unit_price": 3.49,
+          "line_total": 3.49,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "JASMINE RICE 5LB",
+          "qty": 1,
+          "unit_price": 8.99,
+          "line_total": 8.99,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "ALUMINUM FOIL",
+          "qty": 1,
+          "unit_price": 4.79,
+          "line_total": 4.79,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        }
+      ],
+      "subtotal": 63.08,
+      "tax_lines": [
+        {
+          "rate": 0.0625,
+          "taxable_base": 4.79,
+          "amount": 0.3
+        }
+      ],
+      "tax": 0.3,
+      "tip": 0.0,
+      "total": 63.38,
+      "split": {
+        "Alex": 21.12,
+        "Sam": 21.13,
+        "Jordan": 21.13
+      },
+      "split_exact_unrounded": {
+        "Alex": 21.126667,
+        "Sam": 21.126667,
+        "Jordan": 21.126667
+      }
+    },
+    {
+      "id": "r2",
+      "file": "r2.png",
+      "kind": "pharmacy (personal + shared items)",
+      "store": "Lindenwick Pharmacy",
+      "store_as_printed": "LINDENWICK PHARMACY",
+      "address": "48 Wren Street, Brookhollow, MA",
+      "date": "2026-10-26",
+      "time": "18:15",
+      "payer": "Sam",
+      "payment": "MC ****3307",
+      "items": [
+        {
+          "name": "PAPER TOWELS 6RL",
+          "qty": 1,
+          "unit_price": 9.99,
+          "line_total": 9.99,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "COLD/FLU CAPLETS",
+          "qty": 2,
+          "unit_price": 7.49,
+          "line_total": 14.98,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "FACIAL TISSUE 3PK",
+          "qty": 1,
+          "unit_price": 5.49,
+          "line_total": 5.49,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "SHAMPOO 12OZ",
+          "qty": 1,
+          "unit_price": 6.79,
+          "line_total": 6.79,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex"
+          ]
+        },
+        {
+          "name": "CONTACT LENS SOLN",
+          "qty": 1,
+          "unit_price": 10.99,
+          "line_total": 10.99,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Jordan"
+          ]
+        },
+        {
+          "name": "RAZOR CARTRIDGE 4",
+          "qty": 1,
+          "unit_price": 14.99,
+          "line_total": 14.99,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Sam"
+          ]
+        },
+        {
+          "name": "GRANOLA BARS 6CT",
+          "qty": 2,
+          "unit_price": 3.29,
+          "line_total": 6.58,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Sam"
+          ]
+        }
+      ],
+      "subtotal": 69.81,
+      "tax_lines": [
+        {
+          "rate": 0.0625,
+          "taxable_base": 63.23,
+          "amount": 3.95
+        }
+      ],
+      "tax": 3.95,
+      "tip": 0.0,
+      "total": 73.76,
+      "split": {
+        "Alex": 18.0,
+        "Sam": 33.3,
+        "Jordan": 22.46
+      },
+      "split_exact_unrounded": {
+        "Alex": 18.001789,
+        "Sam": 33.294046,
+        "Jordan": 22.464165
+      }
+    },
+    {
+      "id": "r3",
+      "file": "r3.png",
+      "kind": "wine & spirits shop",
+      "store": "Talloway Wine & Spirits",
+      "store_as_printed": "TALLOWAY WINE & SPIRITS",
+      "address": "7 Cooper Lane, Brookhollow, MA",
+      "date": "2026-10-30",
+      "time": "17:38",
+      "payer": "Jordan",
+      "payment": "DEBIT ****6650",
+      "items": [
+        {
+          "name": "CABERNET SAUV 750",
+          "qty": 2,
+          "unit_price": 13.99,
+          "line_total": 27.98,
+          "tax_rate": 0.0,
+          "category": "alcohol",
+          "assigned_to": [
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "IPA 6PK 12OZ",
+          "qty": 1,
+          "unit_price": 11.49,
+          "line_total": 11.49,
+          "tax_rate": 0.0,
+          "category": "alcohol",
+          "assigned_to": [
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "TEQUILA BLANCO 750",
+          "qty": 1,
+          "unit_price": 24.99,
+          "line_total": 24.99,
+          "tax_rate": 0.0,
+          "category": "alcohol",
+          "assigned_to": [
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "LIME SELTZER 12PK",
+          "qty": 1,
+          "unit_price": 5.99,
+          "line_total": 5.99,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "TORTILLA CHIPS",
+          "qty": 2,
+          "unit_price": 3.49,
+          "line_total": 6.98,
+          "tax_rate": 0.0,
+          "category": "grocery",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "PARTY CUPS 50CT",
+          "qty": 1,
+          "unit_price": 4.29,
+          "line_total": 4.29,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        }
+      ],
+      "subtotal": 81.72,
+      "tax_lines": [
+        {
+          "rate": 0.0625,
+          "taxable_base": 4.29,
+          "amount": 0.27
+        }
+      ],
+      "tax": 0.27,
+      "tip": 0.0,
+      "total": 81.99,
+      "split": {
+        "Alex": 5.84,
+        "Sam": 38.07,
+        "Jordan": 38.08
+      },
+      "split_exact_unrounded": {
+        "Alex": 5.843333,
+        "Sam": 38.073333,
+        "Jordan": 38.073333
+      }
+    },
+    {
+      "id": "r4",
+      "file": "r4.png",
+      "kind": "pizza night takeout (prepared food, 7% meals tax, tip)",
+      "store": "Lanternfly Pizza Co.",
+      "store_as_printed": "LANTERNFLY PIZZA CO.",
+      "address": "330 Mill Street, Brookhollow, MA",
+      "date": "2026-10-29",
+      "time": "20:05",
+      "payer": "Sam",
+      "payment": "MC ****3307",
+      "items": [
+        {
+          "name": "LG MARGHERITA",
+          "qty": 1,
+          "unit_price": 18.5,
+          "line_total": 18.5,
+          "tax_rate": 0.07,
+          "category": "prepared_meal",
+          "assigned_to": [
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "LG PEPPERONI",
+          "qty": 1,
+          "unit_price": 19.75,
+          "line_total": 19.75,
+          "tax_rate": 0.07,
+          "category": "prepared_meal",
+          "assigned_to": [
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "GARLIC KNOTS 12",
+          "qty": 1,
+          "unit_price": 7.25,
+          "line_total": 7.25,
+          "tax_rate": 0.07,
+          "category": "prepared_meal",
+          "assigned_to": [
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "CAESAR SALAD",
+          "qty": 1,
+          "unit_price": 9.5,
+          "line_total": 9.5,
+          "tax_rate": 0.07,
+          "category": "prepared_meal",
+          "assigned_to": [
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "SODA 2 LITER",
+          "qty": 1,
+          "unit_price": 3.29,
+          "line_total": 3.29,
+          "tax_rate": 0.07,
+          "category": "prepared_meal",
+          "assigned_to": [
+            "Sam",
+            "Jordan"
+          ]
+        }
+      ],
+      "subtotal": 58.29,
+      "tax_lines": [
+        {
+          "rate": 0.07,
+          "taxable_base": 58.29,
+          "amount": 4.08
+        }
+      ],
+      "tax": 4.08,
+      "tip": 10.49,
+      "total": 72.86,
+      "split": {
+        "Alex": 0.0,
+        "Sam": 36.43,
+        "Jordan": 36.43
+      },
+      "split_exact_unrounded": {
+        "Alex": 0.0,
+        "Sam": 36.43,
+        "Jordan": 36.43
+      }
+    },
+    {
+      "id": "r5",
+      "file": "r5.png",
+      "kind": "hardware / household supplies",
+      "store": "Ironbark Hardware & Home",
+      "store_as_printed": "IRONBARK HARDWARE & HOME",
+      "address": "1450 Bridge Road, Brookhollow, MA",
+      "date": "2026-11-01",
+      "time": "13:10",
+      "payer": "Alex",
+      "payment": "VISA ****4821",
+      "items": [
+        {
+          "name": "LED BULBS 4PK",
+          "qty": 1,
+          "unit_price": 8.97,
+          "line_total": 8.97,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "DISH SOAP 24OZ",
+          "qty": 2,
+          "unit_price": 3.29,
+          "line_total": 6.58,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "TRASH BAGS 40CT",
+          "qty": 1,
+          "unit_price": 12.49,
+          "line_total": 12.49,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "SPONGES 6PK",
+          "qty": 1,
+          "unit_price": 4.99,
+          "line_total": 4.99,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "AA BATTERIES 8PK",
+          "qty": 1,
+          "unit_price": 9.49,
+          "line_total": 9.49,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        },
+        {
+          "name": "DOOR DRAFT STOPPER",
+          "qty": 1,
+          "unit_price": 14.99,
+          "line_total": 14.99,
+          "tax_rate": 0.0625,
+          "category": "general",
+          "assigned_to": [
+            "Alex",
+            "Sam",
+            "Jordan"
+          ]
+        }
+      ],
+      "subtotal": 57.51,
+      "tax_lines": [
+        {
+          "rate": 0.0625,
+          "taxable_base": 57.51,
+          "amount": 3.59
+        }
+      ],
+      "tax": 3.59,
+      "tip": 0.0,
+      "total": 61.1,
+      "split": {
+        "Alex": 20.36,
+        "Sam": 20.37,
+        "Jordan": 20.37
+      },
+      "split_exact_unrounded": {
+        "Alex": 20.366667,
+        "Sam": 20.366667,
+        "Jordan": 20.366667
+      }
+    }
+  ],
+  "per_person_share": {
+    "by_receipt": {
+      "r1": {
+        "Alex": 21.12,
+        "Sam": 21.13,
+        "Jordan": 21.13
+      },
+      "r2": {
+        "Alex": 18.0,
+        "Sam": 33.3,
+        "Jordan": 22.46
+      },
+      "r3": {
+        "Alex": 5.84,
+        "Sam": 38.07,
+        "Jordan": 38.08
+      },
+      "r4": {
+        "Alex": 0.0,
+        "Sam": 36.43,
+        "Jordan": 36.43
+      },
+      "r5": {
+        "Alex": 20.36,
+        "Sam": 20.37,
+        "Jordan": 20.37
+      }
+    },
+    "total": {
+      "Alex": 65.32,
+      "Sam": 149.3,
+      "Jordan": 138.47
+    }
+  },
+  "paid": {
+    "Alex": 124.48,
+    "Sam": 146.62,
+    "Jordan": 81.99
+  },
+  "net_balances": {
+    "Alex": 59.16,
+    "Sam": -2.68,
+    "Jordan": -56.48
+  },
+  "net_balances_note": "net = total paid - total share; positive means the person is owed money.",
+  "settlement": [
+    {
+      "from": "Jordan",
+      "to": "Alex",
+      "amount": 56.48
+    },
+    {
+      "from": "Sam",
+      "to": "Alex",
+      "amount": 2.68
+    }
+  ],
+  "grand_total": 353.09
+}

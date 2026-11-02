@@ -1,0 +1,283 @@
+{
+ "url": "https://api.openalex.org/works?search.title_and_abstract=silence+study+replication&filter=from_publication_date%3A2000-01-01&per_page=40&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Cpublication_date%2Ctype%2Ccited_by_count%2Cis_retracted%2Copen_access%2Cprimary_location%2Clocations%2Cauthorships%2Cbiblio%2Cabstract_inverted_index",
+ "kind": "search",
+ "query": "silence study replication",
+ "backend": "openalex",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "meta": {
+   "count": 38
+  },
+  "results": [
+   {
+    "id": "https://openalex.org/W0000000102",
+    "doi": "https://doi.org/10.5555/nvrss.2019.0208",
+    "title": "How Much Does Silence Help? A Replication and Extension of Brennholt and Vanstone (2014)",
+    "type": "article",
+    "publication_year": 2019,
+    "publication_date": "2019-01-01",
+    "cited_by_count": 186,
+    "is_retracted": false,
+    "open_access": {
+     "oa_status": "closed"
+    },
+    "primary_location": {
+     "source": {
+      "type": "journal",
+      "display_name": "Northvale Review of Study Strategies",
+      "issn_l": "0000-0027"
+     }
+    },
+    "locations": [
+     {
+      "source": {
+       "type": "journal",
+       "display_name": "Northvale Review of Study Strategies",
+       "issn_l": "0000-0027"
+      }
+     }
+    ],
+    "authorships": [
+     {
+      "author": {
+       "display_name": "Kestrel Marwood"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Juniper Ashdown"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Ronan T. Blevins"
+      }
+     }
+    ],
+    "biblio": {
+     "volume": "8",
+     "issue": "2",
+     "first_page": "145",
+     "last_page": "171"
+    },
+    "referenced_works": [
+     "https://openalex.org/W0000000101",
+     "https://openalex.org/W0000000106"
+    ],
+    "abstract": ""
+   },
+   {
+    "id": "https://openalex.org/W0000000105",
+    "doi": "https://doi.org/10.5555/nvjls.2021.0215",
+    "title": "Silence is not golden after all: A multisite replication of Brennholt and Vanstone’s (2014) Study 1",
+    "type": "article",
+    "publication_year": 2021,
+    "publication_date": "2021-01-01",
+    "cited_by_count": 240,
+    "is_retracted": false,
+    "open_access": {
+     "oa_status": "closed"
+    },
+    "primary_location": {
+     "source": {
+      "type": "journal",
+      "display_name": "Northvale Journal of Learning Science",
+      "issn_l": "0000-0019"
+     }
+    },
+    "locations": [
+     {
+      "source": {
+       "type": "journal",
+       "display_name": "Northvale Journal of Learning Science",
+       "issn_l": "0000-0019"
+      }
+     }
+    ],
+    "authorships": [
+     {
+      "author": {
+       "display_name": "Hollis L. Ashworth-Pell"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Corin S. Crane"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Daria Velasquez-Thorne"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Emeka O. Lindgren"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Farah Abernathy"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Gideon P. Moorcroft"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Hana K. Ostrowska"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Idris Fairbairn"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Jolene Achterberg"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Kofi A. Mensah-Ward"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Lucia Brennan-Oduya"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Marius T. Halloran"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Noor Ferraday"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Oren Castellio"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Petra Nyholm"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Quentin R. Ashby"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Rosalind Okereke"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Soren Valdane"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Talia M. Whitlock"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Umar Delacroix-Bey"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Vera Kostadinova"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Wesley Thornbury"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Xiomara Iturbe"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Yusuf Kaldirim"
+      }
+     }
+    ],
+    "biblio": {
+     "volume": "21",
+     "issue": "2",
+     "first_page": "88",
+     "last_page": "104"
+    },
+    "referenced_works": [
+     "https://openalex.org/W0000000101",
+     "https://openalex.org/W0000000106"
+    ],
+    "abstract": "Brennholt and Vanstone’s (2014) Study 1 found that students who studied in silence recalled more main ideas than students who studied with background music. We repeated Study 1 at six sites with 412 students. As in the original study, music participants gave lower focus ratings overall than did silence participants. However, music participants did not perform better or worse than silence participants on the recall test, and mini meta-analyses of seven similar studies showed the same pattern. Lower focus ratings went with weaker recall, but that link was not robust across sites. Overall, these results do not support the idea that background music impairs recall after a short study session."
+   },
+   {
+    "id": "https://openalex.org/W0000000101",
+    "doi": "https://doi.org/10.5555/nvjls.2014.0412",
+    "title": "Quiet rooms help: Advantages of silent study over background music for recall",
+    "type": "article",
+    "publication_year": 2014,
+    "publication_date": "2014-04-23",
+    "cited_by_count": 1450,
+    "is_retracted": false,
+    "open_access": {
+     "oa_status": "closed"
+    },
+    "primary_location": {
+     "source": {
+      "type": "journal",
+      "display_name": "Northvale Journal of Learning Science",
+      "issn_l": "0000-0019"
+     }
+    },
+    "locations": [
+     {
+      "source": {
+       "type": "journal",
+       "display_name": "Northvale Journal of Learning Science",
+       "issn_l": "0000-0019"
+      }
+     }
+    ],
+    "authorships": [
+     {
+      "author": {
+       "display_name": "Ingrid M. Brennholt"
+      }
+     },
+     {
+      "author": {
+       "display_name": "Tobiah R. Vanstone"
+      }
+     }
+    ],
+    "biblio": {
+     "volume": "12",
+     "issue": "4",
+     "first_page": "301",
+     "last_page": "317"
+    },
+    "referenced_works": [],
+    "abstract": "Many students study with music playing, often through headphones. We asked whether background music changes how much students remember from a short reading. In three studies, students who studied in silence recalled more main ideas than students who studied with background music. The gap was largest for music with lyrics and smallest for instrumental music. We show that whereas studying longer can help, music listeners tended to reread passages rather than summarize them, and rereading predicted weaker recall. We discuss what this means for students who study in noisy places."
+   }
+  ]
+ }
+}

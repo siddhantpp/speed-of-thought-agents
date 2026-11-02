@@ -1,0 +1,50 @@
+{
+  "name": "quiz_writer",
+  "tier": "worker",
+  "job": "Write multiple-choice questions for ONE outline section.",
+  "instructions": "Each question has exactly 4 choices, one correct. Wrong choices must be plausible misconceptions, not jokes.\nanswer_index is 0-based. explanation: one sentence on why the answer is right.\nsource_quote: 6 to 25 consecutive words copied EXACTLY from the excerpt.\nPlain text only: no LaTeX, no Markdown, no backslashes. Write x^2, sqrt(n), theta, etc. as plain text.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "questions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "question": {
+              "type": "string"
+            },
+            "choices": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "answer_index": {
+              "type": "integer"
+            },
+            "explanation": {
+              "type": "string"
+            },
+            "source_quote": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "question",
+            "choices",
+            "answer_index",
+            "explanation",
+            "source_quote"
+          ]
+        }
+      }
+    },
+    "required": [
+      "questions"
+    ]
+  },
+  "success_check": "One correct answer per question, supported by a verbatim quote."
+}

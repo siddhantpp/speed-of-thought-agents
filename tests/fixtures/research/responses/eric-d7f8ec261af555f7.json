@@ -1,0 +1,20 @@
+{
+ "url": "https://api.ies.ed.gov/eric/?search=title%3A%22how+much+does+silence+help+a+replication+and+extension+of+brennholt+and%22&format=json&rows=5&fields=id%2Ctitle%2Cpublicationdateyear%2Cdescription",
+ "kind": "eric_search",
+ "query": "how much does silence help a replication and extension of brennholt and",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "response": {
+   "numFound": 1,
+   "docs": [
+    {
+     "id": "EJ0000102",
+     "title": "How Much Does Silence Help? A Replication and Extension of Brennholt and Vanstone (2014)",
+     "publicationdateyear": 2019,
+     "description": "A widely cited study by Brennholt and Vanstone (2014) found that students who studied in silence recalled more than students who studied with background music. We report a direct replication of their first study, extended with a white-noise group and a group that chose its own music. Recall showed some trends favoring silence, but recall did not consistently differ between any groups. Differences shrank further after students had a second chance to study the passage. A meta-analysis of all direct replications showed small advantages for silence that were not statistically significant. Choosing one study condition for every student is premature."
+    }
+   ]
+  }
+ }
+}

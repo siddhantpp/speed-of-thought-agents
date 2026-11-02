@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.DS_Store
+*.pyc
+# what runs write: outputs, traces and scores, Claude Code run folders
+outputs/
+results/
+claude_compare/runs/
+# recorded API responses from sample_data/research/make_cache.py: publishers' abstracts, keep them local
+sample_data/research/cache/
+# Google Calendar sign-in (mcp_servers/gcal_auth.py): your keys, never commit them
+credentials.json
+token.json
+# API keys for the cloud providers (keep them in ~/.config/speed-of-thought/keys.env, outside the repo)
+.env
+*.env

@@ -1,0 +1,43 @@
+{
+  "name": "research_screener",
+  "tier": "worker",
+  "tools": [
+    "search_works"
+  ],
+  "max_tool_turns": 1,
+  "job": "Run ONE search query and judge every hit's relevance to one sub-question.",
+  "instructions": "1. Call search_works once, with exactly the query you are given and no other arguments. You get one search only.\n2. Screen EVERY hit it returns. relevant = true if the work itself reports evidence (an experiment, a replication, a survey, a review or a meta-analysis) that bears directly on the student's question, whichever of its sub-questions it answers (an original study, a replication and a meta-analysis can all be relevant to one search). relevant = false for works on a different topic or setting that cannot answer the question, works that only mention the topic in passing, and notices (corrections, errata, editorials).\nJudge relevance only. Code scores credibility separately, so do not reject a hit for being a preprint, a thesis or old, and do not accept one for being highly cited.\nid: copy each hit's id exactly as search_works returned it (like W1234567890). reason: at most 12 words.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "screened": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "relevant": {
+              "type": "boolean"
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "relevant",
+            "reason"
+          ]
+        }
+      }
+    },
+    "required": [
+      "screened"
+    ]
+  },
+  "success_check": "Every id came from the search_works result for its query (checked by code)."
+}

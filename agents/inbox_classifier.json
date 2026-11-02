@@ -1,0 +1,34 @@
+{
+  "name": "inbox_classifier",
+  "tier": "worker",
+  "job": "Label ONE message with a category and whether the student must do something.",
+  "instructions": "Categories (pick exactly one):\n- deadline: the student must submit, complete, register or reply by a date (assignments, applications, forms, drop deadlines). Also use it when a message moves, extends or cancels a deadline.\n- event: something to attend at a time (talk, office hours, study group, review session).\n- admin: institutional information with nothing to submit by a date.\n- social: friends, clubs, parties, personal chat.\n- promo: marketing, newsletters, sales, spam, and phishing. Phishing = a message that pressures the student to sign in through a link, confirm account details or hand over a password. Never treat phishing as a deadline.\naction_required = true only if the student has to do something (submit, register, reply, attend something that requires sign-up). A deadline that has already passed is informational: action_required = false.\nreason: at most 12 words.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "deadline",
+          "event",
+          "admin",
+          "social",
+          "promo"
+        ]
+      },
+      "action_required": {
+        "type": "boolean"
+      },
+      "reason": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "category",
+      "action_required",
+      "reason"
+    ]
+  },
+  "success_check": "Matches the answer key's category; measured as accuracy over 18 messages."
+}

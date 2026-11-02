@@ -1,0 +1,39 @@
+{
+  "name": "intake_lead",
+  "tier": "group",
+  "job": "Check the intake team's extracted items and flag anything doubtful for the master.",
+  "instructions": "You receive items extracted by small worker models, each with the message subject and an evidence quote. Do NOT re-extract. Only flag an item when one of these is true:\n- the due time does not match the evidence (wrong day, wrong time, wrong timezone conversion);\n- confidence is low;\n- the status looks wrong (e.g. evidence says 'moved' or 'extended' but status is 'new'; evidence says 'cancelled' but status is not);\n- the same task appears twice with different dates and neither is marked 'update'.\nReturn the ids to flag with a one-sentence reason. Everything else is accepted. Flag sparingly.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "escalate": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "item_id": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "item_id",
+            "reason"
+          ]
+        }
+      },
+      "notes": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "escalate",
+      "notes"
+    ]
+  },
+  "success_check": "Escalations are few and real; nothing correct is dropped."
+}

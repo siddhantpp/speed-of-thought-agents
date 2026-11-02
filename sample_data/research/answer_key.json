@@ -1,0 +1,432 @@
+{
+  "question": "Should I take lecture notes by hand or on a laptop? What does the research actually show?",
+  "constraints": {
+    "min_words": 800,
+    "max_words": 1200,
+    "min_sources": 5,
+    "min_peer_reviewed_share": 0.8,
+    "quote_min_words_checked": 4
+  },
+  "verified": "2026-11-02. Every DOI, venue, year, volume and page below was read from Crossref and OpenAlex records; every finding and quote was read from the abstract named in abstract_source (OpenAlex, ERIC or Europe PMC). Sources marked abstract_source: null have no abstract in any open API, so only their metadata is recorded.",
+  "sources": [
+    {
+      "key": "mueller2014",
+      "doi": "10.1177/0956797614524581",
+      "openalex_id": "W2095632701",
+      "authors": "Mueller, P. A., & Oppenheimer, D. M.",
+      "year": 2014,
+      "title": "The pen is mightier than the keyboard: Advantages of longhand over laptop note taking",
+      "venue": "Psychological Science",
+      "volume": "25",
+      "issue": "6",
+      "pages": "1159-1168",
+      "design": "experiments (3 studies)",
+      "abstract_source": "OpenAlex (same text in Crossref)",
+      "findings": [
+        "In three studies, laptop note takers did worse than longhand note takers on conceptual questions.",
+        "Laptop note takers tended to transcribe lectures verbatim, which the authors argue is detrimental; taking more notes can help."
+      ],
+      "quote": "students who took notes on laptops performed worse on conceptual questions",
+      "notes": "Crossref lists a correction (corrigendum) published 2018-07-31, DOI 10.1177/0956797618781773. It is a correction, not a retraction."
+    },
+    {
+      "key": "morehead2019",
+      "doi": "10.1007/s10648-019-09468-2",
+      "openalex_id": "W2911808944",
+      "authors": "Morehead, K., Dunlosky, J., & Rawson, K. A.",
+      "year": 2019,
+      "title": "How much mightier is the pen than the keyboard for note-taking? A replication and extension of Mueller and Oppenheimer (2014)",
+      "venue": "Educational Psychology Review",
+      "volume": "31",
+      "issue": "3",
+      "pages": "753-780",
+      "design": "direct replication + extension (2 experiments) + meta-analysis of direct replications",
+      "abstract_source": "ERIC EJ1225471 (OpenAlex and Crossref have no abstract; the publisher withholds it)",
+      "findings": [
+        "A direct replication (plus eWriter and no-notes groups) found some trends toward longhand, but performance did not consistently differ between groups.",
+        "Differences shrank further after students studied their notes.",
+        "Combining direct replications, longhand had small, nonsignificant advantages; the authors call choosing a winner premature."
+      ],
+      "quote": "performance did not consistently differ between any groups"
+    },
+    {
+      "key": "urry2021",
+      "doi": "10.1177/0956797620965541",
+      "openalex_id": "W3129046511",
+      "authors": "Urry, H. L., et al. (88 authors)",
+      "year": 2021,
+      "title": "Don't ditch the laptop just yet: A direct replication of Mueller and Oppenheimer's (2014) Study 1 plus mini meta-analyses across similar studies",
+      "venue": "Psychological Science",
+      "volume": "32",
+      "issue": "3",
+      "pages": "326-339",
+      "design": "direct replication (n = 74 laptop, 68 longhand) + mini meta-analyses of 8 studies",
+      "abstract_source": "OpenAlex (same text in Europe PMC, PMID 33539228)",
+      "findings": [
+        "As in the original, laptop notes had more words and more verbatim overlap.",
+        "On the quiz, laptop users did no better than longhand users, and mini meta-analyses of eight similar studies pointed the same way.",
+        "Higher word count went with better quiz scores; the verbatim-overlap penalty was not robust.",
+        "Overall the results do not support the claim that longhand improves immediate learning via better encoding."
+      ],
+      "quote": "do not support the idea that longhand note taking improves immediate learning"
+    },
+    {
+      "key": "flanigan2024",
+      "doi": "10.1007/s10648-024-09914-w",
+      "openalex_id": "W4400596643",
+      "authors": "Flanigan, A. E., Wheeler, J., Colliot, T., Lu, J., & Kiewra, K. A.",
+      "year": 2024,
+      "title": "Typed versus handwritten lecture notes and college student achievement: A meta-analysis",
+      "venue": "Educational Psychology Review",
+      "volume": "36",
+      "issue": "3",
+      "article": "78",
+      "design": "meta-analysis (24 studies in 21 articles)",
+      "abstract_source": "ERIC EJ1430416 (OpenAlex and Crossref have no abstract)",
+      "findings": [
+        "Across 24 studies, taking and reviewing handwritten notes was associated with higher achievement (Hedges' g = 0.248).",
+        "Typing produced much more note volume (Hedges' g = 0.919)."
+      ],
+      "quote": "taking and reviewing handwritten notes leads to higher achievement"
+    },
+    {
+      "key": "voyer2022",
+      "doi": "10.1016/j.cedpsych.2021.102025",
+      "openalex_id": "W3214496671",
+      "authors": "Voyer, D., Ronis, S. T., & Byers, N.",
+      "year": 2022,
+      "title": "The effect of notetaking method on academic performance: A systematic review and meta-analysis",
+      "venue": "Contemporary Educational Psychology",
+      "volume": "68",
+      "article": "102025",
+      "design": "systematic review and meta-analysis",
+      "abstract_source": null,
+      "findings": [],
+      "notes": "Metadata verified (Crossref). No abstract in OpenAlex, Crossref, ERIC or Europe PMC, so its findings are not recorded here and a pipeline that only quotes abstracts cannot use it."
+    },
+    {
+      "key": "luo2018",
+      "doi": "10.1007/s11251-018-9458-0",
+      "openalex_id": "W2808126227",
+      "authors": "Luo, L., Kiewra, K. A., Flanigan, A. E., & Peteranetz, M. S.",
+      "year": 2018,
+      "title": "Laptop versus longhand note taking: Effects on lecture notes and achievement",
+      "venue": "Instructional Science",
+      "volume": "46",
+      "issue": "6",
+      "pages": "947-971",
+      "design": "experiment (notes recorded vs recorded and reviewed)",
+      "abstract_source": "ERIC EJ1197626",
+      "findings": [
+        "Laptop note takers recorded more notes and more verbatim lecture strings; longhand note takers recorded more visual notes.",
+        "Which medium helped depended on whether notes were only taken or also reviewed."
+      ],
+      "quote": "laptop note takers recorded more notes (idea units and words)"
+    },
+    {
+      "key": "bui2013",
+      "doi": "10.1037/a0030367",
+      "openalex_id": "W2140772388",
+      "authors": "Bui, D. C., Myerson, J., & Hale, S.",
+      "year": 2013,
+      "title": "Note-taking with computers: Exploring alternative strategies for improved recall",
+      "venue": "Journal of Educational Psychology",
+      "volume": "105",
+      "issue": "2",
+      "pages": "299-309",
+      "design": "experiments (3)",
+      "abstract_source": "OpenAlex",
+      "findings": [
+        "Transcribing on a computer gave the best immediate recall; organized notes did best on delayed tests, but with time to study, transcribers did better.",
+        "Note quantity predicted recall."
+      ],
+      "quote": "instructed to transcribe the lecture using a computer showed the best recall",
+      "notes": "OpenAlex lists the online year 2012; the issue (and Crossref) year is 2013."
+    },
+    {
+      "key": "sana2013",
+      "doi": "10.1016/j.compedu.2012.10.003",
+      "openalex_id": "W2123222302",
+      "authors": "Sana, F., Weston, T., & Cepeda, N. J.",
+      "year": 2013,
+      "title": "Laptop multitasking hinders classroom learning for both users and nearby peers",
+      "venue": "Computers & Education",
+      "volume": "62",
+      "pages": "24-31",
+      "design": "experiments in a simulated classroom",
+      "abstract_source": "OpenAlex",
+      "findings": [
+        "Students who multitasked on a laptop during a lecture scored lower, and so did students who could see a multitasking peer."
+      ],
+      "quote": "participants who were in direct view of a multitasking peer scored lower"
+    },
+    {
+      "key": "ravizza2017",
+      "doi": "10.1177/0956797616677314",
+      "openalex_id": "W2573895525",
+      "authors": "Ravizza, S. M., Uitvlugt, M. G., & Fenn, K. M.",
+      "year": 2017,
+      "title": "Logged in and zoned out: How laptop internet use relates to classroom learning",
+      "venue": "Psychological Science",
+      "volume": "28",
+      "issue": "2",
+      "pages": "171-180",
+      "design": "correlational, objectively logged internet use",
+      "abstract_source": "OpenAlex",
+      "findings": [
+        "Nonacademic internet use in class was common and inversely related to class performance, even after accounting for motivation, interest and intelligence.",
+        "Class-related internet use brought no benefit."
+      ],
+      "quote": "nonacademic Internet use was common among students who brought laptops to class"
+    },
+    {
+      "key": "fried2008",
+      "doi": "10.1016/j.compedu.2006.09.006",
+      "openalex_id": "W2164485579",
+      "authors": "Fried, C. B.",
+      "year": 2008,
+      "title": "In-class laptop use and its effects on student learning",
+      "venue": "Computers & Education",
+      "volume": "50",
+      "issue": "3",
+      "pages": "906-914",
+      "design": "weekly surveys in a large lecture course (correlational)",
+      "abstract_source": "ERIC EJ784506",
+      "findings": [
+        "Students who used laptops in class multitasked a lot, and more laptop use went with lower scores on several measures of learning."
+      ],
+      "quote": "laptop use was negatively related to several measures of student learning"
+    },
+    {
+      "key": "carter2017",
+      "doi": "10.1016/j.econedurev.2016.12.005",
+      "openalex_id": "W2562986337",
+      "authors": "Carter, S. P., Greenberg, K., & Walker, M. S.",
+      "year": 2017,
+      "title": "The impact of computer usage on academic performance: Evidence from a randomized trial at the United States Military Academy",
+      "venue": "Economics of Education Review",
+      "volume": "56",
+      "pages": "118-132",
+      "design": "randomized trial",
+      "abstract_source": null,
+      "findings": [],
+      "notes": "Metadata verified (Crossref). No abstract in any open API."
+    },
+    {
+      "key": "vanderweel2024",
+      "doi": "10.3389/fpsyg.2023.1219945",
+      "openalex_id": "W4391261647",
+      "authors": "Van der Weel, F. R., & Van der Meer, A. L. H.",
+      "year": 2024,
+      "title": "Handwriting but not typewriting leads to widespread brain connectivity: A high-density EEG study with implications for the classroom",
+      "venue": "Frontiers in Psychology",
+      "volume": "14",
+      "article": "1219945",
+      "design": "EEG, 36 students writing visually presented words",
+      "abstract_source": "OpenAlex",
+      "findings": [
+        "Handwriting words produced more elaborate brain connectivity patterns than typing them."
+      ],
+      "quote": "When writing by hand, brain connectivity patterns were far more elaborate",
+      "notes": "Peer-reviewed, but it measured brain activity while writing single words, not lecture note-taking or test scores. Use only with that caveat."
+    }
+  ],
+  "key_findings": [
+    {
+      "id": "original_longhand_advantage",
+      "finding": "The famous 2014 study found longhand note takers did better on conceptual questions, linked to laptop users transcribing verbatim.",
+      "dois": [
+        "10.1177/0956797614524581"
+      ],
+      "keyword_groups": [
+        [
+          "conceptual"
+        ],
+        [
+          "verbatim",
+          "transcrib",
+          "word for word"
+        ]
+      ]
+    },
+    {
+      "id": "replications_smaller_or_none",
+      "finding": "Direct replications (Morehead et al. 2019; Urry et al. 2021) found small, nonsignificant or no differences in test performance.",
+      "dois": [
+        "10.1007/s10648-019-09468-2",
+        "10.1177/0956797620965541"
+      ],
+      "keyword_groups": [
+        [
+          "replicat",
+          "repeated the study",
+          "repeat the study"
+        ],
+        [
+          "not consistently differ",
+          "did not consistently",
+          "did not differ",
+          "no reliable",
+          "no significant",
+          "nonsignificant",
+          "non-significant",
+          "not significant",
+          "did not perform better",
+          "not support",
+          "no difference",
+          "no clear",
+          "small",
+          "weaker",
+          "did not hold"
+        ]
+      ]
+    },
+    {
+      "id": "meta_analysis",
+      "finding": "Syntheses: a 2024 meta-analysis found a small advantage for taking AND reviewing handwritten notes (g = 0.248); replication meta-analyses found small or no effects.",
+      "dois": [
+        "10.1007/s10648-024-09914-w",
+        "10.1016/j.cedpsych.2021.102025",
+        "10.1177/0956797620965541",
+        "10.1007/s10648-019-09468-2"
+      ],
+      "keyword_groups": [
+        [
+          "meta-analy",
+          "meta analy"
+        ]
+      ]
+    },
+    {
+      "id": "note_volume",
+      "finding": "Typing produces more notes and more words, and more notes tend to go with better recall or quiz scores.",
+      "dois": [
+        "10.1177/0956797620965541",
+        "10.1177/0956797614524581",
+        "10.1037/a0030367",
+        "10.1007/s10648-024-09914-w",
+        "10.1007/s11251-018-9458-0"
+      ],
+      "keyword_groups": [
+        [
+          "more words",
+          "word count",
+          "more notes",
+          "note quantity",
+          "note-quantity",
+          "volume",
+          "notes overall",
+          "longer notes",
+          "number of words",
+          "more extensive notes"
+        ]
+      ]
+    },
+    {
+      "id": "review_matters",
+      "finding": "Whether students review or study their notes changes the picture (Flanigan 2024; Morehead 2019; Bui 2013; Luo 2018).",
+      "dois": [
+        "10.1007/s10648-024-09914-w",
+        "10.1007/s10648-019-09468-2",
+        "10.1037/a0030367",
+        "10.1007/s11251-018-9458-0"
+      ],
+      "keyword_groups": [
+        [
+          "review",
+          "studied their notes",
+          "study their notes",
+          "studying their notes",
+          "restud",
+          "opportunity to study"
+        ]
+      ]
+    },
+    {
+      "id": "laptop_distraction",
+      "finding": "Off-task laptop use (multitasking, nonacademic internet) is linked to lower performance, including for nearby peers.",
+      "dois": [
+        "10.1016/j.compedu.2012.10.003",
+        "10.1177/0956797616677314",
+        "10.1016/j.compedu.2006.09.006",
+        "10.1016/j.econedurev.2016.12.005"
+      ],
+      "keyword_groups": [
+        [
+          "multitask",
+          "distract",
+          "nonacademic",
+          "non-academic",
+          "internet use",
+          "off-task",
+          "browsing"
+        ]
+      ]
+    }
+  ],
+  "replication_nuance": {
+    "rule": "replications_smaller_or_none is covered AND the report cites the 2014 original",
+    "original_doi": "10.1177/0956797614524581",
+    "replication_dois": [
+      "10.1007/s10648-019-09468-2",
+      "10.1177/0956797620965541"
+    ]
+  },
+  "red_flags": [
+    {
+      "id": "retracted_source",
+      "check": "auto",
+      "rule": "a cited work is retracted (OpenAlex is_retracted or a Crossref retraction/withdrawal notice)",
+      "note": "No source in this literature is retracted as of the verification date."
+    },
+    {
+      "id": "fabricated_reference",
+      "check": "auto",
+      "rule": "a cited DOI is neither in the run's fetched cache nor registered with the DOI system"
+    },
+    {
+      "id": "non_scholarly_source",
+      "check": "auto",
+      "rule": "a cited source is not a peer-reviewed journal article or review by the credibility rule (preprints, theses, datasets, news, blogs)"
+    },
+    {
+      "id": "correction_called_retraction",
+      "check": "auto",
+      "rule": "the report says the 2014 study was retracted (it has a 2018 correction, not a retraction)",
+      "pattern": "retract",
+      "near": [
+        "mueller",
+        "oppenheimer",
+        "2014"
+      ]
+    },
+    {
+      "id": "overstated_effect",
+      "check": "auto",
+      "rule": "the report overstates the evidence (e.g. 'proves', 'definitively', 'always better', 'far superior')",
+      "patterns": [
+        "\\bprove[sn]?\\b",
+        "\\bproof\\b",
+        "definitively",
+        "conclusively",
+        "always (?:better|worse|superior)",
+        "far superior",
+        "settled science",
+        "no doubt",
+        "beyond doubt",
+        "guarantee"
+      ]
+    },
+    {
+      "id": "eeg_overreach",
+      "check": "hand",
+      "rule": "citing the 2024 EEG study as evidence that handwritten lecture notes raise grades (it measured brain connectivity while writing words)"
+    },
+    {
+      "id": "corrigendum_as_study",
+      "check": "auto",
+      "rule": "citing the 2018 corrigendum as if it were a study",
+      "doi": "10.1177/0956797618781773"
+    }
+  ]
+}

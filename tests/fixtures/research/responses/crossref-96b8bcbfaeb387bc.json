@@ -1,0 +1,65 @@
+{
+ "url": "https://api.crossref.org/works/10.5555/nvcl.2013.0062",
+ "kind": "crossref_work",
+ "doi": "10.5555/nvcl.2013.0062",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "message": {
+   "DOI": "10.5555/nvcl.2013.0062",
+   "title": [
+    "Lyrics in the background hinder reading for listeners and nearby classmates"
+   ],
+   "container-title": [
+    "Northvale Computers & Learning"
+   ],
+   "ISSN": [
+    "0000-0035"
+   ],
+   "volume": "9",
+   "page": "55-63",
+   "type": "journal-article",
+   "published-print": {
+    "date-parts": [
+     [
+      2013,
+      6
+     ]
+    ]
+   },
+   "published-online": {
+    "date-parts": [
+     [
+      2012,
+      10,
+      11
+     ]
+    ]
+   },
+   "issued": {
+    "date-parts": [
+     [
+      2012,
+      10,
+      11
+     ]
+    ]
+   },
+   "is-referenced-by-count": 820,
+   "author": [
+    {
+     "given": "Aino",
+     "family": "Saarinen"
+    },
+    {
+     "given": "Teodor",
+     "family": "Weissfeld"
+    },
+    {
+     "given": "Nadia",
+     "family": "Okoro-Banks"
+    }
+   ]
+  }
+ }
+}

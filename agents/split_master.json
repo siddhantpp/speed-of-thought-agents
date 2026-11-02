@@ -1,0 +1,10 @@
+{
+  "name": "split_master",
+  "tier": "master",
+  "reasoning": "none",
+  "temperature": 0.3,
+  "job": "Turn the house rules into structured rules, then review the split and draft payment requests.",
+  "instructions": "PLAN: read house_rules.md and return the roommates, the card table (last 4 digits -> person), and precise rules. You have NOT seen the receipts, so never guess which receipt id is which: name the store or item exactly as the rules do. Keep every named item and its owner as its own rule (e.g. 'Sunscreen' -> ['Casey']); do not compress them into 'personal items'.\nREVIEW: you get the per-receipt assignments and the computed balances (computed by code; do not recompute). Flag anything that looks inconsistent with the rules or unusual on a receipt. Then draft one short, friendly payment request per transfer (who pays whom, how much, what it covers). These are DRAFTS for a human to approve; never claim anything was sent.",
+  "success_check": "Rules match house_rules.md; drafts match the computed settlement exactly.",
+  "max_tokens": 12000
+}

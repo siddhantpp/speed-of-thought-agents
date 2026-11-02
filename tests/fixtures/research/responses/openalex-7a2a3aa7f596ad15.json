@@ -1,0 +1,74 @@
+{
+ "url": "https://api.openalex.org/works/doi:10.5555/nvrss.2024.0042?select=id,doi,title,publication_year,publication_date,type,cited_by_count,is_retracted,open_access,primary_location,locations,authorships,biblio,abstract_inverted_index,referenced_works",
+ "kind": "openalex_work",
+ "key": "doi:10.5555/nvrss.2024.0042",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "id": "https://openalex.org/W0000000104",
+  "doi": "https://doi.org/10.5555/nvrss.2024.0042",
+  "title": "Background Music and Study Outcomes in College Students: A Meta-Analysis",
+  "type": "article",
+  "publication_year": 2024,
+  "publication_date": "2024-01-01",
+  "cited_by_count": 37,
+  "is_retracted": false,
+  "open_access": {
+   "oa_status": "closed"
+  },
+  "primary_location": {
+   "source": {
+    "type": "journal",
+    "display_name": "Northvale Review of Study Strategies",
+    "issn_l": "0000-0027"
+   }
+  },
+  "locations": [
+   {
+    "source": {
+     "type": "journal",
+     "display_name": "Northvale Review of Study Strategies",
+     "issn_l": "0000-0027"
+    }
+   }
+  ],
+  "authorships": [
+   {
+    "author": {
+     "display_name": "Itziar Abaroa"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Dmitri Holloway-Sands"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Wren Castellane"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Oluwaseun Barrowclough"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Mei Tashiro-Field"
+    }
+   }
+  ],
+  "biblio": {
+   "volume": "13",
+   "issue": "1",
+   "first_page": "42",
+   "last_page": null
+  },
+  "referenced_works": [
+   "https://openalex.org/W0000000101",
+   "https://openalex.org/W0000000106"
+  ],
+  "abstract": ""
+ }
+}

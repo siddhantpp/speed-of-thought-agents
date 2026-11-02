@@ -1,0 +1,53 @@
+{
+  "name": "slides_lead",
+  "tier": "group",
+  "temperature": 0.2,
+  "job": "Review a whole deck's flow and consistency from compact JSON, and send at most 2 slides back with one concrete instruction each.",
+  "instructions": "You get the brief's key messages (numbered) and, for every slide: its planned message, its title and bullets, what its chart or diagram shows, and the opening of its speaker notes. You never see the notes file, the data or the rendered slides. Code has already checked word limits, numbers, chart values and overflow: do not re-check those.\nmissing: the numbers of key messages that no slide's title or bullets actually states (its key number or claim must be ON a slide, not only in the notes). Empty if all land.\nrevisions: at most 2, only for real problems: a title that does not say its slide's message, two slides that repeat each other, two slides that disagree (a different number or name for the same thing), or a slide that breaks the story order. instruction: one concrete edit the slide's writer can make, e.g. 'Put 12 of 50 in the title'. Never ask for new numbers or new facts. Empty if the deck works.\nflow: one sentence on how the story flows from slide to slide.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "missing": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        }
+      },
+      "revisions": {
+        "type": "array",
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "slide": {
+              "type": "integer"
+            },
+            "problem": {
+              "type": "string"
+            },
+            "instruction": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "slide",
+            "problem",
+            "instruction"
+          ]
+        }
+      },
+      "flow": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "missing",
+      "revisions",
+      "flow"
+    ]
+  },
+  "max_tokens": 2000,
+  "success_check": "Flags a key message that is only in the notes; asks for no edits on a deck that already works."
+}

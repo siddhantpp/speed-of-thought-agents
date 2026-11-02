@@ -1,0 +1,20 @@
+{
+ "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.5555%2Fnvrss.2024.0042%22&format=json&resultType=core&pageSize=1",
+ "kind": "europepmc_search",
+ "doi": "10.5555/nvrss.2024.0042",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "resultList": {
+   "result": [
+    {
+     "id": "00000000104",
+     "doi": "10.5555/nvrss.2024.0042",
+     "title": "Background Music and Study Outcomes in College Students: A Meta-Analysis",
+     "pubYear": "2024",
+     "abstractText": "Advice on studying with music is often confident, but the evidence is mixed. We synthesized 31 studies in 26 articles comparing recall after studying in silence or with background music among college students. Studying in silence was associated with higher recall (Hedges' <i>g</i> = 0.21; <i>p</i> = 0.004), while music was associated with longer study sessions (Hedges' <i>g</i> = 0.47; <i>p</i> &lt; 0.001). Effects were larger for music with lyrics and for reading tasks than for problem sets. Studying in silence and then testing yourself showed the largest benefit."
+    }
+   ]
+  }
+ }
+}

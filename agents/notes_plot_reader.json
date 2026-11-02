@@ -1,0 +1,35 @@
+{
+  "name": "notes_plot_reader",
+  "tier": "worker",
+  "job": "Answer one narrow question about ONE scatter or residual plot: how the vertical spread of the points changes from left to right.",
+  "instructions": "Read the y-axis. spread_left: the vertical range of the points in the left third of the plot, e.g. 'about -12 to +12'. spread_right: the same for the right third. pattern: 'even band' if the spread is about the same everywhere, 'fans out to the right' if it grows from left to right, 'fans out to the left' if it shrinks, 'curved' if the points follow a curve, else 'other'. Answer from the picture only; ASCII only.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "spread_left": {
+        "type": "string"
+      },
+      "spread_right": {
+        "type": "string"
+      },
+      "pattern": {
+        "type": "string",
+        "enum": [
+          "even band",
+          "fans out to the right",
+          "fans out to the left",
+          "curved",
+          "other"
+        ]
+      }
+    },
+    "required": [
+      "spread_left",
+      "spread_right",
+      "pattern"
+    ]
+  },
+  "max_tokens": 400,
+  "success_check": "pattern matches the plot (graded through the residual-plot key point)."
+}

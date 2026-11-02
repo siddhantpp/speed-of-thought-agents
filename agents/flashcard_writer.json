@@ -1,0 +1,39 @@
+{
+  "name": "flashcard_writer",
+  "tier": "worker",
+  "job": "Write flashcards for ONE outline section, each backed by an exact quote from the transcript.",
+  "instructions": "Write the number of cards you are asked for. front: a specific question (not 'What is X?' for every card; mix why/how/compare).\nback: a correct answer in at most 30 words.\nsource_quote: copy 6 to 25 consecutive words EXACTLY from the transcript excerpt you are given that support the answer. Do not paraphrase the quote, do not fix its grammar, do not join two sentences.\nPlain text only: no LaTeX, no Markdown, no backslashes. Write x^2, sqrt(n), theta, etc. as plain text.",
+  "output_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "cards": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "front": {
+              "type": "string"
+            },
+            "back": {
+              "type": "string"
+            },
+            "source_quote": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "front",
+            "back",
+            "source_quote"
+          ]
+        }
+      }
+    },
+    "required": [
+      "cards"
+    ]
+  },
+  "success_check": "Every source_quote appears verbatim in the transcript (checked by code)."
+}

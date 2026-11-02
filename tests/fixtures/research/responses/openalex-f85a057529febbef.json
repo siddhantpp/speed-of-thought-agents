@@ -1,0 +1,169 @@
+{
+ "url": "https://api.openalex.org/works/doi:10.5555/nvjls.2021.0215?select=id,doi,title,publication_year,publication_date,type,cited_by_count,is_retracted,open_access,primary_location,locations,authorships,biblio,abstract_inverted_index,referenced_works",
+ "kind": "openalex_work",
+ "key": "doi:10.5555/nvjls.2021.0215",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "id": "https://openalex.org/W0000000105",
+  "doi": "https://doi.org/10.5555/nvjls.2021.0215",
+  "title": "Silence is not golden after all: A multisite replication of Brennholt and Vanstone’s (2014) Study 1",
+  "type": "article",
+  "publication_year": 2021,
+  "publication_date": "2021-01-01",
+  "cited_by_count": 240,
+  "is_retracted": false,
+  "open_access": {
+   "oa_status": "closed"
+  },
+  "primary_location": {
+   "source": {
+    "type": "journal",
+    "display_name": "Northvale Journal of Learning Science",
+    "issn_l": "0000-0019"
+   }
+  },
+  "locations": [
+   {
+    "source": {
+     "type": "journal",
+     "display_name": "Northvale Journal of Learning Science",
+     "issn_l": "0000-0019"
+    }
+   }
+  ],
+  "authorships": [
+   {
+    "author": {
+     "display_name": "Hollis L. Ashworth-Pell"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Corin S. Crane"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Daria Velasquez-Thorne"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Emeka O. Lindgren"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Farah Abernathy"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Gideon P. Moorcroft"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Hana K. Ostrowska"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Idris Fairbairn"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Jolene Achterberg"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Kofi A. Mensah-Ward"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Lucia Brennan-Oduya"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Marius T. Halloran"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Noor Ferraday"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Oren Castellio"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Petra Nyholm"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Quentin R. Ashby"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Rosalind Okereke"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Soren Valdane"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Talia M. Whitlock"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Umar Delacroix-Bey"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Vera Kostadinova"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Wesley Thornbury"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Xiomara Iturbe"
+    }
+   },
+   {
+    "author": {
+     "display_name": "Yusuf Kaldirim"
+    }
+   }
+  ],
+  "biblio": {
+   "volume": "21",
+   "issue": "2",
+   "first_page": "88",
+   "last_page": "104"
+  },
+  "referenced_works": [
+   "https://openalex.org/W0000000101",
+   "https://openalex.org/W0000000106"
+  ],
+  "abstract": "Brennholt and Vanstone’s (2014) Study 1 found that students who studied in silence recalled more main ideas than students who studied with background music. We repeated Study 1 at six sites with 412 students. As in the original study, music participants gave lower focus ratings overall than did silence participants. However, music participants did not perform better or worse than silence participants on the recall test, and mini meta-analyses of seven similar studies showed the same pattern. Lower focus ratings went with weaker recall, but that link was not robust across sites. Overall, these results do not support the idea that background music impairs recall after a short study session."
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "url": "https://api.crossref.org/works/10.5555/nvrss.2024.0042",
+ "kind": "crossref_work",
+ "doi": "10.5555/nvrss.2024.0042",
+ "status": 200,
+ "fetched_at": "2026-11-02T12:00:00Z",
+ "body": {
+  "message": {
+   "DOI": "10.5555/nvrss.2024.0042",
+   "title": [
+    "Background Music and Study Outcomes in College Students"
+   ],
+   "subtitle": [
+    "A Meta-Analysis"
+   ],
+   "container-title": [
+    "Northvale Review of Study Strategies"
+   ],
+   "ISSN": [
+    "0000-0027"
+   ],
+   "volume": "13",
+   "issue": "1",
+   "article-number": "42",
+   "type": "journal-article",
+   "published-print": {
+    "date-parts": [
+     [
+      2024,
+      6
+     ]
+    ]
+   },
+   "issued": {
+    "date-parts": [
+     [
+      2024
+     ]
+    ]
+   },
+   "is-referenced-by-count": 37,
+   "author": [
+    {
+     "given": "Itziar",
+     "family": "Abaroa"
+    },
+    {
+     "given": "Dmitri",
+     "family": "Holloway-Sands"
+    },
+    {
+     "given": "Wren",
+     "family": "Castellane"
+    },
+    {
+     "given": "Oluwaseun",
+     "family": "Barrowclough"
+    },
+    {
+     "given": "Mei",
+     "family": "Tashiro-Field"
+    }
+   ]
+  }
+ }
+}
