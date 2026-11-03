@@ -17,17 +17,18 @@ Because each model sees only its own slice, every prompt stays small (the larges
 
 ## How agentkit works
 
-`agentkit/` is about 650 lines of Python in seven files. Read it in this order:
+`agentkit/` is 716 lines of Python in seven files, plus `providers.py` (513 lines) for the optional cloud backends. Read it in this order:
 
 | File | Lines | What it does |
 |---|---|---|
-| `llm.py` | 73 | `chat()` over LM Studio's OpenAI-compatible server; `TIER_MODELS` maps worker, group and master to models; `embed()` |
+| `llm.py` | 119 | `chat()` over LM Studio's OpenAI-compatible server; `TIER_MODELS` maps worker, group and master to models; `embed()` |
 | `agent.py` | 141 | `AgentCard` and `Agent.run()`: a tool loop, then an answer constrained to the card's JSON Schema |
 | `orchestrator.py` | 45 | `Group`: fan jobs out to workers in parallel, check each result, retry with the error, hand back failures for escalation |
 | `tools.py` | 244 | `Toolbox` and the deterministic tools: `resolve_date`, `sum_items`, `compute_balances`, `write_ics` |
-| `trace.py` | 68 | `Tracer`: every model and tool call with tokens and time, saved to `results/runs/` |
+| `trace.py` | 88 | `Tracer`: every model and tool call with tokens and time, saved to `results/runs/` |
 | `mcp.py` | 68 | a minimal stdio MCP client, so workflows use the same tool servers as LM Studio and Claude Code |
 | `__init__.py` | 11 | the public names |
+| `providers.py` | 513 | optional: the same `chat()` on a small cloud model, through the OpenAI or Anthropic SDK |
 
 Each agent is a model plus an Agent Card in `agents/*.json`: its tier, its one job, short instructions, the tools it may call and the JSON Schema of its answer.
 
@@ -77,6 +78,19 @@ bash run_all.sh                           # all seven workflows, one after anoth
 One pass of `run_all.sh` took about 30 minutes on the M4 Max. `PASSES=3 bash run_all.sh` runs three passes in a row; runs vary, so compare medians and ranges. To run one workflow alone: `.venv/bin/python workflows/<script>.py`, then `score.py`.
 
 Outputs go to `outputs/<workflow>/`, traces to `results/runs/`, scores to `results/scores/`, and peak model memory and timing to `results/`. All of these are ignored by git.
+
+### On a small cloud model (optional)
+
+The same pipelines can run with one small cloud model in every role: Claude Haiku 5.5 or GPT-6 Luna. Embeddings stay local, so keep the nomic model loaded in LM Studio.
+
+Put your key in `~/.config/speed-of-thought/keys.env` as a `SOT_ANTHROPIC_API_KEY` or `SOT_OPENAI_API_KEY` line, in KEY=VALUE form, or export that variable. agentkit never reads or sets the generic `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`.
+
+```bash
+PROVIDER=anthropic bash run_all.sh      # Claude Haiku 5.5 (claude-haiku-5-5)
+PROVIDER=openai bash run_all.sh         # GPT-6 Luna (gpt-6-luna)
+```
+
+Set `SMALL_MODEL=<model id>` to try another model. These runs are billed by the provider; every call's billed tokens go to `outputs/logs/usage-<label>.jsonl`.
 
 ## The seven workflows
 
@@ -160,7 +174,7 @@ Measured on the M4 Max over three passes per side, the local pipeline matched Cl
 ## Repo layout
 
 ```
-agentkit/           the toolkit (about 650 lines)
+agentkit/           the toolkit (716 lines, plus 513 for the cloud backends)
 agents/             Agent Cards, one JSON file per agent
 workflows/          the seven workflows, plus class_notes_tools.py and slide_tools.py (deterministic helpers)
 mcp_servers/        gcal_server.py (with gcal_reconcile.py, gcal_auth.py) and research_server.py (with research_*.py)
